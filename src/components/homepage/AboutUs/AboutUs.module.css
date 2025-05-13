@@ -34,7 +34,7 @@
   color: var(--red);
   border: 2px solid var(--red);
   border-radius: 50px;
-  padding: 0.5rem 1rem;
+  padding: 0.8rem 1.5rem;
   display: block;
   white-space: nowrap;
   cursor: pointer;

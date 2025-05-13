@@ -1,8 +1,8 @@
 "use client";
 
+import styles from "./AboutUs.module.css";
 import { useRef } from "react";
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
-import styles from "./AboutUs.module.css";
 import Image from "next/image";
 import Img1 from "../../../../public/images/hero.jpg";
 import Arrow from "../../../../public/icons/arrow.svg";
