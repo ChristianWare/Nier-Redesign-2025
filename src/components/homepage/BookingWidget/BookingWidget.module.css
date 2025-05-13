@@ -1,0 +1,35 @@
+.container {
+  border: 1px solid var(--white);
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  backdrop-filter: blur(50px);
+  border-radius: 50px;
+  width: 100%;
+  overflow: scroll;
+}
+
+.title {
+  color: var(--white);
+  font-family: var(--inter);
+  font-weight: 600;
+  font-size: 1.4rem;
+  text-align: center;
+  white-space: nowrap;
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid var(--white);
+  padding: 1.8rem;
+}
+
+.title:nth-child(5) {
+  border-right: none;
+}
+
+.btnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: .5rem;
+}
