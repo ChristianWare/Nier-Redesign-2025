@@ -5,6 +5,7 @@ import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import styles from "./AboutUs.module.css";
 import Image from "next/image";
 import Img1 from "../../../../public/images/hero.jpg";
+import Arrow from "../../../../public/icons/arrow.svg";
 
 const data = [
   { id: 1, title: "Professional Drivers" },
@@ -14,15 +15,14 @@ const data = [
 ];
 
 const imageData = [
-  { id: 1, src: Img1 },
-  { id: 2, src: Img1 },
-  { id: 3, src: Img1 },
-  { id: 4, src: Img1 },
-  { id: 5, src: Img1 },
-  { id: 6, src: Img1 },
+  { id: 1, src: Img1, service: "Airport Transfrers", href: "/" },
+  { id: 2, src: Img1, service: "Special Events", href: "/" },
+  { id: 3, src: Img1, service: "Party Bus", href: "/" },
+  { id: 4, src: Img1, service: "Reoccuring Rides", href: "/" },
+  { id: 5, src: Img1, service: "Long Distance Drives", href: "/" },
+  { id: 6, src: Img1, service: "Hourly Charters", href: "/" },
 ];
 
-// duplicate for seamless loop
 const loopedImages = [...imageData, ...imageData];
 
 export default function AboutUs() {
@@ -36,8 +36,9 @@ export default function AboutUs() {
             <h2 className={styles.heading}>About Us</h2>
             <div className={styles.topContainer}>
               <p className={styles.copy}>
-                At Nier Transportation, we&rsquo;re more than a car service;
-                we&rsquo;re your trusted partner in high end transportation.
+                With a passion for providing the best car service in the Phoenix
+                Metro area, we&lsquo;ve been serving the Arizona community for 20
+                years.
               </p>
               <div className={styles.widgitContainer}>
                 {data.map((x) => (
@@ -52,6 +53,7 @@ export default function AboutUs() {
             <div className={styles.scrollTrack} ref={trackRef}>
               {loopedImages.map((y, i) => (
                 <div className={styles.imgContainer} key={`${y.id}-${i}`}>
+                  <Arrow className={styles.icon} />
                   <Image
                     src={y.src}
                     width={300}
@@ -59,6 +61,7 @@ export default function AboutUs() {
                     alt=''
                     className={styles.img}
                   />
+                  <h3 className={styles.service}>{y.service}</h3>
                 </div>
               ))}
             </div>

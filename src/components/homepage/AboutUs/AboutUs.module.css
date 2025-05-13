@@ -15,7 +15,8 @@
 }
 
 .copy {
-  width: 25%;
+  width: 30%;
+  font-weight: 600;
 }
 
 .widgitContainer {
@@ -23,15 +24,15 @@
   align-items: center;
   justify-content: flex-end;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 3px;
 }
 
 .title {
   font-family: var(--inter);
   font-size: 1.4rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--red);
-  border: 1px solid var(--red);
+  border: 2px solid var(--red);
   border-radius: 50px;
   padding: 0.5rem 1rem;
   display: block;
@@ -42,6 +43,71 @@
 .widgitContainer > .card:first-child .title {
   background-color: var(--red);
   color: var(--white);
+}
+
+.bottom {
+  overflow: hidden;
+  margin-top: 10rem;
+}
+
+.scrollTrack {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: nowrap;
+  animation: scroll 50s linear infinite;
+  padding-bottom: 5rem;
+}
+
+.scrollTrack:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.imgContainer {
+  flex: 0 0 300px;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  cursor: pointer;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.icon {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--white);
+  border-radius: 50%;
+  padding: 0.7rem;
+  color: var(--red);
+  top: 15px;
+  right: 15px;
+  transform: rotate(45deg);
+}
+
+.imgContainer:nth-child(odd) {
+  height: 200px;
+}
+
+.service {
+  color: var(--red);
+  margin-top: 1rem;
+  font-family: var(--inter);
+  font-size: 1.6rem;
 }
 
 @media screen and (max-width: 1068px) {
@@ -65,41 +131,6 @@
   .copy {
     width: 60%;
   }
-}
-
-.bottom {
-  overflow: hidden;
-  margin-top: 10rem;
-}
-
-.scrollTrack {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: nowrap;
-  animation: scroll 15s linear infinite;
-}
-
-@keyframes scroll {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-.imgContainer {
-  flex: 0 0 300px;       
-  width: 300px;
-  height: 300px;
-  position: relative;
-}
-
-.img {
-  width: 100%;            
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.imgContainer:nth-child(odd) {
-  height: 200px;
 }
 
 @media screen and (max-width: 768px) {

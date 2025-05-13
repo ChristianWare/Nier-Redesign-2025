@@ -57,6 +57,7 @@
 
 .copy {
   color: var(--white);
+  width: 70%;
 }
 
 .BookingWidgitContainer {

@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <section className={styles.container}>
       <div className={styles.imgContainer}>
-      <div className={styles.imgOverlay}></div>
+        <div className={styles.imgOverlay}></div>
         <Image
           src={Img1}
           alt=''
@@ -25,13 +25,14 @@ export default function Hero() {
           <div className={styles.content}>
             <div className={styles.contentTop}>
               <div className={styles.left}>
-                <h1 className={styles.heading}>Start your journey with <br /> Us, Nier.</h1>
+                <h1 className={styles.heading}>
+                  Start your journey with <br /> Us, Nier.
+                </h1>
               </div>
               <div className={styles.right}>
                 <p className={styles.copy}>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Veniam, maiores asperiores! Eaque asperiores illo esse quidem
-                  sint. Eum, quam nisi?
+                  At Nier Transportation, we&rsquo;re more than a car service;
+                  we&rsquo;re your trusted partner in high end transportation.
                 </p>
               </div>
             </div>
