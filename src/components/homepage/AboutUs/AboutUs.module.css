@@ -45,7 +45,8 @@
 }
 
 @media screen and (max-width: 1068px) {
-  .heading, .copy {
+  .heading,
+  .copy {
     text-align: center;
   }
 
@@ -64,6 +65,41 @@
   .copy {
     width: 60%;
   }
+}
+
+.bottom {
+  overflow: hidden;
+  margin-top: 10rem;
+}
+
+.scrollTrack {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: nowrap;
+  animation: scroll 15s linear infinite;
+}
+
+@keyframes scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.imgContainer {
+  flex: 0 0 300px;       
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+.img {
+  width: 100%;            
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.imgContainer:nth-child(odd) {
+  height: 200px;
 }
 
 @media screen and (max-width: 768px) {
