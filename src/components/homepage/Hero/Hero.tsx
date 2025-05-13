@@ -8,8 +8,8 @@ import BookingWidget from "../BookingWidget/BookingWidget";
 export default function Hero() {
   return (
     <section className={styles.container}>
-      <div className={styles.imgOverlay}></div>
       <div className={styles.imgContainer}>
+      <div className={styles.imgOverlay}></div>
         <Image
           src={Img1}
           alt=''
@@ -24,7 +24,7 @@ export default function Hero() {
         <LayoutWrapper>
           <div className={styles.content}>
             <div className={styles.contentTop}>
-              <div className={styles.left}>z
+              <div className={styles.left}>
                 <h1 className={styles.heading}>Start your journey with <br /> Us, Nier.</h1>
               </div>
               <div className={styles.right}>

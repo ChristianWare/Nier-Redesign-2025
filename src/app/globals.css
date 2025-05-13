@@ -6,7 +6,7 @@
   --lightBlue2: #b7c3fc;
   --lightBlue3: rgb(228, 232, 254);
   --cream: #fefffa;
-  --red: #eb455f;
+  --red: #EA4B3F;
   --red2: #f38493;
   --border: rgba(43, 52, 103, 0.2);
   --border2: rgba(255, 255, 255, 0.3);
@@ -63,13 +63,13 @@ span {
 h1 {
   font-size: 11.5rem;
   line-height: 1;
-  letter-spacing: -2px;
+  letter-spacing: -3px;
 }
 
 h2 {
-  font-size: 7.5rem;
+  font-size: 8rem;
   line-height: 115%;
-  letter-spacing: -1px;
+  letter-spacing: -3px;
 }
 
 h3 {
@@ -134,27 +134,27 @@ textarea:focus {
   background: var(--secondary);
 } */
 
-::selection {
+/* ::selection {
   background: var(--orange);
   color: var(--black);
 }
 ::-moz-selection {
   background: var(--orange);
   color: var(--black);
-}
+} */
 
 @media screen and (max-width: 968px) {
   html {
     font-size: 55%;
   }
 
-  /* h1 {
+  h1 {
     font-size: 8rem;
   }
 
   h2 {
     font-size: 6rem;
-  } */
+  }
 
   p {
     font-size: 113.7%;
@@ -166,13 +166,13 @@ textarea:focus {
     font-size: 50%;
   }
 
-  /* h1 {
+  h1 {
     font-size: 15vw;
   }
 
   h2 {
     font-size: 5rem;
-  } */
+  }
 }
 
 /* .toastFont {
