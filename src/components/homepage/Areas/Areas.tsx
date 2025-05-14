@@ -1,17 +1,18 @@
 import styles from "./Areas.module.css";
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import Image from "next/image";
-import Img1 from '../../../../public/images/areas.jpg'
+import ImgBg from "../../../../public/images/areas.jpg";
+import ImgA from "../../../../public/images/specialevents.jpg";
+import ImgB from "../../../../public/images/distance.jpg";
 
 export default function Areas() {
   return (
     <section className={styles.container}>
       <div className={styles.imgContainer}>
-        <div className={styles.imgOverlay}></div>
+        <div className={styles.imgOverlay} />
         <Image
-          src={Img1}
-          alt=''
-          title=''
+          src={ImgBg}
+          alt='map of Arizona'
           priority
           fill
           className={styles.img}
@@ -20,15 +21,27 @@ export default function Areas() {
         <LayoutWrapper>
           <div className={styles.content}>
             <div className={styles.contentTop}>
-              <div className={styles.left}>
-                <h2 className={styles.heading}>Areas We service</h2>
-              </div>
-              <div className={styles.right}>
-                <p className={styles.copy}>
-                  At Nier Transportation, we&rsquo;re more than a car service;
-                  we&rsquo;re your trusted partner in high end transportation.
-                </p>
-              </div>
+              <h2 className={styles.heading}>
+                <span>Explore</span>
+                <span className={styles.inlineImage1}>
+                  <Image
+                    src={ImgA}
+                    alt='Sedona'
+                    fill
+                    className={styles.imgii}
+                  />
+                </span>
+                the areas we service
+                <span className={styles.inlineImage2}>
+                  <Image
+                    src={ImgB}
+                    alt='Phoenix skyline'
+                    fill
+                    className={styles.imgii}
+                  />
+                </span>
+                in all of Arizona
+              </h2>
             </div>
           </div>
         </LayoutWrapper>
