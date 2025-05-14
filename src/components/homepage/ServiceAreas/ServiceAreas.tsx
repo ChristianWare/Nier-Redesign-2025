@@ -6,13 +6,13 @@ import styles from "./ServiceAreas.module.css";
 import Image from "next/image";
 
 /* ------------- images per city ------------- */
-import ImgScottsdale from "../../../../public/images/partybus.jpg";
-import ImgPhoenix from "../../../../public/images/hero.jpg";
-import ImgMesa from "../../../../public/images/driver.jpg";
-import ImgTempe from "../../../../public/images/distance.jpg";
-import ImgWestValley from "../../../../public/images/chauffeur.jpg";
-import ImgCasaGrande from "../../../../public/images/cadi.jpg";
-import ImgMaricopa from "../../../../public/images/areas.jpg";
+import ImgScottsdale from "../../../../public/images/scottsdale.jpg";
+import ImgPhoenix from "../../../../public/images/phoenix.jpg";
+import ImgMesa from "../../../../public/images/mesa.jpg";
+import ImgTempe from "../../../../public/images/tempe.jpg";
+import ImgWestValley from "../../../../public/images/westValley.jpg";
+import ImgCasaGrande from "../../../../public/images/casaGrande.jpg";
+import ImgMaricopa from "../../../../public/images/maricopa.jpeg";
 
 const data = [
   {

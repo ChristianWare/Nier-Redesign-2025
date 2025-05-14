@@ -4,7 +4,7 @@
   --lightBlue: #f9faff;
   --white: #ffffff;
   --lightBlue2: #b7c3fc;
-  --lightBlue3: rgb(228, 232, 254);
+  --lightBlue3: rgb(156, 156, 159);
   --gray: #7b7c76;
   --gray2: #73878B;
   --darkGray: #2C2F33;
@@ -73,7 +73,7 @@ h2 {
 }
 
 h3 {
-  font-size: 5rem;
+  font-size: 5.5rem;
 }
 
 h4 {

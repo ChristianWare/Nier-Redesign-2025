@@ -13,7 +13,7 @@
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   backdrop-filter: blur(10px);
-  border: 1px solid var(--white);
+  border: 1px solid var(--lightBlue3);
   border-radius: 50px;
   width: 100%;
   overflow: scroll;
@@ -37,7 +37,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-right: 1px solid var(--white);
+  border-right: 1px solid var(--lightBlue3);
   padding: 1.8rem;
   cursor: pointer;
   user-select: none;

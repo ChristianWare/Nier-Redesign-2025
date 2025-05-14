@@ -200,7 +200,6 @@
   border-bottom-color: var(--white);
 }
 
-/* optional smooth colour transition */
 .city,
 .desc {
   transition: color 0.4s ease, border-color 0.4s ease;
