@@ -1,5 +1,5 @@
 .container {
-    padding-top: 15rem;
+  padding-top: 15rem;
 }
 
 .dataContainer {
@@ -7,73 +7,107 @@
   grid-template-columns: repeat(4, 1fr);
 }
 
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 3rem;
+}
+
 .heading {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
   color: var(--red);
+  font-size: 6rem;
+  width: 70%;
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15rem;
+  margin-top: 5rem;
+}
+
+.imgContanier {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.img {
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.btnContainer {
+  position: absolute;
+  right: -10rem;
+  top: 40%;
 }
 
 .dataContainer {
-  margin: 5rem 10rem;
-
-  border: 1px solid var(--red);
   border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
 }
 
 .card {
   padding: 7rem 3rem;
-  border-right: 1px solid var(--red);
+  border-bottom: 1px solid var(--red);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  position: relative;
 }
 
 .card:nth-child(4) {
   border-right: none;
 }
 
-.cardTop {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 1rem;
-}
-
 .icon {
-  width: 3.5rem;
-  height: 3.5rem;
-  color: var(--red);
+  width: 20rem;
+  height: 20rem;
+  color: var(--red2);
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .title {
-  font-weight: 600;
   color: var(--red);
-  text-align: center;
   width: 100%;
-  text-transform: uppercase;
+  font-size: 3rem;
 }
 
 @media screen and (max-width: 1268px) {
-  .dataContainer {
-    margin: 5rem 0rem;
+  .heading {
+    width: 100%;
   }
 }
 
 @media screen and (max-width: 1068px) {
-  .dataContainer {
-    grid-template-columns: repeat(2, 1fr);
+  .bottom {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 5rem;
   }
 
-  .card:nth-child(1) {
-    border-bottom: 1px solid var(--red);
+  .heading {
+    text-align: center;
+    width: 100%;
   }
 
-  .card:nth-child(2) {
-    border-right: none;
-    border-bottom: 1px solid var(--red);
+  .imgContanier {
+    height: 350px;
+  }
+
+  .btnContainer {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: max-content;
   }
 }
 
@@ -84,6 +118,7 @@
 
   .card {
     gap: 3rem;
+    padding: 3rem;
   }
 
   .card:nth-child(3) {
@@ -91,10 +126,10 @@
     border-bottom: 1px solid var(--red);
   }
 
-  .btnContainer {
+  /* .btnContainer {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-  }
+  } */
 }

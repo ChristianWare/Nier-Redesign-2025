@@ -73,7 +73,7 @@ export default function ServiceAreas() {
       const viewportH = window.innerHeight;
 
       /* ---------- MOBILE ≤ 568 px ---------- */
-      if (window.innerWidth <= 568) {
+      if (window.innerWidth <= 668) {
         const thresholdLine = viewportH * 0.7; // 70 % down
         let newIdx = active; // fallback
 

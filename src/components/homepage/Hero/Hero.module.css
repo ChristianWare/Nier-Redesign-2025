@@ -115,6 +115,10 @@
 }
 
 @media screen and (max-width: 568px) {
+.content {
+  margin-top: 0rem;
+}
+
   .heading {
     font-size: 15vw;
   }

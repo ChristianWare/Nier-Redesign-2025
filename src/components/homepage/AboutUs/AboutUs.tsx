@@ -37,7 +37,7 @@ export default function AboutUs() {
       <LayoutWrapper>
         <div className={styles.content}>
           <div className={styles.top}>
-            <h2 className={styles.heading}>Why Ride with Nier</h2>
+            <h2 className={styles.heading}>Why Ride with <br /> Nier Transportation?</h2>
             <div className={styles.topContainer}>
               <p className={styles.copy}>
                 With a passion for providing the best car service in the Phoenix

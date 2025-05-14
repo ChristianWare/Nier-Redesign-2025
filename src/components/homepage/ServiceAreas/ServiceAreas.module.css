@@ -196,6 +196,7 @@
 .activeCard .desc {
   color: var(--white);
 }
+
 .activeCard .city {
   border-bottom-color: var(--white);
 }
@@ -225,7 +226,12 @@
   }
 }
 
-@media screen and (max-width: 568px) {
+@media screen and (max-width: 668px) {
+  .container {
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+  }
+
   .heading {
     font-size: 16vw;
   }
@@ -236,38 +242,91 @@
 
   .bottom {
     grid-template-columns: 1fr;
-    margin-top: 5rem;
-  }
-
-  .right {
-    /* margin-top: 0; */
-    grid-gap: 10rem;
-    padding-bottom: 10vh;
+    margin-top: 3rem;
+    position: relative;
+    /* Remove fixed height - let content determine height */
   }
 
   .left {
     position: sticky;
-    top: 50px;
-    height: 500px;
-    transition: opacity 0.5s ease;
-    z-index: 2;
-  }
-
-  .card {
-    top: 600px;
-    min-height: 20vh;
-    padding: 2rem 0;
-    background-color: var(--darkGray);
-    opacity: 0;
+    top: 0;
+    height: 100vh;
     z-index: 1;
   }
 
-  .card:nth-child(7) {
-    transform: scale(0.95);
+  .imgContainer {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    top: 20px;
+  }
+
+  .imgContainer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  .img {
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0;
+  }
+
+  .right {
+    position: relative;
+    z-index: 2;
+    margin-top: -100vh; /* Pull content up over the image */
+    padding: 2rem;
+  }
+
+  .card {
+    min-height: 100vh;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 20vh;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none; /* Allow clicking through to content below */
   }
 
   .activeCard {
     opacity: 1;
-    transform: scale(1.02);
+  }
+
+  /* Text overlay styles */
+  .card .city,
+  .card .desc {
+    position: fixed;
+    left: 2rem;
+    right: 2rem;
+    color: white;
+    z-index: 3;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    pointer-events: auto; /* Make text clickable */
+  }
+
+  .card .city {
+    top: 60vh;
+    border-bottom: 1px solid var(--white);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+
+  .card .desc {
+    top: calc(60vh + 2rem);
+  }
+
+  /* Ensure last card has enough space */
+  .card:last-child {
+    padding-bottom: 50vh;
   }
 }
