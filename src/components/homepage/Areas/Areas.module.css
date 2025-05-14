@@ -69,14 +69,19 @@
 }
 
 .subHeadingCopyContainer {
-  padding-left: 2rem;
-  border-left: 1px solid var(--white);
+  padding: 2rem;
+  border: 1px solid var(--gray);
+  border-radius: 10px;
   width: 70%;
   margin-left: auto;
+  backdrop-filter: blur(50px);
 }
 
 .subHeading {
-  color: var(--white);
+  color: var(--red);
+  display: block;
+  font-size: 5rem;
+  margin-bottom: 3rem;
 }
 
 .copy {
