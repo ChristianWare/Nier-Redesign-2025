@@ -114,6 +114,10 @@
 }
 
 @media screen and (max-width: 568px) {
+  .heading {
+    font-size: 15vw;
+  }
+  
   .copy {
     width: 100%;
   }
