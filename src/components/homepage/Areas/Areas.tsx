@@ -22,7 +22,7 @@ export default function Areas() {
           <div className={styles.content}>
             <div className={styles.contentTop}>
               <h2 className={styles.heading}>
-                <span>Explore</span>
+                Explore
                 <span className={styles.inlineImage1}>
                   <Image
                     src={ImgA}

@@ -4,36 +4,43 @@ import FalseButton from "@/components/shared/FalseButton/FalseButton";
 const data = [
   {
     id: 1,
-    title: "Location",
+    title: "Date",
   },
   {
     id: 2,
-    title: "Check In",
+    title: "Pick Up",
   },
   {
     id: 3,
-    title: "Check Out",
+    title: "Drop Off",
   },
   {
     id: 4,
-    title: "Check Out",
+    title: "Pick up Time",
   },
   {
     id: 5,
-    title: "Guests",
+    title: "Passengers",
+  },
+  {
+    id: 6,
+    title: "Service",
   },
 ];
 
 export default function BookingWidget() {
   return (
-    <div className={styles.container}>
-      {data.map((x) => (
-        <span className={styles.title} key={x.id}>
-          {x.title}
-        </span>
-      ))}
-      <div className={styles.btnContainer}>
-        <FalseButton text='Search' btnType='red' />
+    <div className={styles.parent}>
+      <span className={styles.heading}>Get an instant quote:</span>
+      <div className={styles.container}>
+        {data.map((x) => (
+          <span className={styles.title} key={x.id}>
+            {x.title}
+          </span>
+        ))}
+        <div className={styles.btnContainer}>
+          <FalseButton text='Search' btnType='red' />
+        </div>
       </div>
     </div>
   );

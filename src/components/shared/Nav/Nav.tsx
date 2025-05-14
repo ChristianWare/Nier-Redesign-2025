@@ -5,6 +5,7 @@ import styles from "./Nav.module.css";
 // import Image from "next/image";
 // import Phone from "../../../../public/icons/phone.svg";
 import { Link } from "next-view-transitions";
+import Button from "../Button/Button";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -112,9 +113,7 @@ const Nav = () => {
           </li>
           <li className={styles.navItem} onClick={openMenu}>
             <a href='tel:+4803006003' className={styles.mobilePhone}>
-              <span>
-                {/* <Phone className={styles.mobileIcon} /> */}
-              </span>
+              <span>{/* <Phone className={styles.mobileIcon} /> */}</span>
               480-300-6003
             </a>
           </li>
@@ -125,12 +124,12 @@ const Nav = () => {
             </p>
           </div>
         </ul>
-        <a href='tel:+4803006003' className={styles.phone}>
-          <span>
-            {/* <Phone className={styles.icon} /> */}
-          </span>
-          480-300-6003
-        </a>
+        <div className={styles.rightLinks}>
+          <a href='tel:+4803006003' className={styles.phone}>
+            LOG IN
+          </a>
+          <Button btnType='nav' href='/' text='Sign Up' />
+        </div>
         <span
           className={
             isOpen === false

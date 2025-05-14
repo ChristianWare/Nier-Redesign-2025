@@ -1,12 +1,12 @@
 :root {
-  --darkBlue: #0a071b;
+  --black: #0a071b;
   --darkBlue2: #151125;
   --lightBlue: #f9faff;
   --white: #ffffff;
   --lightBlue2: #b7c3fc;
   --lightBlue3: rgb(228, 232, 254);
   --cream: #fefffa;
-  --red: #EA4B3F;
+  --red: #ea4b3f;
   --red2: #f38493;
   --border: rgba(43, 52, 103, 0.2);
   --border2: rgba(255, 255, 255, 0.3);

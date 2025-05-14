@@ -98,6 +98,13 @@
   margin-top: 1rem;
 }
 
+.rightLinks {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
 .hamburger {
   display: none;
 }
