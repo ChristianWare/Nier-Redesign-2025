@@ -32,11 +32,10 @@
 .container:hover .svg {
   fill: var(--black);
   transition: all 0.1s ease-in;
-
 }
 
 .autoSpin {
-  animation: spin-slow 60s linear infinite;
+  animation: spin-slow 10s linear infinite;
 }
 
 @keyframes spin-slow {
@@ -64,6 +63,6 @@
 }
 
 .container:hover .arrow {
-    color: var(--black);
-    transition: all 0.3s ease-in;
+  color: var(--black);
+  transition: all 0.3s ease-in;
 }

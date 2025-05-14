@@ -163,9 +163,7 @@ export default function ServiceAreas() {
         <div className={styles.content}>
           <div className={styles.top}>
             <h2 className={styles.heading}>
-              Serving the Phoenix
-              <br />
-              metropolitan area
+              Serving the <br /> Phoenix metropolitan area
             </h2>
             <p className={styles.copy}>
               Need to go somewhere outside our service area? We&lsquo;ll get you

@@ -27,7 +27,8 @@ export default function Hero() {
             <div className={styles.contentTop}>
               <div className={styles.left}>
                 <h1 className={styles.heading}>
-                  Start your journey with <br /> Us, Nier.
+                  {/* Start your journey with <br /> Us, Nier. */}
+                  AZ&lsquo;s Premier Black Car Service
                 </h1>
               </div>
               <div className={styles.right}>
