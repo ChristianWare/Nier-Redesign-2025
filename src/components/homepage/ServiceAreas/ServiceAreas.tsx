@@ -74,7 +74,7 @@ export default function ServiceAreas() {
 
       /* ---------- MOBILE ≤ 568 px ---------- */
       if (window.innerWidth <= 568) {
-        const thresholdLine = viewportH * 0.8; // 80 % down
+        const thresholdLine = viewportH * 0.7; // 70 % down
         let newIdx = active; // fallback
 
         cardRefs.current.forEach((card, index) => {

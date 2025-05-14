@@ -1,6 +1,7 @@
 .container {
   background-color: var(--darkGray);
   scroll-snap-type: y proximity;
+  padding-top: 15rem;
 }
 
 .right > div {
@@ -105,36 +106,42 @@
 }
 
 @media screen and (max-width: 568px) {
+  .heading,
+  .copy {
+    text-align: center;
+    width: 100%;
+  }
+
   .bottom {
     grid-template-columns: 1fr;
     margin-top: 5rem;
   }
 
   .right {
-    margin-top: 0;
+    /* margin-top: 0; */
     grid-gap: 10rem;
     padding-bottom: 10vh;
   }
 
   .left {
     position: sticky;
-    top: 100px;
+    top: 50px;
     height: 500px;
     transition: opacity 0.5s ease;
+    z-index: 2;
   }
 
   .card {
-    position: sticky;
     top: 600px;
     min-height: 20vh;
     padding: 2rem 0;
     background-color: var(--darkGray);
-    opacity: 1;
+    opacity: 0;
+    z-index: 1;
   }
 
-  .right .card:nth-child(7) {
-    height: 500px;
-    background-color: red;
+  .card:nth-child(7) {
+    transform: scale(0.95);
   }
 
   .activeCard {
