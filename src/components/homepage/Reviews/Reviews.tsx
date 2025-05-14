@@ -35,6 +35,7 @@ export default function Reviews() {
                     <div>
                       <h3 className={styles.title}>{x.reviewer}</h3>
                       <p className={styles.review}>{x.company}</p>
+                      {/* Star cluster Here */}
                     </div>
                     <p className={styles.review}>{x.review}</p>
                   </div>

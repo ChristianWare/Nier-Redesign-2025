@@ -46,12 +46,12 @@
 
 .img {
   object-fit: cover;
-  border-radius: 15px;
+  border-radius: 25px;
 }
 
 .cardRight {
   background-color: var(--white);
-  border-radius: 15px;
+  border-radius: 25px;
   padding: 2rem;
   display: flex;
   flex-direction: column;
