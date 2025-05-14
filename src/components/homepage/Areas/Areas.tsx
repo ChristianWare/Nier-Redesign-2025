@@ -2,14 +2,14 @@ import styles from "./Areas.module.css";
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import Image from "next/image";
 import ImgBg from "../../../../public/images/cadi.jpg";
-import ImgA from "../../../../public/images/specialevents.jpg";
-import ImgB from "../../../../public/images/distance.jpg";
+// import ImgA from "../../../../public/images/specialevents.jpg";
+// import ImgB from "../../../../public/images/distance.jpg";
 import BookingButton from "../BookingButton/BookingButton";
 
 const statsData = [
   {
     id: 1,
-    number: "20",
+    number: "20+",
     detail: "Years of Experience",
   },
   {
@@ -40,26 +40,26 @@ export default function Areas() {
           <div className={styles.content}>
             <div className={styles.contentTop}>
               <h2 className={styles.heading}>
-                At Nier
-                <span className={styles.inlineImage1}>
+                {/* <span className={styles.inlineImage1}>
                   <Image
                     src={ImgA}
                     alt='Sedona'
                     fill
                     className={styles.imgii}
                   />
-                </span>
-                we <br />
-                change what <br />
-                Transportation
-                <span className={styles.inlineImage2}>
+                </span> */}
+                {/* <span className={styles.inlineImage2}>
                   <Image
                     src={ImgB}
                     alt='Phoenix skyline'
                     fill
                     className={styles.imgii}
                   />
-                </span>
+                </span> */}
+                At Nier
+                we 
+                change what 
+                Transportation 
                 means to you.
               </h2>
             </div>
