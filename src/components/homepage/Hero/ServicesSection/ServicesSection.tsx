@@ -8,7 +8,7 @@ export default function ServicesSection() {
         <div className={styles.content}>
           <div className={styles.top}>
             <h2 className={styles.heading}>
-                Services <br /> we offer
+              Services <br /> we offer at Nier
             </h2>
           </div>
           <div className={styles.bottom}></div>
