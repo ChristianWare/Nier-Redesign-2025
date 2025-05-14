@@ -5,6 +5,7 @@ import ImgBg from "../../../../public/images/cadi.jpg";
 // import ImgA from "../../../../public/images/specialevents.jpg";
 // import ImgB from "../../../../public/images/distance.jpg";
 import BookingButton from "../BookingButton/BookingButton";
+import Button from "@/components/shared/Button/Button";
 
 const statsData = [
   {
@@ -56,11 +57,7 @@ export default function Areas() {
                     className={styles.imgii}
                   />
                 </span> */}
-                At Nier
-                we 
-                change what 
-                Transportation 
-                means to you.
+                At Nier we change <br /> what Transportation means to you.
               </h2>
             </div>
             <div className={styles.contentMiddle}>
@@ -76,6 +73,9 @@ export default function Areas() {
                   journey began with a single luxury vehicle, and today, we have
                   a large fleet of cars, serving hundreds of satisfied clients.
                 </p>
+                <div className={styles.btnContainer}>
+                  <Button text='More About Us' btnType='nav' href='/' />
+                </div>
               </div>
             </div>
             <div className={styles.stats}>

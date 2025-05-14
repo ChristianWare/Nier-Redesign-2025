@@ -13,10 +13,9 @@ import Img6 from "../../../../public/images/chauffeur.jpg";
 import Arrow from "../../../../public/icons/arrow.svg";
 
 const data = [
-  { id: 1, title: "Professional Drivers" },
-  { id: 2, title: "Diverse Services" },
-  { id: 3, title: "Timeless Elegance" },
-  { id: 4, title: "Stylish Vehicles" },
+  { id: 1, title: "Punctual—Guaranteed" },
+  { id: 2, title: "Professional Chauffeurs" },
+  { id: 3, title: "Luxury Fleet" },
 ];
 
 const imageData = [
@@ -38,7 +37,7 @@ export default function AboutUs() {
       <LayoutWrapper>
         <div className={styles.content}>
           <div className={styles.top}>
-            <h2 className={styles.heading}>About Us</h2>
+            <h2 className={styles.heading}>Why Ride with Nier</h2>
             <div className={styles.topContainer}>
               <p className={styles.copy}>
                 With a passion for providing the best car service in the Phoenix

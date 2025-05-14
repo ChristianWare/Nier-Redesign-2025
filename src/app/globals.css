@@ -6,11 +6,11 @@
   --lightBlue2: #b7c3fc;
   --lightBlue3: rgb(228, 232, 254);
   --gray: #7b7c76;
+  --gray2: #73878B;
+  --darkGray: #2C2F33;
   --red: #ea4b3f;
   --red2: #f38493;
-  --border: rgba(43, 52, 103, 0.2);
-  --border2: rgba(255, 255, 255, 0.3);
-  --border3: #2b2838;
+
 }
 
 * {

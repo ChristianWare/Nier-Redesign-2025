@@ -88,6 +88,10 @@
   color: var(--white);
 }
 
+.btnContainer {
+  margin-top: 3rem;
+}
+
 .stats {
   display: flex;
   align-items: center;
@@ -138,6 +142,6 @@
 
 @media screen and (max-width: 568px) {
   .heading {
-    font-size: 12vw;
+    font-size: 10vw;
   }
 }
