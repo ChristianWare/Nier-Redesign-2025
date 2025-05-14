@@ -5,6 +5,11 @@ import { useRef } from "react";
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import Image from "next/image";
 import Img1 from "../../../../public/images/hero.jpg";
+import Img2 from "../../../../public/images/partybus.jpg";
+import Img3 from "../../../../public/images/specialevents.jpg";
+import Img4 from "../../../../public/images/reocurring.jpg";
+import Img5 from "../../../../public/images/distance.jpg";
+import Img6 from "../../../../public/images/chauffeur.jpg";
 import Arrow from "../../../../public/icons/arrow.svg";
 
 const data = [
@@ -16,11 +21,11 @@ const data = [
 
 const imageData = [
   { id: 1, src: Img1, service: "Airport Transfrers", href: "/" },
-  { id: 2, src: Img1, service: "Special Events", href: "/" },
-  { id: 3, src: Img1, service: "Party Bus", href: "/" },
-  { id: 4, src: Img1, service: "Reoccuring Rides", href: "/" },
-  { id: 5, src: Img1, service: "Long Distance Drives", href: "/" },
-  { id: 6, src: Img1, service: "Hourly Charters", href: "/" },
+  { id: 2, src: Img3, service: "Special Events", href: "/" },
+  { id: 3, src: Img2, service: "Party Bus", href: "/" },
+  { id: 4, src: Img4, service: "Reoccuring Rides", href: "/" },
+  { id: 5, src: Img5, service: "Long Distance Drives", href: "/" },
+  { id: 6, src: Img6, service: "Hourly Chauffeur", href: "/" },
 ];
 
 const loopedImages = [...imageData, ...imageData];
@@ -37,8 +42,8 @@ export default function AboutUs() {
             <div className={styles.topContainer}>
               <p className={styles.copy}>
                 With a passion for providing the best car service in the Phoenix
-                Metro area, we&lsquo;ve been serving the Arizona community for 20
-                years.
+                Metro area, we&lsquo;ve been serving the Arizona community for
+                20 years.
               </p>
               <div className={styles.widgitContainer}>
                 {data.map((x) => (
