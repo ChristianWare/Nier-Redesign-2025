@@ -7,7 +7,6 @@ import Image from "next/image";
 import Button from "@/components/shared/Button/Button";
 import Left from "../../../../../public/icons/left.svg";
 import Right from "../../../../../public/icons/right.svg";
-
 import Img from "../../../../../public/images/cadi.jpg";
 import Img2 from "../../../../../public/images/chauffeur.jpg";
 import Img3 from "../../../../../public/images/distance.jpg";

@@ -46,7 +46,7 @@
   height: 6.5vw;
   border-radius: 0.5rem;
   overflow: hidden;
-  border-radius: 15px;
+  border-radius: 25px;
   border: 1px solid var(--white);
   margin-right: 2rem;
   margin-left: 2rem;
@@ -59,7 +59,7 @@
 }
 
 .imgii {
-  border-radius: 15px;
+  border-radius: 25px;
 }
 
 .contentBottom {
@@ -71,7 +71,7 @@
 .subHeadingCopyContainer {
   padding: 2rem;
   border: 1px solid var(--gray);
-  border-radius: 10px;
+  border-radius: 25px;
   width: 70%;
   margin-left: auto;
   backdrop-filter: blur(50px);

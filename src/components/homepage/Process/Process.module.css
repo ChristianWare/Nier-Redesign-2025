@@ -36,7 +36,7 @@
 
 .img {
   object-fit: cover;
-  border-radius: 15px;
+  border-radius: 25px;
 }
 
 .btnContainer {
@@ -79,7 +79,9 @@
 .title {
   color: var(--red);
   width: 100%;
-  font-size: 3rem;
+  font-size: 2rem;
+  font-family: var(--inter);
+  /* font-weight: 600; */
 }
 
 @media screen and (max-width: 1268px) {
