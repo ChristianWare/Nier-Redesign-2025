@@ -17,7 +17,9 @@
 
 .heading {
   color: var(--red);
-  font-size: 6rem;
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: -1px;
   width: 70%;
 }
 
@@ -52,7 +54,7 @@
 }
 
 .card {
-  padding: 7rem 3rem;
+  padding: 5rem 0rem;
   border-bottom: 1px solid var(--red);
   display: flex;
   flex-direction: column;
@@ -67,20 +69,24 @@
 }
 
 .icon {
-  width: 20rem;
-  height: 20rem;
-  color: var(--red2);
-  opacity: 0.2;
-  position: absolute;
-  top: 0;
-  left: 0;
+  width: 3.5rem;
+  height: 3.5rem;
+  color: var(--red);
+  /* opacity: 0.2; */
+  margin-bottom: 1rem;
+  display: none;
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: 0; */
 }
 
 .title {
-  color: var(--red);
-  width: 100%;
-  font-size: 2rem;
-  font-family: var(--inter);
+  /* color: var(--red); */
+  line-height: 1;
+  font-family: var(--SuisseIntlMedium);
+  text-transform: capitalize;
+  letter-spacing: -0.03em;
+  font-size: 3rem;
   /* font-weight: 600; */
 }
 

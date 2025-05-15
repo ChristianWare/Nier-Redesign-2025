@@ -4,7 +4,7 @@ import Image from "next/image";
 import ImgBg from "../../../../public/images/cadi.jpg";
 // import ImgA from "../../../../public/images/specialevents.jpg";
 // import ImgB from "../../../../public/images/distance.jpg";
-import BookingButton from "../BookingButton/BookingButton";
+// import BookingButton from "../BookingButton/BookingButton";
 import Button from "@/components/shared/Button/Button";
 
 const statsData = [
@@ -61,7 +61,7 @@ export default function Areas() {
               </h2>
             </div>
             <div className={styles.contentMiddle}>
-              <BookingButton text='Book Here • Book Here • Book Here • Book Here •' />
+              {/* <BookingButton text='Book Here • Book Here • Book Here • Book Here •' /> */}
             </div>
             <div className={styles.contentBottom}>
               <div></div>

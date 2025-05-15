@@ -17,8 +17,10 @@
 }
 
 .heading {
-  -webkit-text-stroke: 1px var(--white);
-  -webkit-text-fill-color: transparent;
+  /* -webkit-text-stroke: 1px var(--white);
+  -webkit-text-fill-color: transparent; */
+  color: var(--white);
+  line-height: 0.8;
   font-size: 8vw;
 }
 
@@ -52,6 +54,8 @@
   color: var(--gray2);
   border-bottom: 1px solid var(--gray2);
   padding-bottom: 1rem;
+  line-height: 0.8;
+  font-size: 6vw;
 }
 
 .desc {

@@ -27,8 +27,8 @@ export default function Hero() {
             <div className={styles.contentTop}>
               <div className={styles.left}>
                 <h1 className={styles.heading}>
-                  {/* Book your <br /> next ride <br /> with Us */}
-                  AZ&lsquo;s Premier Black Car Service
+                  Book your <br /> next ride <br /> with Us
+                  {/* AZ&lsquo;s Premier Black Car Service */}
                 </h1>
               </div>
               <div className={styles.right}>

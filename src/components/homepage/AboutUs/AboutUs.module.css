@@ -47,7 +47,7 @@
 
 .bottom {
   overflow: hidden;
-  margin-top: 10rem;
+  /* margin-top: 10rem; */
 }
 
 .scrollTrack {
@@ -97,6 +97,7 @@
   top: 25px;
   right: 25px;
   transform: rotate(45deg);
+  display: none;
 }
 
 .imgContainer:nth-child(odd) {
@@ -106,7 +107,8 @@
 .service {
   color: var(--red);
   margin-top: 1rem;
-  font-family: var(--inter);
+  font-family: var(--SuisseIntlMedium);
+  text-transform: capitalize;
   font-size: 1.6rem;
 }
 

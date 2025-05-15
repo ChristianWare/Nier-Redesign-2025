@@ -1,6 +1,12 @@
 import Linda from "../public/images/linda.jpg";
 import Sheryl from "../public/images/sheryl.jpg";
 import Jeff from "../public/images/jeff.jpg";
+import Airport from "../public/images/airport.jpg";
+import Events from "../public/images/events.jpg";
+import Party from "../public/images/partybus.jpg";
+import Reocurring from "../public/images/reocurring.jpg";
+import Distance from "../public/images/distance.jpg";
+import Golf from "../public/images/golf.jpg";
 
 export const reviews = [
   {
@@ -66,5 +72,44 @@ export const reviews = [
     reviewer: "Adam B.",
     company: "Phoenix, AZ",
     person: Jeff,
+  },
+] as const;
+
+export const services = [
+  {
+    id: 1,
+    title: "Airport Transfers",
+    copy: "Reliable black car service to Scottsdale, Sky Harbor, and Gateway airports. Professional chauffeurs ensure punctual, stress-free travel.",
+    src: Airport,
+  },
+  {
+    id: 2,
+    title: "Special Events",
+    copy: "Arrive in style for any occasion. We provide luxury vehicles and shuttle buses to suit all group sizes and event types.",
+    src: Events,
+  },
+  {
+    id: 3,
+    title: "Party Bus",
+    copy: "Elevate your celebration with our premium party buses. Featuring spacious interiors, entertainment systems, and professional chauffeurs.",
+    src: Party,
+  },
+  {
+    id: 4,
+    title: "Reoccurring Rides",
+    copy: "Dependable transportation for regular business needs. Scheduled rides ensure timely arrivals without ride-share uncertainties.",
+    src: Reocurring,
+  },
+  {
+    id: 5,
+    title: "Long Distance Drives",
+    copy: "Comfortable intercity travel with professional drivers. Relax in our well-maintained vehicles while we handle the journey.",
+    src: Distance,
+  },
+  {
+    id: 6,
+    title: "Golf Outing Tours",
+    copy: "Stress-free rides to TPC, We-Ko Pa, Troon and other courses. Vehicles for any group size with knowledgeable local drivers.",
+    src: Golf,
   },
 ] as const;

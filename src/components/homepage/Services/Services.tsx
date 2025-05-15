@@ -1,15 +1,15 @@
 "use client";
 
+import styles from "./Services.module.css";
 import { useState } from "react";
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
-import styles from "./Reviews.module.css";
-import { reviews } from "@/data";
 import Image from "next/image";
 import Left from "../../../../public/icons/left.svg";
 import Right from "../../../../public/icons/right.svg";
+import { services } from "@/data";
 
-export default function Reviews() {
-  const slides = reviews.slice(0, 3);
+export default function Services() {
+  const slides = services.slice(0, 4);
   const [current, setCurrent] = useState(0);
 
   const prev = () => setCurrent((i) => (i === 0 ? slides.length - 1 : i - 1));
@@ -21,7 +21,9 @@ export default function Reviews() {
         <div className={styles.top}>
           <h2 className={styles.heading}>Popular Services</h2>
           <p className={styles.copy}>
-            Read what our clients have to say about their journey with us
+            We offer bespoke website design services that reflect your brand’s
+            identity and values. Our designs are crafted to captivate your
+            audience and provide an engaging user experience.
           </p>
         </div>
         <div className={styles.bottom}>
@@ -41,13 +43,13 @@ export default function Reviews() {
                 <div className={styles.cardLeft}>
                   <div className={styles.imgContainer}>
                     <Image
-                      src={x.person}
-                      alt={x.reviewer}
+                      src={x.src}
+                      alt={x.title}
                       fill
                       className={styles.img}
                     />
                     <div className={styles.indicators}>
-                      {slides.map((_, idx) => (
+                      {services.map((_, idx) => (
                         <span
                           key={idx}
                           className={`${styles.indicator} ${
@@ -61,17 +63,17 @@ export default function Reviews() {
                 </div>
                 <div className={styles.cardRight}>
                   <div className={styles.cardRightTop}>
-                    <h3 className={styles.reviewer}>{x.reviewer}</h3>
-                    <p className={styles.company}>{x.company}</p>
-                    <span className={styles.starContainer}>
+                    <h3 className={styles.reviewer}>{x.title}</h3>
+                    {/* <p className={styles.company}>{x.company}</p> */}
+                    {/* <span className={styles.starContainer}>
                       <span className={styles.star}></span>
                       <span className={styles.star}></span>
                       <span className={styles.star}></span>
                       <span className={styles.star}></span>
                       <span className={styles.star}></span>
-                    </span>{" "}
+                    </span>{" "} */}
                   </div>
-                  <p className={styles.review}>{x.review}</p>
+                  <p className={styles.review}>{x.copy}</p>
                 </div>
               </div>
             </div>
