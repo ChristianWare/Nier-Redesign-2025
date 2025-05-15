@@ -7,6 +7,7 @@ import Image from "next/image";
 import Left from "../../../../public/icons/left.svg";
 import Right from "../../../../public/icons/right.svg";
 import { services } from "@/data";
+import Button from "@/components/shared/Button/Button";
 
 export default function Services() {
   const slides = services.slice(0, 4);
@@ -73,7 +74,12 @@ export default function Services() {
                       <span className={styles.star}></span>
                     </span>{" "} */}
                   </div>
-                  <p className={styles.review}>{x.copy}</p>
+                  <div>
+                    <p className={styles.review}>{x.copy}</p>
+                    <div className={styles.btnContainer}>
+                      <Button text='Learn More' btnType='black' href='/' />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

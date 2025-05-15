@@ -37,26 +37,6 @@
   color: var(--blue);
 }
 
-.primaryii {
-  border: 1px solid var(--blue);
-}
-
-.secondary {
-  color: var(--white);
-  border: 1px solid var(--white);
-}
-
-.secondary:hover {
-  background-color: var(--white);
-  color: var(--blue);
-}
-
-.tanOutline {
-  border: 1px solid var(--tan);
-  background-color: var(--tan);
-  color: var(--blue);
-}
-
 .nav {
   border-radius: 8px;
   line-height: 1;
@@ -70,6 +50,18 @@
 }
 
 .nav:hover {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.black {
+  color: var(--white);
+  background-color: var(--black);
+  border: 1px solid var(--black);
+  transition: all 0.3s ease-in;
+}
+
+.black:hover {
   background-color: var(--white);
   color: var(--black);
 }

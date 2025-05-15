@@ -5,6 +5,7 @@ import styles from "./HigherMargins.module.css";
 import Image from "next/image";
 import Img from "../../../../public/images/heroii.jpg";
 import Img2 from "../../../../public/images/driver.jpg";
+import React from "react";
 
 const HigherMargins = () => {
   const data = [
@@ -44,7 +45,7 @@ const HigherMargins = () => {
       </p> */}
       <div className={styles.bottom}>
         {data.map((x, index) => (
-          <>
+          <React.Fragment key={index}>
             {x.src && (
               <div className={styles.imgContainer}>
                 <Image src={x.src} alt='image' fill className={styles.img} />
@@ -56,7 +57,7 @@ const HigherMargins = () => {
                 <p className={styles.desc}>{x.description}</p>
               </div>
             )}
-          </>
+          </React.Fragment>
         ))}
       </div>
       {/* </LayoutWrapper> */}
