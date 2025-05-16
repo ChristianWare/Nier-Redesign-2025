@@ -1,0 +1,50 @@
+.content {
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  grid-gap: 5rem;
+}
+
+.imgContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.img {
+    object-fit: cover;
+}
+
+.righBottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* keeps all the badges centered and wraps on smaller screens  */
+.righBottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;              /* space between circles */
+    justify-content: center;
+  }
+  
+  /* the red circle itself */
+  .card {
+    background: var(--red);
+    border-radius: 50%;
+    width: 13vmin;      /* always 16 % of the smaller viewport side */
+    aspect-ratio: 1;    /* height tracks width, keeping it round */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .title {
+    color: var(--white);
+    font-size: 1.4vmin; /* scales with the badge */
+    text-align: center;
+    line-height: 1.2;
+    padding: 0 1rem;
+  }
+  
+  

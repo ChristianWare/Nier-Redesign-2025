@@ -5,9 +5,7 @@ import LayoutWrapper from "../LayoutWrapper";
 import React, { useState } from "react";
 import Arrow from "../../../../public/icons/arrow.svg";
 import SectionHeading from "../SectionHeading/SectionHeading";
-import Button from "../Button/Button";
-import Image from "next/image";
-import Img1 from '../../../../public/images/heroii.jpg'
+// import Button from "../Button/Button";
 
 const data = [
   {
@@ -63,21 +61,17 @@ export default function Faq() {
 
   return (
     <section className={styles.container}>
-      <SectionHeading title='Frequently Asked Questions' />
+      <SectionHeading title="Faq's" />
       <LayoutWrapper>
         <div className={styles.content}>
           <div className={styles.top}>
-            <h3 className={styles.heading}>FAQ by category</h3>
+            <h2 className={styles.heading}>
+              You Ask <br /> we answer
+            </h2>
             <p className={styles.topText}>
               Here are some commonly asked questions and their answers below. If
               you don&#39;t see your questions here, call us any time.
             </p>
-            <div className={styles.btnContainer}>
-              <Button href='/' btnType='black' text="See All Faq's" />
-            </div>
-            <div className={styles.imgContainer}>
-              <Image src={Img1} fill title='' alt='' className={styles.img} />
-            </div>
           </div>
           <div className={styles.bottom}>
             {data.map((x, i) => (
@@ -96,9 +90,13 @@ export default function Faq() {
                   </h3>
                   <div className={styles.arrowContainer}>
                     {selected === i ? (
-                      <Arrow className={styles.iconFlip} />
+                      <div className={styles.arrowContainer}>
+                        <Arrow className={styles.iconFlip} />
+                      </div>
                     ) : (
-                      <Arrow className={styles.icon} />
+                      <div className={styles.arrowContainer}>
+                        <Arrow className={styles.icon} />
+                      </div>
                     )}
                   </div>
                 </div>

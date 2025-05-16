@@ -8,6 +8,7 @@ import Image from "next/image";
 // import Button from "@/components/shared/Button/Button";
 import Left from "../../../../public/icons/left.svg";
 import Right from "../../../../public/icons/right.svg";
+import SectionHeading from "@/components/shared/SectionHeading/SectionHeading";
 
 export default function ReviewSection() {
   const [current, setCurrent] = useState(0);
@@ -44,6 +45,8 @@ export default function ReviewSection() {
 
   return (
     <section className={styles.container}>
+      <SectionHeading title='Reviews' />
+
       <LayoutWrapper>
         <div className={styles.top}>
           <h2 className={styles.heading}>
