@@ -1,0 +1,106 @@
+.container {
+  background-color: var(--tan);
+}
+
+.top {
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.heading {
+  text-align: center;
+  width: 100%;
+}
+
+.copy {
+  font-family: var(--PPNeueMontrealMedium);
+  text-align: center;
+  width: 60%;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 15rem;
+}
+
+.imgContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.img {
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 5rem;
+  width: 100%;
+  border: 2px solid var(--border);
+  border-radius: 15px;
+  padding: 2rem;
+}
+
+.right {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 3rem;
+  width: 100%;
+}
+
+.feature {
+  color: var(--darkGray);
+  font-size: 3.4rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  display: block;
+}
+
+.detail {
+    font-family: var(--PPNeueMontrealMedium);
+    color: var(--text);
+}
+
+@media screen and (max-width: 1268px) {
+  .copy {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .copy {
+    width: 100%;
+  }
+
+  .content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .imgContainer {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .btnContainer {
+    display: grid;
+    width: 100%;
+  }
+}

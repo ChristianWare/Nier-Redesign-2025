@@ -30,7 +30,7 @@ export default function Services() {
             services we provide:
           </p>
           <div className={styles.topBtnContainer}>
-            <Button btnType='red' href='/' text='All Services' />
+            <Button btnType='black' href='/' text='All Services' />
           </div>
         </div>
         <div className={styles.bottom}>
@@ -75,7 +75,7 @@ export default function Services() {
                   <div>
                     <p className={styles.review}>{x.copy}</p>
                     <div className={styles.btnContainer}>
-                      <Button text='Learn More' btnType='black' href='/' />
+                      <Button text='Learn More' btnType='red' href='/' />
                     </div>
                   </div>
                 </div>
