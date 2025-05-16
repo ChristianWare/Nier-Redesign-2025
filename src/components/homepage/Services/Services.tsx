@@ -23,6 +23,9 @@ export default function Services() {
       <LayoutWrapper>
         <div className={styles.top}>
           <h2 className={styles.heading}>Popular Services</h2>
+          <div className={styles.btnContainer}>
+            <Button btnType='red' href='/' text='All Services' />
+          </div>
           <p className={styles.copy}>
             Whether it&lsquo;s a simple airport transfer, special event, or
             girls night out, our black car service delivers the epitome of

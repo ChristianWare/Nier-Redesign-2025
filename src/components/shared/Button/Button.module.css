@@ -65,3 +65,15 @@
   background-color: var(--tan);
   color: var(--black);
 }
+
+.red {
+  color: var(--tan);
+  background-color: var(--red);
+  border: 1px solid var(--red);
+  transition: all 0.3s ease-in;
+}
+
+.red:hover {
+  background-color: transparent;
+  color: var(--red);
+}
