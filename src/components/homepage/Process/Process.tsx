@@ -7,6 +7,7 @@ import Receipt from "../../../../public/icons/receipt.svg";
 import Calendar from "../../../../public/icons/calendar.svg";
 import Image from "next/image";
 import Img1 from "../../../../public/images/cadi2.jpg";
+import SectionHeading from "@/components/shared/SectionHeading/SectionHeading";
 
 const data = [
   {
@@ -42,6 +43,7 @@ const data = [
 export default function Process() {
   return (
     <section className={styles.container}>
+      <SectionHeading title='How it works' />
       <LayoutWrapper>
         <div className={styles.content}>
           <div className={styles.top}>

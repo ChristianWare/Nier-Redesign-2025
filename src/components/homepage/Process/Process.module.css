@@ -1,5 +1,5 @@
 .container {
-  padding-top: 15rem;
+  background-color: var(--white);
 }
 
 .dataContainer {
@@ -17,8 +17,6 @@
 
 .heading {
   color: var(--red);
-  font-size: 5rem;
-  font-weight: 700;
   letter-spacing: -1px;
   width: 70%;
 }
@@ -38,7 +36,7 @@
 
 .img {
   object-fit: cover;
-  border-radius: 25px;
+  border-radius: 15px;
 }
 
 .btnContainer {
@@ -72,22 +70,12 @@
   width: 3.5rem;
   height: 3.5rem;
   color: var(--red);
-  /* opacity: 0.2; */
   margin-bottom: 1rem;
   display: none;
-  /* position: absolute; */
-  /* top: 0; */
-  /* left: 0; */
 }
 
-.title {
-  /* color: var(--red); */
-  line-height: 1;
-  font-family: var(--SuisseIntlMedium);
-  text-transform: capitalize;
-  letter-spacing: -0.03em;
-  font-size: 3rem;
-  /* font-weight: 600; */
+.description {
+  color: var(--text);
 }
 
 @media screen and (max-width: 1268px) {
