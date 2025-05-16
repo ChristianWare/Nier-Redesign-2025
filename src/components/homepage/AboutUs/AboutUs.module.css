@@ -8,6 +8,7 @@
 
 .copy {
   color: var(--red);
+  font-family: var(--PPNeueMontrealMedium);
 }
 
 .topContainer {

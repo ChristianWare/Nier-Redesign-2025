@@ -1,11 +1,7 @@
 import styles from "./Areas.module.css";
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
-import Image from "next/image";
-import ImgBg from "../../../../public/images/cadi.jpg";
-// import ImgA from "../../../../public/images/specialevents.jpg";
-// import ImgB from "../../../../public/images/distance.jpg";
-// import BookingButton from "../BookingButton/BookingButton";
 import Button from "@/components/shared/Button/Button";
+import SectionHeading from "@/components/shared/SectionHeading/SectionHeading";
 
 const statsData = [
   {
@@ -28,41 +24,16 @@ const statsData = [
 export default function Areas() {
   return (
     <section className={styles.container}>
+      <SectionHeading title='About Us' />
       <div className={styles.imgContainer}>
-        <div className={styles.imgOverlay} />
-        <Image
-          src={ImgBg}
-          alt='map of Arizona'
-          priority
-          fill
-          className={styles.img}
-        />
         <LayoutWrapper>
           <div className={styles.content}>
             <div className={styles.contentTop}>
               <h2 className={styles.heading}>
-                {/* <span className={styles.inlineImage1}>
-                  <Image
-                    src={ImgA}
-                    alt='Sedona'
-                    fill
-                    className={styles.imgii}
-                  />
-                </span> */}
-                {/* <span className={styles.inlineImage2}>
-                  <Image
-                    src={ImgB}
-                    alt='Phoenix skyline'
-                    fill
-                    className={styles.imgii}
-                  />
-                </span> */}
                 At Nier we change <br /> what Transportation means to you.
               </h2>
             </div>
-            <div className={styles.contentMiddle}>
-              {/* <BookingButton text='Book Here • Book Here • Book Here • Book Here •' /> */}
-            </div>
+            <div className={styles.contentMiddle}></div>
             <div className={styles.contentBottom}>
               <div></div>
               <div className={styles.subHeadingCopyContainer}>

@@ -4,6 +4,10 @@ import styles from "./Faq.module.css";
 import LayoutWrapper from "../LayoutWrapper";
 import React, { useState } from "react";
 import Arrow from "../../../../public/icons/arrow.svg";
+import SectionHeading from "../SectionHeading/SectionHeading";
+import Button from "../Button/Button";
+import Image from "next/image";
+import Img1 from '../../../../public/images/heroii.jpg'
 
 const data = [
   {
@@ -37,6 +41,13 @@ const data = [
     answer:
       "Unlike general web developers, we specialize exclusively in e-commerce, with deep expertise across multiple business models including B2C, B2B, marketplaces, subscription services, and more. Our approach balances beautiful design with data-driven strategy, ensuring your store not only looks great but delivers measurable business results. We take a limited number of clients to provide personalized attention, and our focus on long-term partnerships means we're invested in your success far beyond the initial launch.",
   },
+  {
+    id: 36.466,
+    question:
+      "What sets Fonts & Footers apart from other web development agencies?",
+    answer:
+      "Unlike general web developers, we specialize exclusively in e-commerce, with deep expertise across multiple business models including B2C, B2B, marketplaces, subscription services, and more. Our approach balances beautiful design with data-driven strategy, ensuring your store not only looks great but delivers measurable business results. We take a limited number of clients to provide personalized attention, and our focus on long-term partnerships means we're invested in your success far beyond the initial launch.",
+  },
 ] as const;
 
 export default function Faq() {
@@ -52,54 +63,58 @@ export default function Faq() {
 
   return (
     <section className={styles.container}>
+      <SectionHeading title='Frequently Asked Questions' />
       <LayoutWrapper>
         <div className={styles.content}>
           <div className={styles.top}>
+            <h3 className={styles.heading}>FAQ by category</h3>
             <p className={styles.topText}>
               Here are some commonly asked questions and their answers below. If
               you don&#39;t see your questions here, call us any time.
             </p>
+            <div className={styles.btnContainer}>
+              <Button href='/' btnType='black' text="See All Faq's" />
+            </div>
+            <div className={styles.imgContainer}>
+              <Image src={Img1} fill title='' alt='' className={styles.img} />
+            </div>
           </div>
-          <div className={styles.border}>
-            <div className={styles.bottom}>
-              {data.map((x, i) => (
-                <div
-                  key={x.id}
-                  className={
-                    selected === i
-                      ? styles.qaContainer + " " + styles.showBorder
-                      : styles.qaContainer
-                  }
-                  onClick={() => toggle(i)}
-                >
-                  <div className={styles.headingArrowContainer}>
-                    <h3 className={styles.question} lang='en'>
-                      {x.question}
-                    </h3>
+          <div className={styles.bottom}>
+            {data.map((x, i) => (
+              <div
+                key={x.id}
+                className={
+                  selected === i
+                    ? styles.qaContainer + " " + styles.showBorder
+                    : styles.qaContainer
+                }
+                onClick={() => toggle(i)}
+              >
+                <div className={styles.headingArrowContainer}>
+                  <h3 className={styles.question} lang='en'>
+                    {x.question}
+                  </h3>
+                  <div className={styles.arrowContainer}>
                     {selected === i ? (
-                      <Arrow
-                        className={styles.iconFlip}
-                        width={20}
-                        height={20}
-                      />
+                      <Arrow className={styles.iconFlip} />
                     ) : (
-                      <Arrow className={styles.icon} width={20} height={20} />
+                      <Arrow className={styles.icon} />
                     )}
                   </div>
-                  <div
-                    className={
-                      selected === i
-                        ? styles.answerContainer + " " + styles.show
-                        : styles.answerContainer
-                    }
-                  >
-                    <p className={styles.answer} lang='en'>
-                      {x.answer}
-                    </p>
-                  </div>
                 </div>
-              ))}
-            </div>
+                <div
+                  className={
+                    selected === i
+                      ? styles.answerContainer + " " + styles.show
+                      : styles.answerContainer
+                  }
+                >
+                  <p className={styles.answer} lang='en'>
+                    {x.answer}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </LayoutWrapper>

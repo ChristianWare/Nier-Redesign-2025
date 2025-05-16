@@ -1,10 +1,7 @@
-.container {
-  padding-bottom: 15rem;
-}
-
 .content {
+  padding-top: 15rem;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 5rem;
 }
 
@@ -13,13 +10,25 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  margin-top: 2rem;
+  gap: 3rem;
+  height: 100%;
 }
 
 .topText {
-  color: var(--black);
-  font-size: 2rem;
-  display: none;
+  font-family: var(--PPNeueMontrealMedium);
+  font-size: 2.3rem;
+  color: var(--text);
+}
+
+.imgContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.img {
+  object-fit: cover;
+  border-radius: 15px;
 }
 
 .bottom {
@@ -30,21 +39,23 @@
 }
 
 .qaContainer {
-  padding: 3rem 0rem;
-  border-bottom: 1px solid var(--red);
+  padding: 3rem;
+  background-color: var(--tan);
+  border: 2px solid var(--border);
+  border-radius: 10px;
   width: 100%;
   cursor: pointer;
   user-select: none;
+  display: grid;
 }
 
 .question {
-  font-size: 2.1rem;
+  font-size: 2.5rem;
   line-height: 1.2;
-  font-family: var(--SuisseIntlMedium);
-  text-transform: capitalize;
-  letter-spacing: -0.03em;
-  width: 50%;
-  /* font-size: 3rem; */
+  font-family: var(--PPNeueMontrealBold);
+  text-transform: none;
+  letter-spacing: -0.01em;
+  color: var(--black);
 }
 
 .answerContainer {
@@ -57,11 +68,39 @@
   max-height: 350px;
 }
 
+.answer {
+  margin-top: 2rem;
+  width: 100%;
+  color: var(--red);
+}
+
 .headingArrowContainer {
+  display: grid;
+  grid-template-columns: 6fr 1fr;
+}
+
+.arrowContainer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
+  justify-content: center;
+}
+
+.icon {
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  color: var(--black);
+  width: 4rem;
+  height: 4rem;
+  transform: rotate(45deg);
+}
+
+.iconFlip {
+  transform: rotate(180deg);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  color: var(--black);
+  width: 4rem;
+  height: 4rem;
 }
 
 .h3Container {
@@ -69,37 +108,24 @@
   gap: 1rem;
 }
 
-.icon {
-  cursor: pointer;
-  transition: all 0.4s ease-in-out;
-  color: var(--red);
-}
-
-.iconFlip {
-  transform: rotate(180deg);
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  color: var(--red);
-}
-
 .index {
   margin-right: 1rem;
   font-size: 2rem;
 }
 
-.answer {
-  margin-top: 2rem;
-  width: 100%;
-  color: var(--grayii);
-}
-
-@media screen and (max-width: 968px) {
+@media screen and (max-width: 1068px) {
   .content {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 3rem;
     margin-top: 0rem;
   }
 
+  .top {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .heading,
   .topText {
     text-align: center;
     width: 60%;
@@ -107,26 +133,13 @@
     margin-right: auto;
   }
 
-  /* .top {
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    align-self: normal;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  } */
+  .imgContainer {
+    height: 400px;
+  }
 }
 
-@media screen and (max-width: 820px) {
-  .bottom {
-    padding-left: 0rem;
-    padding-right: 0rem;
-  }
-
-  .top .topText {
+@media screen and (max-width: 768px) {
+  .topText {
     width: 100%;
   }
 }
@@ -149,87 +162,6 @@
   align-items: center;
 }
 
-.card {
-  width: 100%;
-  height: 300px;
-  position: relative;
-  /* “0 -10px 20px” means the shadow is offset -10px on the Y-axis (above). */
-  box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.cardInner {
-  width: 100%;
-  height: 100%;
-  padding: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  will-change: transform;
-}
-
-.card1 .cardInner {
-  background-color: var(--gray);
-}
-.card2 .cardInner {
-  background-color: var(--lightGray);
-}
-.card3 .cardInner {
-  background-color: var(--orange);
-}
-.card4 .cardInner {
-  background-color: var(--tan);
-}
-
-.titleHeading {
-  font-size: 15rem;
-  z-index: 2;
-  letter-spacing: -5px;
-}
-
-.card1 .cardInner .titleHeading {
-  color: var(--tan);
-}
-
-.card2 .cardInner .titleHeading {
-  color: var(--black);
-}
-
-.card4 .cardInner .titleHeading {
-  color: var(--gray);
-}
-
-/* .card1 .titleHeading,
-.card4 .titleHeading {
-  color: #07feff;
-  text-shadow: 0 0 10px rgba(7, 254, 255, 0.7);
-  background: rgba(7, 254, 255, 0.1);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  padding: 0.5rem 1rem;
-  border: 1px solid rgba(7, 254, 255, 0.3);
-  display: inline-block;
-  transform: perspective(1000px) translateZ(0);
-  box-shadow: 0 0 15px rgba(7, 254, 255, 0.2);
-} */
-
-.blackDot {
-  position: absolute;
-  top: 35px;
-  right: 35px;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  background-color: var(--black);
-}
-
-.card1 .cardInner .blackDot {
-  background-color: var(--tan);
-}
-
-.card4 .cardInner .blackDot {
-  background-color: var(--gray);
-}
-
 @media screen and (max-width: 1268px) {
   .card {
     height: 250px;
@@ -237,13 +169,6 @@
 
   .titleHeading {
     font-size: 10rem;
-  }
-
-  .blackDot {
-    top: 30px;
-    right: 30px;
-    width: 30px;
-    height: 30px;
   }
 }
 
