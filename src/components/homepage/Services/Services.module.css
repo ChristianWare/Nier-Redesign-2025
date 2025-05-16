@@ -1,5 +1,5 @@
 .container {
-  background-color: var(--tan);
+  background-color: var(--gray3);
 }
 
 .top {
@@ -14,7 +14,7 @@
   font-size: 8rem;
   font-weight: 700;
   display: block;
-  color: var(--red);
+  /* color: var(--red); */
   letter-spacing: -1px;
   text-align: center;
 }
@@ -81,13 +81,6 @@
   justify-content: space-between;
   gap: 15rem;
   height: 100%;
-}
-
-.reviewer {
-  line-height: 1;
-  font-family: var(--sofia);
-  letter-spacing: -0.02em;
-  font-size: 4.5rem;
 }
 
 .review {
@@ -171,7 +164,7 @@
 
 @media screen and (max-width: 1068px) {
   .copy {
-    width: 50%;
+    width: 80%;
   }
 
   .card,
