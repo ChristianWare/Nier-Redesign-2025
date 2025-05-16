@@ -23,7 +23,7 @@ export default function Services() {
       <LayoutWrapper>
         <div className={styles.top}>
           <h2 className={styles.heading}>Popular Services</h2>
-          <div className={styles.btnContainer}>
+          <div className={styles.topBtnContainer}>
             <Button btnType='red' href='/' text='All Services' />
           </div>
           <p className={styles.copy}>
