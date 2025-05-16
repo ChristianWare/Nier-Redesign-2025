@@ -36,7 +36,7 @@
 .heading {
   font-size: 8vw;
   line-height: 0.8;
-  color: var(--white);
+  color: var(--tan);
   width: 80%;
 }
 
@@ -49,7 +49,7 @@
   border-radius: 0.5rem;
   overflow: hidden;
   border-radius: 25px;
-  border: 1px solid var(--white);
+  border: 1px solid var(--tan);
   margin-right: 2rem;
   margin-left: 2rem;
 }
@@ -73,14 +73,14 @@
 
 .subHeadingCopyContainer {
   padding-left: 2rem;
-  border-left: 1px solid var(--white);
+  border-left: 1px solid var(--tan);
   width: 70%;
   margin-left: auto;
   backdrop-filter: blur(50px);
 }
 
 .subHeading {
-  color: var(--white);
+  color: var(--tan);
   font-weight: 700;
   display: block;
   font-size: 5rem;
@@ -88,7 +88,7 @@
 }
 
 .copy {
-  color: var(--white);
+  color: var(--tan);
 }
 
 .btnContainer {
@@ -102,7 +102,7 @@
   flex-wrap: wrap;
   width: 100%;
   gap: 5rem;
-  border-top: 1px solid var(--white);
+  border-top: 1px solid var(--tan);
   /* margin-top: 5rem; */
   padding-top: 3rem;
 }
@@ -117,14 +117,14 @@
 .number {
   font-size: 8vw;
   line-height: 0.8;
-  color: var(--white);
+  color: var(--tan);
   font-weight: 700;
   letter-spacing: -1px;
   line-height: 0.8;
 }
 
 .detail {
-  color: var(--white);
+  color: var(--tan);
   width: 50%;
 }
 

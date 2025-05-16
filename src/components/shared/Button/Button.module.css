@@ -26,14 +26,14 @@
 }
 
 .primary {
-  color: var(--white);
+  color: var(--tan);
   background-color: var(--blue);
   border: 1px solid var(--blue);
   transition: all 0.3s ease-in;
 }
 
 .primary:hover {
-  background-color: var(--white);
+  background-color: var(--tan);
   color: var(--blue);
 }
 
@@ -42,26 +42,26 @@
   line-height: 1;
   padding: 1.3rem 4rem;
   font-weight: 600;
-  color: var(--white);
+  color: var(--tan);
   border-radius: 50px;
   backdrop-filter: blur(50px);
-  border: 2px solid var(--white);
+  border: 2px solid var(--tan);
   font-size: 1.6rem;
 }
 
 .nav:hover {
-  background-color: var(--white);
+  background-color: var(--tan);
   color: var(--black);
 }
 
 .black {
-  color: var(--white);
+  color: var(--tan);
   background-color: var(--black);
   border: 1px solid var(--black);
   transition: all 0.3s ease-in;
 }
 
 .black:hover {
-  background-color: var(--white);
+  background-color: var(--tan);
   color: var(--black);
 }

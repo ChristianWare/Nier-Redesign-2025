@@ -68,7 +68,7 @@
 .title {
   display: block;
   font-size: 4rem;
-  color: var(--white);
+  color: var(--tan);
   font-weight: 600;
   margin-bottom: 1rem;
   display: block;
@@ -76,7 +76,7 @@
 }
 
 .copy {
-  color: var(--white);
+  color: var(--tan);
 }
 
 .btnContainer {
@@ -96,7 +96,7 @@
   position: relative;
   width: 400px;
   height: 400px;
-  border: 1px solid var(--white);
+  border: 1px solid var(--tan);
   border-radius: 50%;
   user-select: none;
 }
@@ -128,7 +128,7 @@
 }
 
 .arrowBox {
-  border: 2px solid var(--white);
+  border: 2px solid var(--tan);
   border-radius: 50%;
   width: 8rem;
   height: 8rem;
@@ -140,13 +140,13 @@
 }
 
 .arrowBox:hover {
-  background-color: var(--white);
+  background-color: var(--tan);
 }
 
 .icon {
   width: 4.5rem;
   height: 4.5rem;
-  color: var(--white);
+  color: var(--tan);
   transition: all 0.3s ease-in;
 }
 
@@ -163,8 +163,8 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  border: 1px solid var(--white);
-  background-color: var(--white);
+  border: 1px solid var(--tan);
+  background-color: var(--tan);
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
@@ -198,7 +198,7 @@
 
 .indicator {
   fill: none;
-  stroke: var(--white);
+  stroke: var(--tan);
   stroke-width: 2px;
   stroke-linecap: round;
   stroke-dasharray: 306;
@@ -225,8 +225,8 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  border: 1px solid var(--white);
-  background-color: var(--white);
+  border: 1px solid var(--tan);
+  background-color: var(--tan);
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
@@ -238,7 +238,6 @@
 .activeIndicator {
   background-color: transparent;
 }
-
 
 @media screen and (max-width: 1068px) {
   .card {

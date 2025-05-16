@@ -138,9 +138,9 @@ const Nav = () => {
           }
           onClick={openMenu}
         >
-          <span className={styles.whiteBar}></span>
-          <span className={styles.whiteBar}></span>
-          <span className={styles.whiteBar}></span>
+          <span className={styles.tanBar}></span>
+          <span className={styles.tanBar}></span>
+          <span className={styles.tanBar}></span>
         </span>
       </nav>
     </header>

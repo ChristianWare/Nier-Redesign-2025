@@ -17,15 +17,15 @@
 }
 
 .heading {
-  /* -webkit-text-stroke: 1px var(--white);
+  /* -webkit-text-stroke: 1px var(--tan);
   -webkit-text-fill-color: transparent; */
-  color: var(--white);
+  color: var(--tan);
   line-height: 0.8;
   font-size: 8vw;
 }
 
 .copy {
-  color: var(--white);
+  color: var(--tan);
   font-size: 2rem;
   width: 40%;
 }
@@ -198,11 +198,11 @@
 
 .activeCard .city,
 .activeCard .desc {
-  color: var(--white);
+  color: var(--tan);
 }
 
 .activeCard .city {
-  border-bottom-color: var(--white);
+  border-bottom-color: var(--tan);
 }
 
 .city,
@@ -311,7 +311,7 @@
     position: fixed;
     left: 2rem;
     right: 2rem;
-    color: white;
+    color: tan;
     z-index: 3;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
     pointer-events: auto; /* Make text clickable */
@@ -319,7 +319,7 @@
 
   .card .city {
     top: 60vh;
-    border-bottom: 1px solid var(--white);
+    border-bottom: 1px solid var(--tan);
     padding-bottom: 1rem;
     margin-bottom: 1rem;
     font-size: 2rem;

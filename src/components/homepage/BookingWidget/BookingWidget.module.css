@@ -1,5 +1,5 @@
 .heading {
-  color: var(--white);
+  color: var(--tan);
   font-weight: 600;
   font-family: var(--inter);
   text-transform: none;
@@ -13,7 +13,7 @@
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   backdrop-filter: blur(10px);
-  border: 1px solid var(--lightBlue3);
+  border: 2px solid var(--lightBlue3);
   border-radius: 50px;
   width: 100%;
   overflow: scroll;
@@ -27,8 +27,8 @@
 }
 
 .title {
-  color: var(--white);
-  font-family: var(--SuisseIntlMedium);
+  color: var(--tan);
+  font-family: var(--PPNeueMontrealBold);
   font-size: 1.6rem;
   text-align: center;
   white-space: nowrap;
@@ -36,7 +36,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-right: 1px solid var(--lightBlue3);
+  border-right: 2px solid var(--lightBlue3);
   padding: 1.8rem;
   cursor: pointer;
   user-select: none;
@@ -44,7 +44,7 @@
 }
 
 .title:hover {
-  background-color: var(--white);
+  background-color: var(--tan);
   color: var(--black);
 }
 
@@ -65,13 +65,13 @@
 }
 
 .title:nth-child(6):hover {
-  background-color: var(--white);
+  background-color: var(--tan);
   color: var(--black);
 }
 
 /* 2) when that same 6th title is hovered, style the very next .btnContainer */
 .title:nth-child(6):hover + .btnContainer {
-  background-color: var(--white);
+  background-color: var(--tan);
   color: var(--black);
 }
 
@@ -83,7 +83,7 @@
 
   .title {
     border-right: none;
-    border-bottom: 1px solid var(--white);
+    border-bottom: 1px solid var(--tan);
   }
 
   .btnContainer {

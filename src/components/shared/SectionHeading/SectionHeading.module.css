@@ -1,0 +1,33 @@
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 2px;
+  background-color: var(--red2);
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.title {
+  position: relative;
+  z-index: 1;
+  background-color: var(--white);
+  color: var(--red);
+  text-transform: uppercase;
+  border: 1px solid var(--red);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  line-height: 1;
+  width: fit-content;
+  text-align: center;
+}
+

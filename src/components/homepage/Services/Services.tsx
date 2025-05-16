@@ -8,6 +8,7 @@ import Left from "../../../../public/icons/left.svg";
 import Right from "../../../../public/icons/right.svg";
 import { services } from "@/data";
 import Button from "@/components/shared/Button/Button";
+import SectionHeading from "@/components/shared/SectionHeading/SectionHeading";
 
 export default function Services() {
   const slides = services.slice(0, 4);
@@ -18,13 +19,15 @@ export default function Services() {
 
   return (
     <section className={styles.container}>
+      <SectionHeading title='What we do' />
       <LayoutWrapper>
         <div className={styles.top}>
           <h2 className={styles.heading}>Popular Services</h2>
           <p className={styles.copy}>
-            We offer bespoke website design services that reflect your brand’s
-            identity and values. Our designs are crafted to captivate your
-            audience and provide an engaging user experience.
+            Whether it&lsquo;s a simple airport transfer, special event, or
+            girls night out, our black car service delivers the epitome of
+            luxury and class. Book your next ride with us. Hare are some of the
+            services we provide:
           </p>
         </div>
         <div className={styles.bottom}>
@@ -65,14 +68,6 @@ export default function Services() {
                 <div className={styles.cardRight}>
                   <div className={styles.cardRightTop}>
                     <h3 className={styles.reviewer}>{x.title}</h3>
-                    {/* <p className={styles.company}>{x.company}</p> */}
-                    {/* <span className={styles.starContainer}>
-                      <span className={styles.star}></span>
-                      <span className={styles.star}></span>
-                      <span className={styles.star}></span>
-                      <span className={styles.star}></span>
-                      <span className={styles.star}></span>
-                    </span>{" "} */}
                   </div>
                   <div>
                     <p className={styles.review}>{x.copy}</p>

@@ -27,7 +27,7 @@
 }
 
 .red {
-  color: var(--white);
+  color: var(--tan);
   background-color: var(--red);
   border: 1px solid var(--red);
 }

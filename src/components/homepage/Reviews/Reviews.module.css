@@ -55,7 +55,7 @@
 }
 
 .cardRight {
-  background-color: var(--white);
+  background-color: var(--tan);
   border-radius: 25px;
   padding: 2rem;
   display: flex;
@@ -124,7 +124,7 @@
 
 .arrowBox {
   border: 1px solid var(--gray);
-  background-color: var(--white);
+  background-color: var(--tan);
   border-radius: 50%;
   width: 8rem;
   height: 8rem;
@@ -160,8 +160,8 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  border: 1px solid var(--white);
-  background-color: var(--white);
+  border: 1px solid var(--tan);
+  background-color: var(--tan);
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
@@ -186,7 +186,7 @@
 
   .card,
   .evenCard {
-    background-color: var(--white);
+    background-color: var(--tan);
     border-radius: 25px;
     grid-template-columns: repeat(1, 1fr);
     min-height: 420px;
@@ -233,7 +233,7 @@
 
   .card,
   .card:nth-child(even) {
-    background-color: var(--white);
+    background-color: var(--tan);
     border-radius: 25px;
     grid-template-columns: repeat(1, 1fr);
   }

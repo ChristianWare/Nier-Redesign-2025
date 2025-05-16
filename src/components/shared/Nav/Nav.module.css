@@ -20,13 +20,13 @@
 
 .logo {
   z-index: 998;
-  color: var(--white);
+  color: var(--tan);
 }
 
 .newLogo {
   width: 107px;
   height: 45px;
-  color: var(--white);
+  color: var(--tan);
 }
 
 .officialLogoMobile {
@@ -48,7 +48,7 @@
   text-transform: uppercase;
   user-select: none;
   z-index: 998;
-  color: var(--white);
+  color: var(--tan);
 }
 
 .navItem:hover {
@@ -79,7 +79,7 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  color: var(--white);
+  color: var(--tan);
 }
 
 .phone {
@@ -109,13 +109,13 @@
   display: none;
 }
 
-.whiteBar {
+.tanBar {
   display: block;
   width: 45px;
   height: 3px;
   margin: 5px auto;
   border-radius: 25px;
-  background-color: var(--white);
+  background-color: var(--tan);
   transition: all 0.3s ease-in-out;
 }
 
@@ -202,16 +202,16 @@
     margin-right: 1rem;
   }
 
-  .hamburger.active .whiteBar:nth-child(1) {
+  .hamburger.active .tanBar:nth-child(1) {
     -webkit-transform: translateY(8px) rotate(45deg);
     transform: translateY(8px) rotate(45deg);
   }
 
-  .hamburger.active .whiteBar:nth-child(2) {
+  .hamburger.active .tanBar:nth-child(2) {
     opacity: 0;
   }
 
-  .hamburger.active .whiteBar:nth-child(3) {
+  .hamburger.active .tanBar:nth-child(3) {
     -webkit-transform: translateY(-8px) rotate(-45deg);
     transform: translateY(-8px) rotate(-45deg);
   }

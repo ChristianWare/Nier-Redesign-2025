@@ -1,5 +1,6 @@
 import AboutUs from "@/components/homepage/AboutUs/AboutUs";
 import Areas from "@/components/homepage/Areas/Areas";
+import Destinations from "@/components/homepage/Destinations/Destinations";
 import Hero from "@/components/homepage/Hero/Hero";
 import Process from "@/components/homepage/Process/Process";
 import ReviewSection from "@/components/homepage/ReviewSection/ReviewSection";
@@ -17,8 +18,8 @@ export default function Home() {
       <Areas />
       <ServiceAreas />
       <ReviewSection />
-      {/* <ServicesSection /> */}
       <Faq />
+      <Destinations />
     </main>
   );
 }

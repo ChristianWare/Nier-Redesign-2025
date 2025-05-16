@@ -36,8 +36,8 @@
 }
 
 .card {
-  border: 1px solid var(--gray);
-  border-radius: 10px;
+  border: 2px solid var(--border);
+  border-radius: 15px;
   padding: 3rem;
   padding-top: 4rem;
   display: flex;
@@ -49,15 +49,16 @@
 }
 
 .title {
-  font-family: var(--SuisseIntlMedium);
-  text-transform: capitalize;
-  letter-spacing: -0.04em;
-  font-size: 2.1rem;
-  font-weight: 500;
+  font-family: var(--sofia);
+  /* text-transform: capitalize; */
+  letter-spacing: -0.02em;
+  font-size: 4.5rem;
+  /* font-size: 2.1rem; */
+  /* font-weight: 500; */
 }
 
 .desc {
-  color: var(--darkGray);
+  color: var(--text);
 }
 
 .icon {
@@ -83,7 +84,7 @@
 .img {
   object-fit: cover;
   border-bottom: none;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 @media screen and (max-width: 1268px) {
