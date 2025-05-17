@@ -1,0 +1,106 @@
+.container {
+  background-color: var(--tan);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: -30px;
+  border-bottom: 2px solid var(--red);
+  border-right: 2px solid var(--red);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 5rem;
+  height: 100%;
+  border-right: 2px solid var(--red);
+  padding: 3rem;
+  padding-top: 5rem;
+}
+
+.card:first-child {
+  border-left: 2px solid var(--red);
+}
+
+.title {
+  color: var(--red);
+  margin-top: 1rem;
+}
+
+.arrowContainer {
+  border: 2px solid var(--red);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.arrow {
+  color: var(--red);
+  width: 3rem;
+  height: 3rem;
+}
+
+.infoBox {
+  background-color: var(--white);
+  margin: 3rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.info {
+  font-size: 1.8rem;
+  font-family: var(--PPNeueMontrealBold);
+  color: var(--darkGray);
+}
+
+@media screen and (max-width: 1268px) {
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card:nth-child(1) {
+    border-bottom: 2px solid var(--red);
+  }
+
+  .card:nth-child(2) {
+    border-right: none;
+    border-bottom: 2px solid var(--red);
+  }
+
+  .card:nth-child(3) {
+    border-left: 2px solid var(--red);
+  }
+}
+
+@media screen and (max-width: 668px) {
+  .content {
+    grid-template-columns: repeat(1, 1fr);
+    border-left: 2px solid var(--red);
+  }
+
+  .card:nth-child(odd) {
+    border-left: none;
+    border-right: none;
+  }
+
+  .card:nth-child(3) {
+    border-bottom: 2px solid var(--red);
+  }
+
+  .btnContainer {
+    display: grid;
+    width: 100%;
+  }
+}
