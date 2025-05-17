@@ -3,6 +3,8 @@ import LayoutWrapper from "../LayoutWrapper";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import styles from "./BlogSection.module.css";
 import Arrow from "../../../../public/icons/right.svg";
+import Image from "next/image";
+import Img1 from "../../../../public/images/heroii.jpg";
 
 const data = [
   {
@@ -31,10 +33,19 @@ export default function BlogSection() {
           {data.map((x) => (
             <div className={styles.card} key={x.id}>
               <div className={styles.cardTop}>
-                <span className={styles.category}>Category</span>
-                <h3 className={styles.title}>{x.title}</h3>
+                {/* <span className={styles.category}>Category</span> */}
+                <div className={styles.imgContainer}>
+                  <Image
+                    src={Img1}
+                    fill
+                    alt=''
+                    title=''
+                    className={styles.img}
+                  />
+                </div>
               </div>
               <div className={styles.cardBottom}>
+                <h3 className={styles.title}>{x.title}</h3>
                 <p className={styles.desc}>{x.desc}</p>
                 <div className={styles.arrowContainer}>
                   <Arrow className={styles.arrow} />

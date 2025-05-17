@@ -16,12 +16,34 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 5rem;
+  gap: 3rem;
   height: 100%;
   border: 2px solid var(--border);
   border-radius: 15px;
-  padding: 3rem;
-  padding-top: 5rem;
+  padding: 1rem;
+}
+
+.cardTop {
+  width: 100%;
+}
+
+.imgContainer {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.img {
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.cardBottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
 }
 
 .title {
@@ -38,6 +60,8 @@
   align-items: center;
   justify-content: center;
   margin-top: 3rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
 }
 
 .arrow {
@@ -72,6 +96,10 @@
 @media screen and (max-width: 668px) {
   .content {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .imgContainer {
+    height: 250px;
   }
 
   .btnContainer {
