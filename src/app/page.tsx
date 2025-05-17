@@ -9,6 +9,7 @@ import Services from "@/components/homepage/Services/Services";
 import BlogSection from "@/components/shared/BlogSection/BlogSection";
 import ContactSection from "@/components/shared/ContactSection/ContactSection";
 import Faq from "@/components/shared/Faq/Faq";
+import Footer from "@/components/shared/Footer/Footer";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <Faq />
       <BlogSection />
       <ContactSection />
+      <Footer />
     </main>
   );
 }

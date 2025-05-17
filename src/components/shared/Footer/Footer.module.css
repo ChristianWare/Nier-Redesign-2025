@@ -1,0 +1,145 @@
+.container {
+  background-color: var(--red);
+}
+
+.headingOne {
+  white-space: nowrap;
+  font-size: 8vw;
+  text-align: center;
+  color: var(--tan);
+  margin-bottom: 3rem;
+  /* padding-top: 10rem; */
+  /* line-height: 0;
+  -webkit-text-stroke: 3px var(--tan);
+  -webkit-text-fill-color: var(--red); */
+}
+
+.content {
+  border: 1px solid var(--white);
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
+
+.left {
+  border-right: 1px solid var(--white);
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.heading {
+  font-size: 2.5rem;
+  color: var(--white);
+}
+
+.copy {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  width: 80%;
+  color: var(--white);
+}
+
+.email {
+  border: 1px solid var(--white);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1rem;
+  color: var(--white);
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  color: var(--white);
+  transform: rotate(90deg);
+}
+
+.privacy {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.right {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  padding: 5rem;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.optionList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.option {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.data2Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+@media screen and (max-width: 1068px) {
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .left,
+  .right {
+    padding: 3rem;
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .left {
+    border-right: none;
+    border-bottom: 1px solid var(--white);
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .right {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .optionSection {
+    margin-bottom: 5rem;
+  }
+}
