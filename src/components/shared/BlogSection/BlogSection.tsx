@@ -25,8 +25,8 @@ const data = [
 export default function BlogSection() {
   return (
     <section className={styles.container}>
+      <SectionHeading title='Recent Articles' />
       <LayoutWrapper>
-        <SectionHeading title='Recent Articles' />
         <div className={styles.content}>
           {data.map((x) => (
             <div className={styles.card} key={x.id}>
