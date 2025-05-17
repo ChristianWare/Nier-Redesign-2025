@@ -1,6 +1,5 @@
 "use client";
 
-// import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import styles from "./HigherMargins.module.css";
 import Image from "next/image";
 import Img from "../../../../public/images/heroii.jpg";
@@ -36,13 +35,7 @@ const HigherMargins = () => {
   ];
   return (
     <section className={styles.container}>
-      {/* <LayoutWrapper> */}
-      {/* <h2 className={styles.heading}>Tailored Website Design</h2>
-      <p className={styles.copy}>
-        We offer bespoke website design services that reflect your brand’s
-        identity and values. Our designs are crafted to captivate your audience
-        and provide an engaging user experience.
-      </p> */}
+     
       <div className={styles.bottom}>
         {data.map((x, index) => (
           <React.Fragment key={index}>
@@ -60,7 +53,6 @@ const HigherMargins = () => {
           </React.Fragment>
         ))}
       </div>
-      {/* </LayoutWrapper> */}
     </section>
   );
 };

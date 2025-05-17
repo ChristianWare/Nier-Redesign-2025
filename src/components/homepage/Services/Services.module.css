@@ -24,12 +24,10 @@
 }
 
 .copy {
-  font-family: var(--PPNeueMontrealMedium);
   color: var(--black);
-  width: 60%;
-  font-size: 2.3rem;
-  font-family: var(--PPNeueMontrealMedium);
-}
+  width: 40%;
+  line-height: 1.2;
+  font-size: 1.8rem;}
 
 .bottom {
   margin-top: 2rem;

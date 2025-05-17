@@ -6,11 +6,6 @@
   color: var(--red);
 }
 
-.copy {
-  color: var(--red);
-  font-family: var(--PPNeueMontrealMedium);
-}
-
 .topContainer {
   display: flex;
   align-items: flex-start;
@@ -20,8 +15,11 @@
 }
 
 .copy {
-  width: 40%;
-  font-size: 2.3rem;
+  color: var(--red);
+  font-family: var(--PPNeueMontrealMedium);
+  line-height: 1.2;
+  font-size: 1.8rem;
+  width: 30%;
 }
 
 .widgitContainer {
@@ -33,13 +31,14 @@
 }
 
 .title {
-  font-family: var(--inter);
+  font-family: var(--PPNeueMontrealBold);
   font-size: 1.4rem;
   font-weight: 600;
   color: var(--red);
   border: 2px solid var(--red);
   border-radius: 50px;
   padding: 0.8rem 1.5rem;
+  padding-top: 0.9rem;
   display: block;
   white-space: nowrap;
   cursor: pointer;

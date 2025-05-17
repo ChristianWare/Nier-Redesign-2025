@@ -23,12 +23,14 @@
   z-index: 1;
   background-color: var(--white);
   color: var(--red);
+  font-family: var(--PPNeueMontrealBold);
   text-transform: uppercase;
-  border: 1px solid var(--red);
+  border: 2px solid var(--red);
   padding: 0.5rem 1rem;
+  padding-top: 0.7rem;
   border-radius: 50px;
   line-height: 1;
   width: fit-content;
   text-align: center;
+  
 }
-
