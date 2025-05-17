@@ -1,11 +1,11 @@
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import styles from "./Fleet.module.css";
 import Image from "next/image";
-import Suburban from "../../../../public/images/sub.jpg";
-import Escalade from "../../../../public/images/escalade.jpg";
-import Sprinter from "../../../../public/images/sprinter.jpg";
-import MercedesSedan from "../../../../public/images/mercedesSedan.jpg";
-import PartyBus from "../../../../public/images/partyBusii.jpg";
+import Suburban from "../../../../public/images/sub.avif";
+import Escalade from "../../../../public/images/escalade.avif";
+import Sprinter from "../../../../public/images/sprinter.png";
+import MercedesSedan from "../../../../public/images/mercedesSedan.avif";
+import PartyBus from "../../../../public/images/partyBusii.png";
 import SectionHeading from "@/components/shared/SectionHeading/SectionHeading";
 import Button from "@/components/shared/Button/Button";
 
@@ -14,7 +14,7 @@ const data = [
     id: 1,
     title: "Chevy Suburban",
     seats: "7 seater",
-    cargo: "144.7 cu ft", // max volume to front seats :contentReference[oaicite:0]{index=0}
+    cargo: "144.7 cu ft",
     desc: "Our flagship full-size SUV pairs tri-zone climate control with class-leading leg- and luggage-room—perfect for families or small groups.",
     src: Suburban,
   },
@@ -22,7 +22,7 @@ const data = [
     id: 2,
     title: "Cadillac Escalade ESV",
     seats: "6 seater",
-    cargo: "121 cu ft", // max volume (ESV) :contentReference[oaicite:1]{index=1}
+    cargo: "121 cu ft",
     desc: "The pinnacle of luxury SUVs—premium leather, rear captain’s chairs, and magnetic ride control for a first-class travel experience.",
     src: Escalade,
   },
@@ -30,7 +30,7 @@ const data = [
     id: 3,
     title: "Mercedes-Benz Sprinter (Executive)",
     seats: "14 seater",
-    cargo: "Up to 532 cu ft", // high-roof spec :contentReference[oaicite:2]{index=2}
+    cargo: "Up to 532 cu ft",
     desc: "Lounge-style cabin with stand-up headroom, USB-C charging at every seat, and onboard Wi-Fi—ideal for corporate teams and golf outings.",
     src: Sprinter,
   },
@@ -38,7 +38,7 @@ const data = [
     id: 4,
     title: "Mercedes-Benz E-Class Sedan",
     seats: "3 seater",
-    cargo: "19 cu ft", // trunk capacity :contentReference[oaicite:3]{index=3}
+    cargo: "19 cu ft",
     desc: "A refined executive sedan for solo travelers or couples who value discreet style, quiet comfort, and advanced safety tech.",
     src: MercedesSedan,
   },

@@ -1,13 +1,8 @@
 import type { Metadata } from "next";
-import { Oswald, Inter, Sofia_Sans_Extra_Condensed } from "next/font/google";
+import { Inter, Sofia_Sans_Extra_Condensed } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
-
-const oswald = Oswald({
-  variable: "--oswald",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-});
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({
   variable: "--inter",
@@ -58,8 +53,14 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${oswald.variable} ${inter.variable} ${sofia.variable} ${SuisseIntlMedium.variable} ${SuisseRegular.variable} ${PPNeueMontrealBold.variable} ${PPNeueMontrealMedium.variable}`}
+        className={` ${inter.variable} ${sofia.variable} ${SuisseIntlMedium.variable} ${SuisseRegular.variable} ${PPNeueMontrealBold.variable} ${PPNeueMontrealMedium.variable}`}
       >
+        <Toaster
+          position='top-right'
+          toastOptions={{
+            className: "toastFont",
+          }}
+        />
         {children}
       </body>
     </html>

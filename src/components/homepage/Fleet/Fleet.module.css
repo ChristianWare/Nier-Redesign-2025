@@ -35,8 +35,10 @@
 }
 
 .img {
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 15px;
+  background-color: var(--white);
+  padding: 5rem;
 }
 
 .card {
@@ -66,8 +68,8 @@
 }
 
 .detail {
-    font-family: var(--PPNeueMontrealMedium);
-    color: var(--text);
+  font-family: var(--PPNeueMontrealMedium);
+  color: var(--text);
 }
 
 @media screen and (max-width: 1268px) {
@@ -83,24 +85,25 @@
 
   .content {
     grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10rem;
   }
 
   .card {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .imgContainer {
     height: 400px;
   }
-}
-
-@media screen and (max-width: 768px) {
-  .card {
-    grid-template-columns: repeat(1, 1fr);
-  }
 
   .btnContainer {
     display: grid;
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .imgContainer {
+    height: 300px;
   }
 }

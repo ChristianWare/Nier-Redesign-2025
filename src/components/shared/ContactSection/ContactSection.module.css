@@ -1,0 +1,195 @@
+.container {
+  background-color: var(--tan);
+}
+
+.bottom {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.left,
+.right {
+  flex: 1;
+  width: 100%;
+}
+
+.heading {
+  margin-bottom: 2rem;
+  color: var(--red);
+  width: fit-content;
+  text-align: center;
+}
+
+.copy {
+  width: 90%;
+  font-size: 1.8rem;
+}
+
+.letsTalkContainer {
+  margin-top: 3rem;
+  border: 1px solid var(--border);
+  width: fit-content;
+  padding: 3rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  background-color: var(--red);
+}
+
+.letsTalkContainer h3 {
+  color: var(--white);
+}
+
+.iconInfoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.icon {
+  width: 3rem;
+  height: 3rem;
+  color: var(--white);
+}
+
+.info {
+  color: var(--white);
+  font-family: var(--PPNeueMontrealBold);
+  font-size: 1.8rem;
+}
+
+.form {
+  padding: 2rem;
+  border-radius: 10px;
+  border: 2px solid var(--border);
+  width: 100%;
+}
+
+.namesContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  width: 100%;
+}
+
+.labelInputBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 1.5rem;
+  flex: 1;
+  width: 100%;
+}
+
+.labelInputBox label {
+  font-family: var(--roboto);
+  font-weight: 400;
+  color: var(--text);
+  padding-left: 0.3rem;
+}
+
+.labelInputBox input,
+.labelInputBox textarea {
+  border-radius: 8px;
+  border-color: var(--border);
+  border-width: 2px;
+  height: 40px;
+  width: 100%;
+  color: var(--text);
+  padding: 1rem;
+  width: 100%;
+  font-family: var(--roboto);
+  font-weight: 400;
+}
+
+.labelInputBox span {
+  font-family: var(--roboto);
+  font-size: 1.4rem;
+  color: rgb(140, 139, 139);
+}
+
+.labelInputBox textarea {
+  height: 130px;
+  resize: vertical;
+}
+
+.error {
+  color: red !important;
+}
+
+.btnBtnContainer {
+  margin-top: 3rem;
+}
+
+.btn {
+  text-align: center;
+  font-size: 1.8rem;
+  white-space: nowrap;
+  text-transform: uppercase;
+  border-radius: 5px;
+  user-select: none;
+  transition: all 0.1s ease-in;
+  display: inline-block;
+  padding: 10px 35px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+  color: var(--cream);
+  background-color: var(--darkBlue);
+  border: 2px solid var(--darkBlue);
+  width: 100%;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: var(--darkBlue);
+}
+
+@media screen and (max-width: 958px) {
+  .bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .container {
+    padding-top: 5rem;
+    padding-bottom: 0rem;
+  }
+
+  .copy {
+    width: 100%;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .letsTalkContainer {
+    width: 100%;
+  }
+
+  .namesContainer {
+    flex-direction: column;
+    gap: 0rem;
+  }
+}
