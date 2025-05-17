@@ -17,8 +17,6 @@
 }
 
 .heading {
-  /* -webkit-text-stroke: 1px var(--tan);
-  -webkit-text-fill-color: transparent; */
   color: var(--tan);
   line-height: 0.8;
   font-size: 8vw;
@@ -27,7 +25,7 @@
 .copy {
   color: var(--tan);
   font-size: 2rem;
-  width: 40%;
+  width: 30%;
 }
 
 .bottom {
@@ -35,11 +33,6 @@
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 5rem;
   margin-top: 10rem;
-}
-
-.img {
-  object-fit: cover;
-  border-radius: 25px;
 }
 
 .right {
@@ -61,6 +54,7 @@
 .desc {
   color: var(--gray2);
   margin-top: 3rem;
+  font-size: 1.8rem;
 }
 
 .left {
@@ -185,6 +179,11 @@
   ); */
 }
 
+.img {
+  object-fit: cover;
+  border-radius: 25px;
+}
+
 .card {
   transition: all 0.5s ease;
   opacity: 0.7;
@@ -232,6 +231,73 @@
 
 @media screen and (max-width: 668px) {
   .container {
+    padding-bottom: 10rem;
+  }
+
+  .top {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .left {
+    align-self: flex-start;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 90px;
+    height: 100%;
+    width: 100%;
+    /* background-color: var(--darkGray); */
+    z-index: 4;
+  }
+
+  .right {
+    padding: 1rem 2rem;
+  }
+
+  .right > div {
+    position: sticky;
+    top: 90px;
+    background-color: var(--darkGray);
+    width: 100%;
+  }
+
+  .card {
+    background-color: var(--darkGray);
+    opacity: 1;
+    padding: 2rem;
+    border: 2px solid var(--tan);
+    border-radius: 15px;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* .activeCard {
+    z-index: 2;
+  } */
+
+  .heading,
+  .copy {
+    text-align: center;
+    width: 100%;
+  }
+
+  .bottom {
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 3rem;
+  }
+  .right {
+    margin-top: 0rem;
+    grid-gap: 5rem;
+    padding-bottom: 0rem;
+  }
+
+  .imgContainer {
+    height: 300px;
+  }
+}
+
+/* @media screen and (max-width: 668px) {
+  .container {
     padding-top: 5rem;
     padding-bottom: 10rem;
   }
@@ -248,7 +314,6 @@
     grid-template-columns: 1fr;
     margin-top: 3rem;
     position: relative;
-    /* Remove fixed height - let content determine height */
   }
 
   .left {
@@ -285,7 +350,7 @@
   .right {
     position: relative;
     z-index: 2;
-    margin-top: -100vh; /* Pull content up over the image */
+    margin-top: -100vh;
     padding: 2rem;
   }
 
@@ -298,39 +363,35 @@
     padding-bottom: 20vh;
     opacity: 0;
     transition: opacity 0.5s ease;
-    pointer-events: none; /* Allow clicking through to content below */
+    pointer-events: none;
   }
 
   .activeCard {
     opacity: 1;
   }
 
-  /* Text overlay styles */
   .card .city,
   .card .desc {
-    position: fixed;
     left: 2rem;
     right: 2rem;
-    color: tan;
+    color: var(--tan);
     z-index: 3;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-    pointer-events: auto; /* Make text clickable */
+    pointer-events: auto;
   }
 
   .card .city {
     top: 60vh;
-    border-bottom: 1px solid var(--tan);
     padding-bottom: 1rem;
     margin-bottom: 1rem;
-    font-size: 2rem;
+    font-size: 15vw;
   }
 
   .card .desc {
-    top: calc(60vh + 2rem);
+    margin-top: 1rem;
   }
 
-  /* Ensure last card has enough space */
   .card:last-child {
     padding-bottom: 50vh;
   }
-}
+} */

@@ -51,6 +51,10 @@
   color: var(--tan);
 }
 
+.navItem a {
+  font-family: var(--PPNeueMontrealBold);
+}
+
 .navItem:hover {
   color: var(--red);
 }
@@ -103,6 +107,11 @@
   align-items: center;
   justify-content: flex-end;
   gap: 2rem;
+}
+
+.rightLinks a {
+  font-family: var(--PPNeueMontrealBold);
+
 }
 
 .hamburger {

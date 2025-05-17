@@ -170,7 +170,6 @@ export default function ServiceAreas() {
               there, too.
             </p>
           </div>
-
           <div className={styles.bottom}>
             <div className={styles.left}>
               <div className={styles.imgContainer} ref={stickyRef}>

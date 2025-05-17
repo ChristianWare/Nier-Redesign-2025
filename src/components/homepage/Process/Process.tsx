@@ -49,19 +49,21 @@ export default function Process() {
           <div className={styles.top}>
             <div className={styles.bottom}>
               <div className={styles.left}>
-                <h2 className={styles.heading}>
-                  4 Easy steps <br /> To book your next ride
-                </h2>
-                <div className={styles.imgContanier}>
-                  <Image
-                    src={Img1}
-                    alt=''
-                    title=''
-                    fill
-                    className={styles.img}
-                  />
-                  <div className={styles.btnContainer}>
-                    <BookingButton text='Book Here • Book Here • Book Here • Book Here •' />
+                <div className={styles.leftContent}>
+                  <h2 className={styles.heading}>
+                    4 Easy steps To book your next ride
+                  </h2>
+                  <div className={styles.imgContanier}>
+                    <Image
+                      src={Img1}
+                      alt=''
+                      title=''
+                      fill
+                      className={styles.img}
+                    />
+                    <div className={styles.btnContainer}>
+                      <BookingButton text='Book Here • Book Here • Book Here • Book Here •' />
+                    </div>
                   </div>
                 </div>
               </div>
