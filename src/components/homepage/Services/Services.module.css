@@ -1,5 +1,5 @@
 .container {
-  background-color: var(--gray3);
+  background-color: var(--lightgray);
 }
 
 .top {
@@ -27,7 +27,8 @@
   color: var(--black);
   width: 40%;
   line-height: 1.2;
-  font-size: 1.8rem;}
+  font-size: 1.8rem;
+}
 
 .bottom {
   margin-top: 2rem;

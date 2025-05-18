@@ -111,7 +111,6 @@
 
 .rightLinks a {
   font-family: var(--PPNeueMontrealBold);
-
 }
 
 .hamburger {
@@ -150,17 +149,17 @@
   .navMenu {
     position: fixed;
     left: -120%;
-    top: -20px;
+    top: 0px;
     flex-direction: column;
     gap: 3rem;
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     text-align: left;
     transition: 0.3s all ease-in;
     z-index: 998;
-    background-color: var(--cream);
+    background-color: var(--tan);
     padding: 1rem;
     padding-left: 2rem;
   }
@@ -214,15 +213,17 @@
   .hamburger.active .tanBar:nth-child(1) {
     -webkit-transform: translateY(8px) rotate(45deg);
     transform: translateY(8px) rotate(45deg);
+    background-color: var(--black);
   }
-
+  
   .hamburger.active .tanBar:nth-child(2) {
     opacity: 0;
   }
-
+  
   .hamburger.active .tanBar:nth-child(3) {
     -webkit-transform: translateY(-8px) rotate(-45deg);
     transform: translateY(-8px) rotate(-45deg);
+    background-color: var(--black);
   }
 
   .rightLinks {
