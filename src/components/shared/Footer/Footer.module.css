@@ -3,25 +3,21 @@
 }
 
 .headingOne {
-  white-space: nowrap;
   font-size: 8vw;
   text-align: center;
   color: var(--tan);
   margin-bottom: 3rem;
-  /* padding-top: 10rem; */
-  /* line-height: 0;
-  -webkit-text-stroke: 3px var(--tan);
-  -webkit-text-fill-color: var(--red); */
 }
 
 .content {
-  border: 1px solid var(--white);
+  border: 2px solid var(--tan);
+  border-radius: 15px;
   display: grid;
   grid-template-columns: 2fr 3fr;
 }
 
 .left {
-  border-right: 1px solid var(--white);
+  border-right: 2px solid var(--tan);
   padding: 5rem;
   display: flex;
   flex-direction: column;
@@ -31,32 +27,32 @@
 }
 
 .heading {
-  font-size: 2.5rem;
-  color: var(--white);
+  font-size: 4rem;
+  color: var(--tan);
 }
 
 .copy {
   font-size: 1.1rem;
   text-transform: uppercase;
   width: 80%;
-  color: var(--white);
+  color: var(--tan);
 }
 
 .email {
-  border: 1px solid var(--white);
+  border: 1px solid var(--tan);
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
   padding: 1rem;
-  color: var(--white);
+  color: var(--tan);
 }
 
 .icon {
   width: 2rem;
   height: 2rem;
-  color: var(--white);
+  color: var(--tan);
   transform: rotate(90deg);
 }
 
@@ -74,8 +70,8 @@
 
 .title {
   text-transform: uppercase;
-  font-size: 1.1rem;
-  color: var(--text);
+  font-family: var(--PPNeueMontrealBold);
+  color: var(--tan);
 }
 
 .optionList {
@@ -89,9 +85,8 @@
 }
 
 .option {
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  color: var(--white);
+  font-size: 1.4rem;
+  color: var(--tan);
 }
 
 .bottom {
@@ -112,7 +107,17 @@
   margin-bottom: 3rem;
 }
 
+@media screen and (max-width: 1268px) {
+  .headingOne {
+    font-size: 10vw;
+  }
+}
+
 @media screen and (max-width: 1068px) {
+  .headingOne {
+    font-size: 14vw;
+  }
+
   .content {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -130,11 +135,15 @@
 
   .left {
     border-right: none;
-    border-bottom: 1px solid var(--white);
+    border-bottom: 2px solid var(--tan);
   }
 }
 
 @media screen and (max-width: 568px) {
+  .headingOne {
+    font-size: 15vw;
+  }
+
   .right {
     grid-template-columns: repeat(2, 1fr);
   }

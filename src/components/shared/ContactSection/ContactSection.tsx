@@ -50,14 +50,16 @@ export default function ContactSection() {
     <section className={styles.container}>
       <LayoutWrapper>
         <div className={styles.content}>
+          <div className={styles.top}>
+            <h2 className={styles.heading}>Contact Us</h2>
+            <p className={styles.copy}>
+              Reach out to us anytime. Our dedicated team is ready to assist you
+              with bookings, inquiries, and personalized travel solutions.
+              We&#39;re just a message or call away.
+            </p>
+          </div>
           <div className={styles.bottom}>
             <div className={styles.left}>
-              <h2 className={styles.heading}>Contact Us</h2>
-              <p className={styles.copy}>
-                Reach out to us anytime. Our dedicated team is ready to assist
-                you with bookings, inquiries, and personalized travel solutions.
-                We&#39;re just a message or call away.
-              </p>
               <div className={styles.letsTalkContainer}>
                 <h3>Let&#39;s talk</h3>
                 <div className={styles.iconInfoContainer}>
