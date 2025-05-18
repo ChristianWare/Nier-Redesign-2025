@@ -6,13 +6,13 @@ import styles from "./ServiceAreas.module.css";
 import Image from "next/image";
 
 /* ------------- images per city ------------- */
-import ImgScottsdale from "../../../../public/images/scottsdale.jpg";
-import ImgPhoenix from "../../../../public/images/phoenix.jpg";
-import ImgMesa from "../../../../public/images/mesa.jpg";
+import ImgScottsdale from "../../../../public/images/scottsdaleii.jpg";
+import ImgPhoenix from "../../../../public/images/phoenixii.jpg";
+import ImgMesa from "../../../../public/images/mesaii.jpg";
 import ImgTempe from "../../../../public/images/tempe.jpg";
-import ImgWestValley from "../../../../public/images/westValley.jpg";
-import ImgCasaGrande from "../../../../public/images/casaGrande.jpg";
-import ImgMaricopa from "../../../../public/images/maricopa.jpeg";
+import ImgWestValley from "../../../../public/images/westValleyiii.jpg";
+import ImgCasaGrande from "../../../../public/images/casaGrandeii.jpg";
+import ImgMaricopa from "../../../../public/images/maricopaii.jpg";
 
 const data = [
   {
@@ -163,7 +163,8 @@ export default function ServiceAreas() {
         <div className={styles.content}>
           <div className={styles.top}>
             <h2 className={styles.heading}>
-              Serving <br /> the Phoenix  <br />metropolitan area
+              Serving <br /> the Phoenix <br />
+              metropolitan area
             </h2>
             <p className={styles.copy}>
               Need to go somewhere outside our service area? We&lsquo;ll get you
