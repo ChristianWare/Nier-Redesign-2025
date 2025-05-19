@@ -40,6 +40,12 @@ export default function SafetyAndCompliance() {
         <div className={styles.content}>
           <div className={styles.top}>
             <h2 className={styles.heading}>Safety & Compliance</h2>
+            <p className={styles.copy}>
+              Licensed under ADOT TCP #PHX-001234 and TSA-approved, our fleet is
+              GPS-monitored in real time and maintained above DOT standards.
+              Every ride offers ADA ramps and child-safety seats on request—so
+              safety and compliance travel with you, automatically.
+            </p>
           </div>
           <div className={styles.bottom}>
             {data.map((x) => (

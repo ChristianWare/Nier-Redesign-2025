@@ -2,9 +2,23 @@
   background-color: var(--darkGray);
 }
 
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
 .heading {
   color: var(--tan);
-  text-align: center;
+  text-align: right;
+}
+
+.copy {
+  color: var(--tan);
+  width: 60%;
+  text-align: right;
 }
 
 .bottom {
@@ -74,12 +88,27 @@
 }
 
 @media screen and (max-width: 1068px) {
+  .copy {
+    width: 80%;
+  }
+
   .bottom {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (max-width: 668px) {
+  .top {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .heading,
+  .copy {
+    text-align: center;
+    width: 100%;
+  }
+
   .bottom {
     grid-template-columns: repeat(1, 1fr);
   }
