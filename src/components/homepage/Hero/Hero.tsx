@@ -19,9 +19,7 @@ export default function Hero() {
           fill
           className={styles.img}
         />
-        <div className={styles.navContainer}>
-          <Nav />
-        </div>
+        <Nav />
         <LayoutWrapper>
           <div className={styles.content}>
             <div className={styles.contentTop}>
