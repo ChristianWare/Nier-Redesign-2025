@@ -3,6 +3,7 @@ import styles from "./AboutAndHistory.module.css";
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import Image from "next/image";
 import Chauffeur from "../../../../public/images/chauffeur.jpg";
+import BookingButton from "@/components/homepage/BookingButton/BookingButton";
 
 const data = [
   {
@@ -25,26 +26,26 @@ const data = [
   },
 ] as const;
 
-const dataii = [
-  {
-    id: 4,
-    title: "Professional Chauffeurs",
-    description:
-      "Our team of drivers is dedicated to providing you with top-notch service.",
-  },
-  {
-    id: 5,
-    title: "Safety & Comfort",
-    description:
-      "They're trained in safe driving and know Arizona roads inside out—ensuring a smooth, secure trip while you relax.",
-  },
-  {
-    id: 6,
-    title: "Comprehensive Coverage",
-    description:
-      "Need airport transfers, corporate travel, or event transport? We've got you covered!",
-  },
-] as const;
+// const dataii = [
+//   {
+//     id: 4,
+//     title: "Professional Chauffeurs",
+//     description:
+//       "Our team of drivers is dedicated to providing you with top-notch service.",
+//   },
+//   {
+//     id: 5,
+//     title: "Safety & Comfort",
+//     description:
+//       "They're trained in safe driving and know Arizona roads inside out—ensuring a smooth, secure trip while you relax.",
+//   },
+//   {
+//     id: 6,
+//     title: "Comprehensive Coverage",
+//     description:
+//       "Need airport transfers, corporate travel, or event transport? We've got you covered!",
+//   },
+// ] as const;
 
 export default function AboutAndHistory() {
   return (
@@ -84,13 +85,14 @@ export default function AboutAndHistory() {
             </div>
           </div>
           <div className={styles.bottom}>
-            <div className={styles.left}>
-              {dataii.map((x) => (
+            <div className={styles.leftii}>
+              {/* {dataii.map((x) => (
                 <div className={styles.card} key={x.id}>
                   <h4 className={styles.title}>{x.title}</h4>
                   <p className={styles.description}>{x.description}</p>
                 </div>
-              ))}
+              ))} */}
+              <BookingButton text='Book Here • Book Here • Book Here • Book Here •' />{" "}
             </div>
             <div className={styles.rightii}>
               <h3 className={styles.headingii}>
