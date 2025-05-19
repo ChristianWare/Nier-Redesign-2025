@@ -10,14 +10,13 @@
 .heading {
   color: var(--red);
   line-height: 0.9;
+  margin-bottom: 2rem;
 }
 
 .span {
   font-family: var(--PPNeueMontrealMedium);
   color: var(--red);
   display: block;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
 }
 
 .starContainer {
@@ -25,7 +24,7 @@
   align-items: center;
   justify-content: flex-start;
   gap: 0.1rem;
-  margin-top: 0.5rem;
+  margin-top: 2rem;
   margin-bottom: 2rem;
 }
 

@@ -23,7 +23,9 @@ export default function AboutPageIntro() {
         <div className={styles.content}>
           <div className={styles.top}>
             <h1 className={styles.heading}>Get to know us better</h1>
-            <span className={styles.span}>Average Guest Review</span>
+            <span className={styles.span}>
+              Premier Black-Car Service • Est. 2004 • Phoenix, Arizona
+            </span>
             <span className={styles.starContainer}>
               <span className={styles.star}></span>
               <span className={styles.star}></span>
