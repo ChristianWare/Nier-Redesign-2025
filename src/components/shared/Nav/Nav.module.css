@@ -123,11 +123,11 @@
 
 .tanBar {
   display: block;
-  width: 45px;
+  width: 50px;
   height: 3px;
   margin: 5px auto;
   border-radius: 25px;
-  background-color: var(--tan);
+  background-color: var(--nav-item-color, var(--tan));
   transition: all 0.3s ease-in-out;
 }
 
@@ -174,7 +174,6 @@
     color: var(--black);
     font-family: var(--sofia);
     font-size: 12vw;
-
   }
 
   .officialLogoMobile {
@@ -222,15 +221,14 @@
     background-color: var(--black);
   }
 
+  .hamburger.active .tanBar:nth-child(1),
+  .hamburger.active .tanBar:nth-child(3) {
+    background-color: var(--nav-item-color, var(--black));
+  }
+
   .rightLinks {
     display: none;
   }
-}
-
-@media screen and (max-width: 768px) {
-  /* .logo {
-      font-size: 3rem;
-    } */
 }
 
 @media screen and (max-width: 568px) {
