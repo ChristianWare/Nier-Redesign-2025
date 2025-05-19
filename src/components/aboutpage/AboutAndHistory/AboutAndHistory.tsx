@@ -54,7 +54,7 @@ export default function AboutAndHistory() {
         <div className={styles.content}>
           <div className={styles.top}>
             <h2 className={styles.heading}>Our Story</h2>
-            <h3>Established in 2004</h3>
+            <h3 className={styles.subHeading}>Established in 2004</h3>
           </div>
           <div className={styles.middle}>
             <div className={styles.left}>

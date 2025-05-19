@@ -1,5 +1,6 @@
 import AboutAndHistory from "@/components/aboutpage/AboutAndHistory/AboutAndHistory";
 import AboutPageIntro from "@/components/aboutpage/AboutPageIntro/AboutPageIntro";
+import MissionAndValues from "@/components/aboutpage/MissionAndValues/MissionAndValues";
 import BlogSection from "@/components/shared/BlogSection/BlogSection";
 import ContactSection from "@/components/shared/ContactSection/ContactSection";
 import Faq from "@/components/shared/Faq/Faq";
@@ -11,6 +12,7 @@ export default function AboutPage() {
     <main>
       <AboutPageIntro />
       <AboutAndHistory />
+      <MissionAndValues />
       <Faq />
       <BlogSection />
       <FinalCTA />
