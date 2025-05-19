@@ -1,5 +1,6 @@
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import styles from "./MissionAndValues.module.css";
+import SectionHeading from "@/components/shared/SectionHeading/SectionHeading";
 
 const data = [
   {
@@ -61,6 +62,7 @@ const data = [
 export default function MissionAndValues() {
   return (
     <section className={styles.container}>
+      <SectionHeading title='Guiding principles' />
       <LayoutWrapper>
         <div className={styles.content}>
           <div className={styles.top}>
@@ -70,9 +72,7 @@ export default function MissionAndValues() {
             {data.map((x) => (
               <div className={styles.card} key={x.id}>
                 <h3 className={styles.title}>{x.title}</h3>
-                <p className={styles.description}>
-                    {x.description}
-                </p>
+                <p className={styles.description}>{x.description}</p>
               </div>
             ))}
           </div>
