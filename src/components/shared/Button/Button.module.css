@@ -54,6 +54,23 @@
   color: var(--black);
 }
 
+.navRedOutline {
+  border-radius: 8px;
+  line-height: 1;
+  padding: 1.3rem 4rem;
+  font-weight: 600;
+  color: var(--tan);
+  border-radius: 50px;
+  backdrop-filter: blur(50px);
+  border: 2px solid var(--red);
+  font-size: 1.6rem;
+}
+
+.navRedOutline:hover {
+  background-color: var(--red);
+  color: var(--tan);
+}
+
 .black {
   color: var(--tan);
   background-color: var(--black);
