@@ -11,8 +11,8 @@ export default function AboutPage() {
       <AboutPageIntro />
       <Faq />
       <BlogSection />
-      <ContactSection />
       <FinalCTA />
+      <ContactSection />
       <Footer />
     </main>
   );

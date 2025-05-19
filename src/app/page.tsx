@@ -25,8 +25,8 @@ export default function Home() {
       <ReviewSection />
       <Faq />
       <BlogSection />
-      <ContactSection />
       <FinalCTA />
+      <ContactSection />
       <Footer />
     </main>
   );

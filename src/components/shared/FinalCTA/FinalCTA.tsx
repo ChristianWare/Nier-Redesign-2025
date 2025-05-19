@@ -1,7 +1,6 @@
 import BookingButton from "@/components/homepage/BookingButton/BookingButton";
 import LayoutWrapper from "../LayoutWrapper";
 import styles from "./FinalCTA.module.css";
-import Button from "../Button/Button";
 import SectionHeading from "../SectionHeading/SectionHeading";
 
 export default function FinalCTA() {
@@ -14,9 +13,6 @@ export default function FinalCTA() {
           <h2 className={styles.heading}>
             Have a question or just want to say hello? We&lsquo;re here for you!
           </h2>
-          <div className={styles.btnContainer}>
-            <Button href='/' btnType='red' text='Contact Us' />
-          </div>
         </div>
       </LayoutWrapper>
     </section>

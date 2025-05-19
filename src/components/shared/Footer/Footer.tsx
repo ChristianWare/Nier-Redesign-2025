@@ -2,7 +2,6 @@ import styles from "./Footer.module.css";
 import Arrow from "../../../../public/icons/arrow.svg";
 import LayoutWrapper from "../LayoutWrapper";
 import BookingButton from "@/components/homepage/BookingButton/BookingButton";
-import SectionHeading from "../SectionHeading/SectionHeading";
 
 const data = [
   {
@@ -100,7 +99,6 @@ export default function Footer() {
   return (
     <>
       <footer className={styles.container}>
-        <SectionHeading title='book now' />
         <LayoutWrapper>
           <h2 className={styles.headingOne}>
             Nier <br /> Transportation

@@ -9,6 +9,7 @@ import Location from "../../../../public/icons/location.svg";
 import Email from "../../../../public/icons/email.svg";
 import Phone from "../../../../public/icons/phone.svg";
 import FalseButton from "../FalseButton/FalseButton";
+import SectionHeading from "../SectionHeading/SectionHeading";
 
 interface Inputs {
   firstName: string;
@@ -48,6 +49,7 @@ export default function ContactSection() {
 
   return (
     <section className={styles.container}>
+      <SectionHeading title='book now' />
       <LayoutWrapper>
         <div className={styles.content}>
           <div className={styles.top}>
