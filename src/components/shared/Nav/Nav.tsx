@@ -1,140 +1,143 @@
 "use client";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState, CSSProperties } from "react";
 import { usePathname } from "next/navigation";
 import styles from "./Nav.module.css";
-// import Image from "next/image";
-// import Phone from "../../../../public/icons/phone.svg";
 import { Link } from "next-view-transitions";
 import Button from "../Button/Button";
 
-const Nav = () => {
+export interface NavProps {
+  navItemColor?: string;
+  logoColor?: string;
+  signUpBtnType?: string;
+  /**
+   * If you want to completely replace
+   * what's in the `.rightLinks` div,
+   * e.g. custom login / signup markup
+   */
+  rightLinksContent?: React.ReactNode;
+}
+
+const Nav: React.FC<NavProps> = ({
+  navItemColor,
+  logoColor,
+  signUpBtnType = "nav",
+  rightLinksContent,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
-  const openMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  const pathname = usePathname();
+
+  // apply CSS variables only if user passed them in
+  const customStyles = {
+    ...(navItemColor && { "--nav-item-color": navItemColor }),
+    ...(logoColor && { "--logo-color": logoColor }),
+  } as CSSProperties;
 
   useEffect(() => {
     const body = document.querySelector("body");
     if (body) {
-      // check if body element exists:
-      if (window.innerWidth <= 910 && isOpen) {
-        body.style.overflow = "hidden";
-      } else {
-        body.style.overflow = "auto";
-      }
+      body.style.overflow =
+        window.innerWidth <= 910 && isOpen ? "hidden" : "auto";
     }
-
-    const handlResize = () => setIsOpen(false);
-    window.addEventListener("resize", handlResize);
-
+    const handleResize = () => setIsOpen(false);
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener("resize", handlResize);
-      if (body) {
-        body.style.overflow = "auto";
-      }
+      window.removeEventListener("resize", handleResize);
+      if (body) body.style.overflow = "auto";
     };
   }, [isOpen]);
 
-  const pathname = usePathname();
+  const openMenu = () => setIsOpen((o) => !o);
 
   return (
-    <header className={styles.header}>
+    <header className={styles.header} style={customStyles}>
       <nav className={styles.navbar}>
         <div className={styles.logo}>
           <Link href='/' className={styles.logo}>
-            {/* <Image
-              src={LogoMobile}
-              alt='logo'
-              width={113}
-              height={50}
-              className={styles.officialLogo}
-            /> */}
             Nier Transportation
           </Link>
         </div>
+
         <ul
           className={
-            isOpen === false
-              ? styles.navMenu
-              : styles.navMenu + " " + styles.active
+            !isOpen ? styles.navMenu : `${styles.navMenu} ${styles.active}`
           }
         >
-          <li onClick={openMenu}>
-            {/* <Image
-              src={LogoMobile}
-              alt='logo'
-              width={107}
-              height={50}
-              className={styles.officialLogoMobile}
-            /> */}
-          </li>
-          <li className={styles.navItem} onClick={openMenu}>
-            <Link
-              href='/'
-              className={pathname === "/" ? styles.activeLink : ""}
+          {[
+            { href: "/", label: "Home", match: (p: string) => p === "/" },
+            {
+              href: "/about",
+              label: "About",
+              match: (p: string) => p.includes("/about"),
+            },
+            {
+              href: "/services",
+              label: "Services",
+              match: (p: string) => p.includes("/services"),
+            },
+            {
+              href: "/blog",
+              label: "Blog",
+              match: (p: string) => p.includes("/blog"),
+            },
+            {
+              href: "/contact",
+              label: "Contact",
+              match: (p: string) => p.includes("/contact"),
+            },
+          ].map(({ href, label, match }) => (
+            <li
+              key={href}
+              className={styles.navItem}
+              onClick={openMenu}
+              /* inline style picks up --nav-item-color */
+              style={{ color: "var(--nav-item-color)" }}
             >
-              Home
-            </Link>
-          </li>
-          <li className={styles.navItem} onClick={openMenu}>
-            <Link
-              href='/about'
-              className={pathname.includes("/about") ? styles.activeLink : ""}
-            >
-              About
-            </Link>
-          </li>
-          <li className={styles.navItem} onClick={openMenu}>
-            <Link
-              href='/services'
-              className={
-                pathname.includes("/services") ? styles.activeLink : ""
-              }
-            >
-              Services
-            </Link>
-          </li>
+              <Link
+                href={href}
+                className={match(pathname) ? styles.activeLink : ""}
+                style={{ color: "var(--nav-item-color)" }}
+              >
+                {label}
+              </Link>
+            </li>
+          ))}
 
           <li className={styles.navItem} onClick={openMenu}>
-            <Link
-              href='/blog'
-              className={pathname.includes("/blog") ? styles.activeLink : ""}
+            <a
+              href='tel:+4803006003'
+              className={styles.mobilePhone}
+              style={{ color: "var(--nav-item-color)" }}
             >
-              Blog
-            </Link>
-          </li>
-          <li className={styles.navItem} onClick={openMenu}>
-            <Link
-              href='/contact'
-              className={pathname.includes("/contact") ? styles.activeLink : ""}
-            >
-              Contact
-            </Link>
-          </li>
-          <li className={styles.navItem} onClick={openMenu}>
-            <a href='tel:+4803006003' className={styles.mobilePhone}>
-              <span>{/* <Phone className={styles.mobileIcon} /> */}</span>
               480-300-6003
             </a>
           </li>
+
           <div className={styles.bottom}>
             <p className={styles.copy}>
-              Copyright &copy; 2024 Nier Transportation || All Rights Reserved
-              || Designed and Developed By Fonts & Footers
+              Copyright &copy; 2024 Nier Transportation ‖ All Rights Reserved ‖
+              Designed and Developed By Fonts & Footers
             </p>
           </div>
         </ul>
-        <div className={styles.rightLinks}>
-          <a href='tel:+4803006003' className={styles.phone}>
-            LOG IN
-          </a>
-          <Button btnType='nav' href='/' text='Sign Up' />
-        </div>
+
+        {rightLinksContent ? (
+          <div className={styles.rightLinks}>{rightLinksContent}</div>
+        ) : (
+          <div className={styles.rightLinks}>
+            <a
+              href='tel:+4803006003'
+              className={styles.phone}
+              style={{ color: "var(--nav-item-color)" }}
+            >
+              LOG IN
+            </a>
+            <Button btnType={signUpBtnType} href='/' text='Sign Up' />
+          </div>
+        )}
+
         <span
           className={
-            isOpen === false
-              ? styles.hamburger
-              : styles.hamburger + " " + styles.active
+            !isOpen ? styles.hamburger : `${styles.hamburger} ${styles.active}`
           }
           onClick={openMenu}
         >
@@ -146,4 +149,5 @@ const Nav = () => {
     </header>
   );
 };
+
 export default Nav;

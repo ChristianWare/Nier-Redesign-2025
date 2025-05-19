@@ -19,7 +19,11 @@ export default function Hero() {
           fill
           className={styles.img}
         />
-        <Nav />
+        <Nav
+          logoColor='var(--tan)'
+          navItemColor='var(--tan)'
+          signUpBtnType='nav'
+        />
         <LayoutWrapper>
           <div className={styles.content}>
             <div className={styles.contentTop}>

@@ -23,6 +23,10 @@
   color: var(--tan);
 }
 
+.logo {
+  color: var(--logo-color, var(--tan));
+}
+
 .newLogo {
   width: 107px;
   height: 45px;
@@ -77,7 +81,7 @@
   display: none;
 }
 
-.phone,
+.login,
 .mobilePhone {
   display: flex;
   align-items: center;
@@ -86,7 +90,7 @@
   color: var(--tan);
 }
 
-.phone {
+.login {
   z-index: 998;
 }
 
@@ -125,6 +129,13 @@
   border-radius: 25px;
   background-color: var(--tan);
   transition: all 0.3s ease-in-out;
+}
+
+.navItem,
+.phone,
+.mobilePhone,
+.rightLinks a {
+  color: var(--nav-item-color, var(--tan));
 }
 
 @media screen and (max-width: 1068px) {
