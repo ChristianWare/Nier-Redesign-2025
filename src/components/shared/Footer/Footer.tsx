@@ -1,7 +1,7 @@
 import styles from "./Footer.module.css";
 import Arrow from "../../../../public/icons/arrow.svg";
 import LayoutWrapper from "../LayoutWrapper";
-import BookingButton from "@/components/homepage/BookingButton/BookingButton";
+// import BookingButton from "@/components/homepage/BookingButton/BookingButton";
 
 const data = [
   {
@@ -141,7 +141,7 @@ export default function Footer() {
                 </p>
               ))}
             </div>
-            <BookingButton text='Book Here • Book Here • Book Here • Book Here •' />{" "}
+            {/* <BookingButton text='Book Here • Book Here • Book Here • Book Here •' />{" "} */}
           </div>
         </LayoutWrapper>
       </footer>
