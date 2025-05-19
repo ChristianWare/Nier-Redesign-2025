@@ -127,25 +127,7 @@
   transition: all 0.3s ease-in-out;
 }
 
-/* @media screen and (max-width: 1362px) {
-  .header {
-    max-width: 1000px;
-  }
-} */
-
-@media screen and (max-width: 1168px) {
-  /* .header {
-    padding-right: 70px;
-    padding-left: 70px;
-  } */
-}
-
 @media screen and (max-width: 1068px) {
-  /* .header {
-    padding-right: 100px;
-    padding-left: 100px;
-  } */
-
   .navMenu {
     position: fixed;
     left: -120%;
@@ -176,9 +158,12 @@
     left: 0%;
   }
 
-  .navItem {
+  .navItem a {
     font-size: 2.5rem;
-    color: var(--darkBlue);
+    color: var(--black);
+    font-family: var(--sofia);
+    font-size: 12vw;
+
   }
 
   .officialLogoMobile {
@@ -215,11 +200,11 @@
     transform: translateY(8px) rotate(45deg);
     background-color: var(--black);
   }
-  
+
   .hamburger.active .tanBar:nth-child(2) {
     opacity: 0;
   }
-  
+
   .hamburger.active .tanBar:nth-child(3) {
     -webkit-transform: translateY(-8px) rotate(-45deg);
     transform: translateY(-8px) rotate(-45deg);
