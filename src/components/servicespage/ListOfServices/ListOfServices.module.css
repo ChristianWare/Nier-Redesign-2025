@@ -11,6 +11,7 @@
 .card {
   border: 2px solid var(--red);
   border-radius: 20px;
+  height: 100%;
 }
 
 .imgContainer {
@@ -32,7 +33,6 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 2rem;
-  height: fit-content;
 }
 
 .title {
