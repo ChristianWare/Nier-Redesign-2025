@@ -33,7 +33,6 @@ export default function BlogSection() {
           {data.map((x) => (
             <div className={styles.card} key={x.id}>
               <div className={styles.cardTop}>
-                {/* <span className={styles.category}>Category</span> */}
                 <div className={styles.imgContainer}>
                   <Image
                     src={Img1}
