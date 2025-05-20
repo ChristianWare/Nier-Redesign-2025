@@ -6,12 +6,16 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
+  grid-auto-rows: 1fr;
 }
 
 .card {
-  border: 2px solid var(--red);
   border-radius: 20px;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  /* justify-content: flex-start; */
 }
 
 .imgContainer {
@@ -27,7 +31,27 @@
 }
 
 .cardBottom {
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  justify-content: space-between;
+  flex: 1;
+  gap: 3rem;
+  border: 2px solid var(--red);
+  border-top: none;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   padding: 2rem;
+  /* height: 100%; */
+}
+
+.title {
+  color: var(--red);
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.descBtnContainer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -35,8 +59,9 @@
   gap: 2rem;
 }
 
-.title {
-  color: var(--red);
+.btnContainer {
+  display: grid;
+  width: 100%;
 }
 
 @media screen and (max-width: 1268px) {
@@ -49,10 +74,5 @@
   .bottom {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 3rem;
-  }
-
-  .btnContainer {
-    display: grid;
-    width: 100%;
   }
 }
