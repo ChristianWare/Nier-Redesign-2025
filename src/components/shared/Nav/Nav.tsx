@@ -2,8 +2,8 @@
 import React, { useEffect, useState, CSSProperties } from "react";
 import { usePathname } from "next/navigation";
 import styles from "./Nav.module.css";
-import { Link } from "next-view-transitions";
 import Button from "../Button/Button";
+import Link from "next/link";
 
 export interface NavProps {
   navItemColor?: string;
