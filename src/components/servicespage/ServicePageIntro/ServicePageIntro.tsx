@@ -29,7 +29,7 @@ export default function ServicePageIntro() {
             <div className={styles.contentTop}>
               <BookingButton text='Book Here • Book Here • Book Here • Book Here •' />{" "}
               <h1 className={styles.heading}>
-                Chauffeur Services Tailored to Every Journey
+                Chauffeur Services <br /> Tailored to Every Journey
               </h1>
               <p className={styles.copy}>
                 At Nier Transportation, we&rsquo;re more than a car service;

@@ -7,14 +7,13 @@ import { Suspense, useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { signIn, signOut, useSession } from "next-auth/react";
-import LayoutWrapper from "@/components/LayoutWrapper";
+import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import Image from "next/image";
-import SectionHeading2 from "@/components/SectionHeading2/SectionHeading2";
-import Contact2 from "@/components/Contact2/Contact2";
-import FalseButton from "@/components/FalseButton/FalseButton";
-import FinalCTA from "@/components/FinalCTA/FinalCTA";
-import Button from "@/components/Button/Button";
-import Img1 from "../../../../public/images/ecomm.jpeg";
+import SectionHeading from "@/components/shared/SectionHeading/SectionHeading";
+import FalseButton from "@/components/shared/FalseButton/FalseButton";
+import FinalCTA from "@/components/shared/FinalCTA/FinalCTA";
+import Button from "@/components/shared/Button/Button";
+import Img1 from "../../../../public/images/cadi2.jpg";
 
 export default function LoginPage() {
   return (
@@ -125,7 +124,6 @@ function LoginInner() {
 
   // if already signed in, show message + buttons
   if (status === "authenticated" && !loading) {
-
     return (
       <div className={styles.container}>
         <LayoutWrapper>
@@ -133,7 +131,8 @@ function LoginInner() {
             <div className={styles.left}>
               <div className={styles.formCard}>
                 <header className={styles.cardHeader}>
-                  <SectionHeading2 title='You are now logged in.' />
+                  {/* <SectionHeading2 title='You are now logged in.' /> */}
+                  <div>Y9u are now logged in </div>
                 </header>
                 <div className={styles.btnContainer}>
                   <Button
@@ -146,7 +145,7 @@ function LoginInner() {
                   <FalseButton
                     text={loading ? "Signing Out..." : "Sign Out"}
                     btnType='black'
-                    onClick={handleSignOut}
+                    // onClick={handleSignOut}
                   />
                   <Button text='Home' btnType='primary' href='/' />
                 </div>
@@ -160,7 +159,6 @@ function LoginInner() {
           </div>
         </LayoutWrapper>
         <FinalCTA />
-        <Contact2 />
       </div>
     );
   }
@@ -172,7 +170,7 @@ function LoginInner() {
           <div className={styles.left}>
             <div className={styles.formCard}>
               <header className={styles.cardHeader}>
-                <SectionHeading2 title='Welcome Back' />
+                <div>Welcome Back</div>
                 <p className={styles.cardDescription}>
                   Sign in to your account
                 </p>
@@ -274,7 +272,6 @@ function LoginInner() {
         </footer>
       </LayoutWrapper>
       <FinalCTA />
-      <Contact2 />
     </div>
   );
 }
