@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import AuthProvider from "@/providers/AuthProvider";
+import { ModalProvider } from "@/context/ModalContext";
 
 const inter = Inter({
   variable: "--inter",
@@ -62,7 +63,9 @@ export default function RootLayout({
             className: "toastFont",
           }}
         />
-        <AuthProvider>{children}</AuthProvider>
+        <AuthProvider>
+          <ModalProvider>{children}</ModalProvider>
+        </AuthProvider>
       </body>
     </html>
   );

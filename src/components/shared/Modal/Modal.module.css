@@ -1,0 +1,49 @@
+.modalBackdrop {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 10000;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in;
+  overflow: visible;
+}
+
+.modalContent {
+  background-color: var(--white);
+  padding: 2rem;
+  width: 700px;
+  max-height: 100%;
+  position: relative;
+  transition: all 0.3s ease-in;
+  z-index: 1008999999901;
+  overflow: auto;
+}
+
+.button {
+  cursor: pointer;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.children {
+  margin-top: 1rem;
+  height: 100%;
+}
+
+.modalLinks {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+  .modalContent {
+    width: 90vw;
+  }
+}
