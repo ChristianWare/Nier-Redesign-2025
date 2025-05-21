@@ -4,37 +4,17 @@
   min-height: 100vh;
 }
 
+.heading {
+  color: var(--red);
+  text-align: center;
+}
+
 .content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  gap: 5rem;
   height: 100%;
-  padding-top: 7rem;
-}
-
-.formCard {
-  height: 100%;
-}
-
-.cardHeader {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 2rem;
-  width: 100%;
-}
-
-.SectionHeadingContainer {
-  width: 100%;
-}
-
-.cardDescription {
-  font-size: 1.6rem;
-}
-
-.cardContent {
-  margin-top: 3rem;
+  margin-top: 5rem;
 }
 
 .form {
@@ -69,11 +49,10 @@
 }
 
 .input {
-  padding: 0.75rem;
+  padding: 1rem;
   border: 1px solid var(--gray);
-
+  border-radius: 5px;
   font-size: 1.4rem;
-  /* transition: border-color 0.15s ease-in-out; */
 }
 
 .input:focus {
@@ -138,18 +117,23 @@
 }
 
 .footerText {
-  font-size: 1.4rem;
+  font-size: 2rem;
 }
 
 .link {
   color: #2563eb;
   text-decoration: none;
   transition: color 0.15s ease-in-out;
+  margin-left: 0.5rem;
 }
 
 .link:hover {
   color: #1d4ed8;
   text-decoration: underline;
+}
+
+.btnContainer {
+  margin-top: 2rem;
 }
 
 .imgContainer {
@@ -160,6 +144,7 @@
 
 .img {
   object-fit: cover;
+  border-radius: 15px;
 }
 
 @media screen and (max-width: 968px) {
@@ -170,11 +155,8 @@
   .content {
     grid-template-columns: repeat(1, 1fr);
     width: 100%;
-    padding-top: 7rem;
-  }
-
-  .cardContent {
-    width: 100%;
+    padding-top: 0rem;
+    margin-top: 3rem;
   }
 
   .imgContainer {
@@ -190,6 +172,6 @@
 
 @media screen and (max-width: 568px) {
   .imgContainer {
-    height: 400px;
+    height: 300px;
   }
 }

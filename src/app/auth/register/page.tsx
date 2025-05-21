@@ -2,17 +2,16 @@
 "use client";
 
 import { useState } from "react";
-// import { useRouter } from "next/navigation";
+import styles from "./Register.module.css";
 import Link from "next/link";
 import { signIn } from "next-auth/react";
 import Image from "next/image";
-import LayoutWrapper from "@/components/LayoutWrapper";
-import SectionHeading2 from "@/components/SectionHeading2/SectionHeading2";
-import Contact2 from "@/components/Contact2/Contact2";
-import FinalCTA from "@/components/FinalCTA/FinalCTA";
-import FalseButton from "@/components/FalseButton/FalseButton";
-import Img1 from "../../../../public/images/servicesHeroii.jpg";
-import styles from "./Register.module.css";
+import LayoutWrapper from "@/components/shared/LayoutWrapper";
+import FinalCTA from "@/components/shared/FinalCTA/FinalCTA";
+import FalseButton from "@/components/shared/FalseButton/FalseButton";
+import Img1 from "../../../../public/images/casaGrandeii.jpg";
+import Footer from "@/components/shared/Footer/Footer";
+import Nav from "@/components/shared/Nav/Nav";
 
 export default function RegisterPage() {
   // const router = useRouter();
@@ -103,142 +102,110 @@ export default function RegisterPage() {
 
   return (
     <div className={styles.container}>
+      <Nav
+        logoColor='var(--red)'
+        navItemColor='var(--red)'
+        signUpBtnType='navRedOutline'
+      />{" "}
       <LayoutWrapper>
+        <h1 className={styles.heading}>Create <br /> An Account </h1>
         <div className={styles.content}>
           <div className={styles.left}>
-            <div className={styles.formCard}>
-              <div className={styles.cardHeader}>
-                <SectionHeading2 title='Create your account' />
-                <p className={styles.cardDescription}>
-                  Enter your information to create an account
-                </p>
+            <form onSubmit={handleSubmit} className={styles.form}>
+              {generalError && (
+                <div className={styles.errorAlert}>
+                  <p>{generalError}</p>
+                </div>
+              )}
+              <div className={styles.formGroup}>
+                <label htmlFor='name' className={styles.label}>
+                  Full Name
+                </label>
+                <input
+                  id='name'
+                  name='name'
+                  type='text'
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder='John Doe'
+                  className={errors.name ? styles.inputError : styles.input}
+                  required
+                />
+                {errors.name && (
+                  <p className={styles.errorText}>{errors.name}</p>
+                )}
               </div>
-              <div className={styles.cardContent}>
-                <form onSubmit={handleSubmit} className={styles.form}>
-                  {generalError && (
-                    <div className={styles.errorAlert}>
-                      <p>{generalError}</p>
-                    </div>
-                  )}
 
-                  <div className={styles.formGroup}>
-                    <label htmlFor='name' className={styles.label}>
-                      Full Name
-                    </label>
-                    <input
-                      id='name'
-                      name='name'
-                      type='text'
-                      value={formData.name}
-                      onChange={handleChange}
-                      placeholder='John Doe'
-                      className={errors.name ? styles.inputError : styles.input}
-                      required
-                    />
-                    {errors.name && (
-                      <p className={styles.errorText}>{errors.name}</p>
-                    )}
-                  </div>
-
-                  <div className={styles.formGroup}>
-                    <label htmlFor='email' className={styles.label}>
-                      Email
-                    </label>
-                    <input
-                      id='email'
-                      name='email'
-                      type='email'
-                      value={formData.email}
-                      onChange={handleChange}
-                      placeholder='john@example.com'
-                      className={
-                        errors.email ? styles.inputError : styles.input
-                      }
-                      required
-                    />
-                    {errors.email && (
-                      <p className={styles.errorText}>{errors.email}</p>
-                    )}
-                  </div>
-
-                  <div className={styles.formGroup}>
-                    <label htmlFor='password' className={styles.label}>
-                      Password
-                    </label>
-                    <input
-                      id='password'
-                      name='password'
-                      type='password'
-                      value={formData.password}
-                      onChange={handleChange}
-                      placeholder='••••••••'
-                      className={
-                        errors.password ? styles.inputError : styles.input
-                      }
-                      required
-                    />
-                    {errors.password && (
-                      <p className={styles.errorText}>{errors.password}</p>
-                    )}
-                  </div>
-
-                  <div className={styles.formGroup}>
-                    <label htmlFor='confirmPassword' className={styles.label}>
-                      Confirm Password
-                    </label>
-                    <input
-                      id='confirmPassword'
-                      name='confirmPassword'
-                      type='password'
-                      value={formData.confirmPassword}
-                      onChange={handleChange}
-                      placeholder='••••••••'
-                      className={
-                        errors.confirmPassword || errors.passwordMatch
-                          ? styles.inputError
-                          : styles.input
-                      }
-                      required
-                    />
-                    {errors.confirmPassword && (
-                      <p className={styles.errorText}>
-                        {errors.confirmPassword}
-                      </p>
-                    )}
-                    {errors.passwordMatch && (
-                      <p className={styles.errorText}>{errors.passwordMatch}</p>
-                    )}
-                  </div>
-
-                  <div className={styles.formGroup}>
-                    <label htmlFor='companyName' className={styles.label}>
-                      Company Name
-                    </label>
-                    <input
-                      id='companyName'
-                      name='companyName'
-                      type='text'
-                      value={formData.companyName}
-                      onChange={handleChange}
-                      placeholder='Acme Inc.'
-                      className={
-                        errors.companyName ? styles.inputError : styles.input
-                      }
-                      required
-                    />
-                    {errors.companyName && (
-                      <p className={styles.errorText}>{errors.companyName}</p>
-                    )}
-                  </div>
-
-                  <FalseButton
-                    text={loading ? "Creating account..." : "Create account"}
-                    disabled={loading}
-                    btnType='blue'
-                  />
-                </form>
+              <div className={styles.formGroup}>
+                <label htmlFor='email' className={styles.label}>
+                  Email
+                </label>
+                <input
+                  id='email'
+                  name='email'
+                  type='email'
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder='john@example.com'
+                  className={errors.email ? styles.inputError : styles.input}
+                  required
+                />
+                {errors.email && (
+                  <p className={styles.errorText}>{errors.email}</p>
+                )}
               </div>
-            </div>
+              <div className={styles.formGroup}>
+                <label htmlFor='password' className={styles.label}>
+                  Password
+                </label>
+                <input
+                  id='password'
+                  name='password'
+                  type='password'
+                  value={formData.password}
+                  onChange={handleChange}
+                  placeholder='••••••••'
+                  className={errors.password ? styles.inputError : styles.input}
+                  required
+                />
+                {errors.password && (
+                  <p className={styles.errorText}>{errors.password}</p>
+                )}
+              </div>
+
+              <div className={styles.formGroup}>
+                <label htmlFor='confirmPassword' className={styles.label}>
+                  Confirm Password
+                </label>
+                <input
+                  id='confirmPassword'
+                  name='confirmPassword'
+                  type='password'
+                  value={formData.confirmPassword}
+                  onChange={handleChange}
+                  placeholder='••••••••'
+                  className={
+                    errors.confirmPassword || errors.passwordMatch
+                      ? styles.inputError
+                      : styles.input
+                  }
+                  required
+                />
+                {errors.confirmPassword && (
+                  <p className={styles.errorText}>{errors.confirmPassword}</p>
+                )}
+                {errors.passwordMatch && (
+                  <p className={styles.errorText}>{errors.passwordMatch}</p>
+                )}
+              </div>
+              <div className={styles.btnContainer}>
+                <FalseButton
+                  text={loading ? "Creating account..." : "Create account"}
+                  disabled={loading}
+                  btnType='black'
+                />
+              </div>
+            </form>
           </div>
           <div className={styles.right}>
             <div className={styles.imgContainer}>
@@ -256,7 +223,7 @@ export default function RegisterPage() {
         </div>
       </LayoutWrapper>
       <FinalCTA />
-      <Contact2 />
+      <Footer />
     </div>
   );
 }

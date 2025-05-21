@@ -36,3 +36,15 @@
   background-color: var(--red2);
   border: 1px solid var(--red2);
 }
+
+.black {
+  color: var(--tan);
+  background-color: var(--black);
+  border: 1px solid var(--black);
+}
+
+.black:hover {
+  color: var(--black);
+  background-color: transparent;
+  border: 1px solid var(--black);
+}

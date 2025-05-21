@@ -124,14 +124,18 @@ const Nav: React.FC<NavProps> = ({
           <div className={styles.rightLinks}>{rightLinksContent}</div>
         ) : (
           <div className={styles.rightLinks}>
-            <a
-              href='tel:+4803006003'
+            <Link
+              href='/auth/login'
               className={styles.phone}
               style={{ color: "var(--nav-item-color)" }}
             >
               LOG IN
-            </a>
-            <Button btnType={signUpBtnType} href='/' text='Sign Up' />
+            </Link>
+            <Button
+              btnType={signUpBtnType}
+              href='/auth/register'
+              text='Sign Up'
+            />
           </div>
         )}
 
