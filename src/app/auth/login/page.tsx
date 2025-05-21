@@ -9,11 +9,12 @@ import Link from "next/link";
 import { signIn, signOut, useSession } from "next-auth/react";
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import Image from "next/image";
-import SectionHeading from "@/components/shared/SectionHeading/SectionHeading";
 import FalseButton from "@/components/shared/FalseButton/FalseButton";
 import FinalCTA from "@/components/shared/FinalCTA/FinalCTA";
 import Button from "@/components/shared/Button/Button";
 import Img1 from "../../../../public/images/cadi2.jpg";
+import Nav from "@/components/shared/Nav/Nav";
+import Footer from "@/components/shared/Footer/Footer";
 
 export default function LoginPage() {
   return (
@@ -38,7 +39,6 @@ function LoginInner() {
     isRegistered ? "Account created successfully! Please log in." : null
   );
 
-  // auto‑dismiss success message
   useEffect(() => {
     if (successMessage) {
       const timer = setTimeout(() => setSuccessMessage(null), 5000);
@@ -46,7 +46,6 @@ function LoginInner() {
     }
   }, [successMessage]);
 
-  // once we're sure the user is authenticated, fetch their role
   useEffect(() => {
     if (status === "authenticated" && !loading) {
       fetch("/api/user")
@@ -165,94 +164,86 @@ function LoginInner() {
 
   return (
     <div className={styles.container}>
+      <Nav
+        logoColor='var(--red)'
+        navItemColor='var(--red)'
+        signUpBtnType='navRedOutline'
+      />
       <LayoutWrapper>
+        <h1 className={styles.heading}>Welcome back</h1>{" "}
         <div className={styles.content}>
           <div className={styles.left}>
-            <div className={styles.formCard}>
-              <header className={styles.cardHeader}>
-                <div>Welcome Back</div>
-                <p className={styles.cardDescription}>
-                  Sign in to your account
-                </p>
-              </header>
+            <form
+              onSubmit={handleSubmit}
+              autoComplete='off'
+              className={styles.form}
+            >
+              {generalError && (
+                <div className={styles.errorAlert}>
+                  <p>{generalError}</p>
+                </div>
+              )}
+              {successMessage && (
+                <div className={styles.successAlert}>
+                  <p>{successMessage}</p>
+                </div>
+              )}
 
-              <div className={styles.cardContent}>
-                <form
-                  onSubmit={handleSubmit}
-                  autoComplete='off'
-                  className={styles.form}
-                >
-                  {generalError && (
-                    <div className={styles.errorAlert}>
-                      <p>{generalError}</p>
-                    </div>
-                  )}
-                  {successMessage && (
-                    <div className={styles.successAlert}>
-                      <p>{successMessage}</p>
-                    </div>
-                  )}
-
-                  <div className={styles.formGroup}>
-                    <label htmlFor='email' className={styles.label}>
-                      Email
-                    </label>
-                    <input
-                      id='email'
-                      name='email'
-                      type='email'
-                      value={formData.email}
-                      onChange={handleChange}
-                      placeholder='john@example.com'
-                      className={
-                        errors.email ? styles.inputError : styles.input
-                      }
-                      required
-                    />
-                    {errors.email && (
-                      <p className={styles.errorText}>{errors.email}</p>
-                    )}
-                  </div>
-
-                  <div className={styles.formGroup}>
-                    <div className={styles.labelWithLink}>
-                      <label htmlFor='password' className={styles.label}>
-                        Password
-                      </label>
-                      <Link
-                        href='/forgot-password'
-                        className={styles.forgotPasswordLink}
-                      >
-                        Forgot password?
-                      </Link>
-                    </div>
-
-                    <input
-                      id='password'
-                      name='password'
-                      type='password'
-                      value={formData.password}
-                      onChange={handleChange}
-                      placeholder='••••••••'
-                      autoComplete='off'
-                      className={
-                        errors.password ? styles.inputError : styles.input
-                      }
-                      required
-                    />
-                    {errors.password && (
-                      <p className={styles.errorText}>{errors.password}</p>
-                    )}
-                  </div>
-
-                  <FalseButton
-                    text={loading ? "Loading..." : "Sign in"}
-                    disabled={loading}
-                    btnType='blue'
-                  />
-                </form>
+              <div className={styles.formGroup}>
+                <label htmlFor='email' className={styles.label}>
+                  Email
+                </label>
+                <input
+                  id='email'
+                  name='email'
+                  type='email'
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder='john@example.com'
+                  className={errors.email ? styles.inputError : styles.input}
+                  required
+                />
+                {errors.email && (
+                  <p className={styles.errorText}>{errors.email}</p>
+                )}
               </div>
-            </div>
+
+              <div className={styles.formGroup}>
+                <div className={styles.labelWithLink}>
+                  <label htmlFor='password' className={styles.label}>
+                    Password
+                  </label>
+                  <Link
+                    href='/forgot-password'
+                    className={styles.forgotPasswordLink}
+                  >
+                    Forgot password?
+                  </Link>
+                </div>
+
+                <input
+                  id='password'
+                  name='password'
+                  type='password'
+                  value={formData.password}
+                  onChange={handleChange}
+                  placeholder='••••••••'
+                  autoComplete='off'
+                  className={errors.password ? styles.inputError : styles.input}
+                  required
+                />
+                {errors.password && (
+                  <p className={styles.errorText}>{errors.password}</p>
+                )}
+              </div>
+              <div className={styles.btnContainer}>
+                <FalseButton
+                  text={loading ? "Loading..." : "Sign in"}
+                  disabled={loading}
+                  btnType='black'
+                />
+              </div>
+            </form>
           </div>
 
           <div className={styles.right}>
@@ -261,7 +252,6 @@ function LoginInner() {
             </div>
           </div>
         </div>
-
         <footer className={styles.cardFooter}>
           <p className={styles.footerText}>
             Don&apos;t have an account?{" "}
@@ -272,6 +262,7 @@ function LoginInner() {
         </footer>
       </LayoutWrapper>
       <FinalCTA />
+      <Footer />
     </div>
   );
 }

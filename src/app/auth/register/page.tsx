@@ -1,8 +1,7 @@
-// src/app/register/page.tsx
 "use client";
 
-import { useState } from "react";
 import styles from "./Register.module.css";
+import { useState } from "react";
 import Link from "next/link";
 import { signIn } from "next-auth/react";
 import Image from "next/image";
@@ -14,13 +13,11 @@ import Footer from "@/components/shared/Footer/Footer";
 import Nav from "@/components/shared/Nav/Nav";
 
 export default function RegisterPage() {
-  // const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     password: "",
     confirmPassword: "",
-    companyName: "",
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
@@ -55,9 +52,6 @@ export default function RegisterPage() {
     } else if (formData.password !== formData.confirmPassword) {
       newErrors.passwordMatch = "Passwords do not match";
     }
-    if (!formData.companyName || formData.companyName.length < 2) {
-      newErrors.companyName = "Company name must be at least 2 characters";
-    }
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -76,7 +70,6 @@ export default function RegisterPage() {
           name: formData.name,
           email: formData.email,
           password: formData.password,
-          companyName: formData.companyName,
         }),
       });
       const data = await res.json();
@@ -106,9 +99,11 @@ export default function RegisterPage() {
         logoColor='var(--red)'
         navItemColor='var(--red)'
         signUpBtnType='navRedOutline'
-      />{" "}
+      />
       <LayoutWrapper>
-        <h1 className={styles.heading}>Create <br /> An Account </h1>
+        <h1 className={styles.heading}>
+          Create <br /> An Account
+        </h1>
         <div className={styles.content}>
           <div className={styles.left}>
             <form onSubmit={handleSubmit} className={styles.form}>
@@ -135,7 +130,6 @@ export default function RegisterPage() {
                   <p className={styles.errorText}>{errors.name}</p>
                 )}
               </div>
-
               <div className={styles.formGroup}>
                 <label htmlFor='email' className={styles.label}>
                   Email
@@ -172,7 +166,6 @@ export default function RegisterPage() {
                   <p className={styles.errorText}>{errors.password}</p>
                 )}
               </div>
-
               <div className={styles.formGroup}>
                 <label htmlFor='confirmPassword' className={styles.label}>
                   Confirm Password
