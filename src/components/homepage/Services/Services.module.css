@@ -10,7 +10,6 @@
   width: 100%;
   gap: 2rem;
   border-bottom: 5px solid var(--black);
-  /* margin-bottom: 2rem; */
   padding-bottom: 2rem;
 }
 
@@ -56,7 +55,7 @@
   background-color: var(--tan);
   padding: 1rem;
   border-radius: 15px;
-  border: 2px solid var(--border);
+  border: 2px solid var(--red);
 }
 
 .imgContainer {
@@ -82,8 +81,12 @@
   height: 100%;
 }
 
+.reviewer {
+  color: var(--red);
+}
+
 .review {
-  color: var(--text);
+  color: var(--red);
 }
 
 .btnContainer {
@@ -105,7 +108,7 @@
 }
 
 .arrowBox {
-  border: 2px solid var(--gray);
+  border: 2px solid var(--red);
   background-color: var(--tan);
   border-radius: 50%;
   width: 8rem;
@@ -120,7 +123,7 @@
 .icon {
   width: 4.5rem;
   height: 4.5rem;
-  color: var(--black);
+  color: var(--red);
   transition: all 0.3s ease-in;
 }
 
@@ -145,7 +148,9 @@
   border: 1px solid var(--tan);
   background-color: var(--tan);
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
 }
 
 .indicator:hover {
@@ -168,7 +173,7 @@
 
   .card,
   .evenCard {
-    background-color: var(--tan);
+    /* background-color: var(--tan); */
     border-radius: 25px;
     grid-template-columns: repeat(1, 1fr);
     min-height: 420px;
