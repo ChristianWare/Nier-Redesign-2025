@@ -1,9 +1,10 @@
 import { ReactNode } from "react";
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
-import LayoutWrapper from "@/components/LayoutWrapper";
+import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import styles from "./AdminLayout.module.css";
-import Contact2 from "@/components/Contact2/Contact2";
+import Footer from "@/components/shared/Footer/Footer";
+import Nav from "@/components/shared/Nav/Nav";
 
 export default async function AdminLayout({
   children,
@@ -21,10 +22,13 @@ export default async function AdminLayout({
   // 3. Happy path – render nested pages
   return (
     <section className={styles.container}>
-      <LayoutWrapper>
-        {children}
-      </LayoutWrapper>
-        <Contact2 />
+      <Nav
+        logoColor='var(--red)'
+        navItemColor='var(--red)'
+        signUpBtnType='navRedOutline'
+      />
+      <LayoutWrapper>{children}</LayoutWrapper>
+      <Footer />
     </section>
   );
 }

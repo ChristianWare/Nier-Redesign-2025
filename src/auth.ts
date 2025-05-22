@@ -54,12 +54,15 @@ const config: NextAuthConfig = {
         const user = await prisma.user.findUnique({
           where: { email }, // TS now knows "email" is a string
         });
-        if (!user || !user.password) {
+        if (!user || !user.hashedPassword) {
           return null;
         }
 
         // Compare the supplied password to the hashed password
-        const isPasswordValid = await bcrypt.compare(password, user.password);
+        const isPasswordValid = await bcrypt.compare(
+          password,
+          user.hashedPassword
+        );
         if (!isPasswordValid) {
           return null;
         }

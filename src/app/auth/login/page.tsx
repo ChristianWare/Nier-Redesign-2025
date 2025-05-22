@@ -130,7 +130,6 @@ function LoginInner() {
             <div className={styles.left}>
               <div className={styles.formCard}>
                 <header className={styles.cardHeader}>
-                  {/* <SectionHeading2 title='You are now logged in.' /> */}
                   <div>Y9u are now logged in </div>
                 </header>
                 <div className={styles.btnContainer}>

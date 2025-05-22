@@ -1,6 +1,6 @@
-.container {
-  background-color: var(--tan);
-  
+.heading {
+  color: var(--red);
+  font-size: 5rem;
 }
 
 .content {

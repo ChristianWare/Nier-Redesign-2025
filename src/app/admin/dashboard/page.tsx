@@ -1,5 +1,5 @@
-import { getKpis } from "@/lib/kpi";
 import styles from "./Dashboard.module.css";
+import { getKpis } from "@/lib/kpi";
 import KpiCard from "./components/KpiCard/KpiCard";
 
 export const revalidate = 60;
