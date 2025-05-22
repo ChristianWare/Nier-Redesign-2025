@@ -1,5 +1,3 @@
-// app/admin/users/page.tsx
-
 import { prisma } from "@/lib/prisma";
 import UsersTable from "./components/UsersTable/UsersTable";
 

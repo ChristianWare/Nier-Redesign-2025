@@ -126,23 +126,33 @@
 .filterContainer {
   display: flex;
   gap: 1rem;
+  align-items: center;
   justify-content: center;
   margin-bottom: 1.5rem;
 }
 
 .filterTab {
-  padding: 0.4rem 0.8rem;
-  border: 1px solid var(--blue);
-  border-radius: 4px;
+  padding: 0.5rem 2rem;
+  border: 2px solid var(--gray);
+  border-radius: 50px;
   background: none;
-  color: var(--blue);
+  color: var(--gray);
   font-weight: 500;
+  font-size: 2rem;
   cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.filterTab:hover {
+  background-color: var(--red);
+  color: var(--tan);
+  border: 2px solid var(--red);
 }
 
 .filterTabActive {
-  background-color: var(--blue);
-  color: white;
+  background-color: var(--red);
+  color: var(--tan);
+  border: 2px solid var(--red);
 }
 
 /* Center the Admin, Driver, Client columns */
