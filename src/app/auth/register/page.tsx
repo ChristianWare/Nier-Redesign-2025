@@ -11,6 +11,7 @@ import FalseButton from "@/components/shared/FalseButton/FalseButton";
 import Img1 from "../../../../public/images/casaGrandeii.jpg";
 import Footer from "@/components/shared/Footer/Footer";
 import Nav from "@/components/shared/Nav/Nav";
+import Google from "../../../../public/icons/google.svg";
 
 export default function RegisterPage() {
   const [formData, setFormData] = useState({
@@ -108,13 +109,18 @@ export default function RegisterPage() {
             </div>
           </div>
           <div className={styles.right}>
-              {/* <span className={styles.logo}>Nier Transportation</span> */}
+            {/* <span className={styles.logo}>Nier Transportation</span> */}
             <div className={styles.topText}>
               <h1 className={styles.heading}>Create An Account</h1>
               <p className={styles.copy}>
                 Let&lsquo;s get started with your free account
               </p>
             </div>
+            <div className={styles.googleBtn}>
+              <Google className={styles.google} />{" "}
+              <span className={styles.googleBtnText}>Sign up with Google</span>
+            </div>
+            <p className={styles.or}>or</p>
             <form onSubmit={handleSubmit} className={styles.form}>
               {generalError && (
                 <div className={styles.errorAlert}>

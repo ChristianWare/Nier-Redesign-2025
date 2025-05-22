@@ -170,10 +170,16 @@
   margin-bottom: 2rem;
 }
 
+.right {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 20px;
+}
+
 .imgContainer {
   position: relative;
   width: 100%;
-  height: calc(100vh - 14rem);
+  height: calc(100vh - 20rem);
 }
 
 .img {
@@ -205,6 +211,10 @@
 }
 
 @media screen and (max-width: 568px) {
+  .right {
+    padding: 1rem;
+  }
+  
   .imgContainer {
     height: 300px;
   }

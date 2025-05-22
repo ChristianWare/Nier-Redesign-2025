@@ -11,10 +11,16 @@
   margin-top: -10rem;
 }
 
+.left {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 20px;
+}
+
 .imgContainer {
   position: relative;
   width: 100%;
-  height: calc(100vh - 14rem);
+  height: calc(100vh - 20rem);
 }
 .img {
   object-fit: cover;
@@ -27,6 +33,7 @@
   align-items: flex-start;
   justify-content: center;
   position: relative;
+  gap: 2rem;
   width: 100%;
 }
 
@@ -39,24 +46,69 @@
   margin-bottom: 3rem;
 }
 
-.heading,
-.logo {
+.heading {
   color: var(--black);
   font-family: var(--PPNeueMontrealBold);
   font-size: 2rem;
 }
 
-.logo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-size: 2.5rem;
-  text-decoration: underline;
-  display: block;
-}
-
 .copy {
   color: var(--text);
+}
+
+.googleBtn {
+  padding: 1rem;
+  border: 1px solid var(--gray3);
+  border-radius: 50px;
+  font-size: 1.4rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+
+.googleBtn:hover {
+  background-color: var(--gray3);
+}
+
+.google {
+  width: 2rem;
+  height: 2rem;
+}
+
+.googleBtnText {
+  font-family: var(--PPNeueMontrealMedium);
+  text-transform: none;
+}
+
+.or {
+  text-align: center;
+  width: 100%;
+  color: var(--text);
+  position: relative;
+}
+
+.or:after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  width: 40%;
+  height: 1px;
+  background-color: var(--gray3);
+}
+
+.or:before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: 0;
+  width: 40%;
+  height: 1px;
+  background-color: var(--gray3);
 }
 
 .form {
@@ -201,6 +253,10 @@
 }
 
 @media screen and (max-width: 568px) {
+  .left {
+    padding: 1rem;
+  }
+
   .imgContainer {
     height: 300px;
   }
