@@ -130,7 +130,7 @@ function LoginInner() {
             <div className={styles.left}>
               <div className={styles.formCard}>
                 <header className={styles.cardHeader}>
-                  <div>Y9u are now logged in </div>
+                  <div>You are now logged in </div>
                 </header>
                 <div className={styles.btnContainer}>
                   <Button
@@ -169,9 +169,14 @@ function LoginInner() {
         signUpBtnType='navRedOutline'
       />
       <LayoutWrapper>
-        <h1 className={styles.heading}>Welcome back</h1>{" "}
         <div className={styles.content}>
           <div className={styles.left}>
+            <div className={styles.topText}>
+              <h1 className={styles.heading}>Welcome Back</h1>
+              <p className={styles.copy}>
+               Enter your email and password to access your account
+              </p>
+            </div>
             <form
               onSubmit={handleSubmit}
               autoComplete='off'
@@ -243,14 +248,6 @@ function LoginInner() {
                 />
               </div>
             </form>
-          </div>
-
-          <div className={styles.right}>
-            <div className={styles.imgContainer}>
-              <Image src={Img1} fill alt='' className={styles.img} />
-            </div>
-          </div>
-        </div>
         <footer className={styles.cardFooter}>
           <p className={styles.footerText}>
             Don&apos;t have an account?{" "}
@@ -259,6 +256,14 @@ function LoginInner() {
             </Link>
           </p>
         </footer>
+          </div>
+
+          <div className={styles.right}>
+            <div className={styles.imgContainer}>
+              <Image src={Img1} fill alt='' className={styles.img} />
+            </div>
+          </div>
+        </div>
       </LayoutWrapper>
       <FinalCTA />
       <Footer />
