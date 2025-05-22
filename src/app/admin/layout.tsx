@@ -21,7 +21,7 @@ export default async function AdminLayout({
 
   // 3. Happy path – render nested pages
   return (
-    <section className={styles.container}>
+    <main className={styles.container}>
       <Nav
         logoColor='var(--red)'
         navItemColor='var(--red)'
@@ -29,6 +29,6 @@ export default async function AdminLayout({
       />
       <LayoutWrapper>{children}</LayoutWrapper>
       <Footer />
-    </section>
+    </main>
   );
 }

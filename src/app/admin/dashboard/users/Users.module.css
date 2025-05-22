@@ -19,7 +19,6 @@
   border-radius: 8px;
   margin-top: 3rem;
   overflow-x: scroll;
-  
 }
 
 .tBody {
@@ -49,11 +48,12 @@
 }
 
 .roleBadge {
-  padding: 0.4rem 1rem;
+  padding: 0.5rem 1rem;
   font-size: 1.4rem;
   border-radius: 50px;
   text-transform: uppercase;
   color: var(--white);
+  font-family: var(--PPNeueMontrealBold);
   width: 100%;
   margin-left: auto;
 }
@@ -62,10 +62,10 @@
 .roleBadge[data-role="ADMIN"] {
   background: #2563eb;
 }
-.roleBadge[data-role="SALES_AGENT"] {
+.roleBadge[data-role="DRIVER"] {
   background: #059669;
 }
-.roleBadge[data-role="USER"] {
+.roleBadge[data-role="CUSTOMER"] {
   background: #64748b;
 }
 
@@ -81,7 +81,7 @@
   display: flex;
   gap: 1rem;
   align-items: center;
-  font-size: 0.875rem;
+  /* font-size: 0.875rem; */
 }
 
 .pageLink {
@@ -96,4 +96,66 @@
 
 .pageDisabled {
   color: #aaa;
+}
+
+.clientCell {
+  text-align: center;
+  margin: auto;
+  place-items: center;
+}
+
+.icon {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.table th:nth-child(3),
+.table th:nth-child(4),
+.table th:nth-child(5),
+.table th:nth-child(6),
+.table th:nth-child(7),
+.table td:nth-child(3),
+.table td:nth-child(4),
+.table td:nth-child(5),
+.table td:nth-child(6),
+.table td:nth-child(7) {
+  text-align: center;
+}
+
+/* ========== filter bar ========== */
+.filterContainer {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.filterTab {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--blue);
+  border-radius: 4px;
+  background: none;
+  color: var(--blue);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.filterTabActive {
+  background-color: var(--blue);
+  color: white;
+}
+
+/* Center the Admin, Driver, Client columns */
+.table th:nth-child(5),
+.table th:nth-child(6),
+.table th:nth-child(7),
+.table td:nth-child(5),
+.table td:nth-child(6),
+.table td:nth-child(7) {
+  text-align: center;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
 }
