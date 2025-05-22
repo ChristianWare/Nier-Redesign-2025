@@ -151,7 +151,6 @@
   flex-direction: column;
   gap: 1.5rem;
   padding: 2rem;
-  max-width: 320px;
 }
 
 .welcome {
@@ -160,27 +159,11 @@
   text-align: center;
 }
 
-.modalLink,
-.modalBtn {
-  padding: 0.8rem 1.2rem;
-  font-size: 1.4rem;
-  text-align: center;
-  border: 1px solid var(--red);
-  border-radius: 4px;
-  background: transparent;
-  cursor: pointer;
+.btnContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
 }
-
-.modalLink {
-  color: var(--red);
-}
-
-.modalBtn {
-  color: var(--black);
-  background: var(--red);
-  border: none;
-}
-
 
 @media screen and (max-width: 1068px) {
   .navMenu {
@@ -283,6 +266,10 @@
 
   .logo {
     margin-left: 0.5rem;
+  }
+
+  .btnContainer {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 

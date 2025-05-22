@@ -7,6 +7,7 @@ import styles from "./Nav.module.css";
 import Button from "../Button/Button";
 import Modal from "../Modal/Modal";
 import UserIcon from "../../../../public/icons/user.svg";
+import FalseButton from "../FalseButton/FalseButton";
 
 export interface NavProps {
   navItemColor?: string;
@@ -140,20 +141,27 @@ const Nav: React.FC<NavProps> = ({
                 <p className={styles.welcome}>
                   Hi, {session.user.name ?? session.user.email}
                 </p>
-                <Link
-                  href={session.user.role === "ADMIN" ? "/admin" : "/dashboard"}
-                  className={styles.modalLink}
-                  onClick={toggleModal}
-                >
-                  My&nbsp;Dashboard
-                </Link>
-                <button
-                  type='button'
-                  className={styles.modalBtn}
-                  onClick={() => signOut({ callbackUrl: "/" })}
-                >
-                  Sign Out
-                </button>
+                <div className={styles.btnContainer}>
+                  <Button
+                    btnType='black'
+                    onClick={toggleModal}
+                    text='My Dashboard'
+                    href={
+                      session.user.role === "ADMIN"
+                        ? "/admin/dashboard"
+                        : "/dashboard"
+                    }
+                  />
+
+                  <FalseButton
+                    text='Sign Out'
+                    btnType='red'
+                    onClick={() => {
+                      toggleModal();
+                      signOut({ callbackUrl: "/" });
+                    }}
+                  />
+                </div>
               </div>
             </Modal>
           </div>
