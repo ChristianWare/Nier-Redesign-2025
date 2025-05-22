@@ -11,10 +11,13 @@ export default function KpiCard({
   value: number | string;
   href: string;
 }) {
+  const numericValue = Number(value);
+  const displayValue = numericValue >= 1 ? numericValue : 0;
+
   return (
     <Link href={href} className={styles.link}>
       <article className={styles.card}>
-        <h3 className={styles.value}>{value}</h3>
+        <h3 className={styles.value}>{displayValue}</h3>
         <p className={styles.label}>{label}</p>
       </article>
     </Link>

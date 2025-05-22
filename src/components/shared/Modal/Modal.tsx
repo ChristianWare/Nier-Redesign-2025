@@ -2,7 +2,7 @@
 
 import styles from "./Modal.module.css";
 import { useEffect } from "react";
-import Close from "../../../public/icons/close.svg";
+import Close from "../../../../public/icons/close.svg";
 
 interface Props {
   isOpen: boolean;

@@ -4,16 +4,14 @@ import Link from "next/link";
 import { format } from "date-fns";
 import RoleToggleButton from "./components/RoleToggleButton/RoleToggleButton";
 
-export const revalidate = 60; // regenerate list every minute
+export const revalidate = 60;
 
-/* ────────── Types ────────── */
 type SearchParams = { page?: string };
-type PageProps = { searchParams?: Promise<SearchParams> }; // ← Promise!
+type PageProps = { searchParams?: Promise<SearchParams> };
 
-/* ────────── Page ────────── */
 export default async function UsersPage({ searchParams }: PageProps) {
   /* ---------- pagination ---------- */
-  const { page: rawPage } = (await searchParams) ?? {}; // ← await
+  const { page: rawPage } = (await searchParams) ?? {};
   const page = Math.max(1, Number(rawPage ?? 1));
   const pageSize = 20;
   const offset = (page - 1) * pageSize;
@@ -37,14 +35,12 @@ export default async function UsersPage({ searchParams }: PageProps) {
 
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
 
-  /* ---------- render ------------- */
   return (
     <section className={styles.container}>
       <Link href='/admin/dashboard' className={styles.back}>
         Back to Dashboard →
       </Link>
       <h1 className={styles.heading}>Users</h1>
-
       <table className={styles.table}>
         <thead>
           <tr>
@@ -83,7 +79,6 @@ export default async function UsersPage({ searchParams }: PageProps) {
         </tbody>
       </table>
 
-      {/* ---------- pagination footer ---------- */}
       {totalPages > 1 && (
         <nav className={styles.pagination}>
           <PageLink page={page - 1} disabled={page === 1}>

@@ -1,11 +1,10 @@
-// components/RoleToggleButton.tsx
 "use client";
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import Modal from "@/components/Modal/Modal"; // adjust this path if needed
+import Modal from "@/components/shared/Modal/Modal";
 import styles from "./RoleToggleButton.module.css";
-import FalseButton from "@/components/FalseButton/FalseButton";
+import FalseButton from "@/components/shared/FalseButton/FalseButton";
 
 interface Props {
   userId: string;
@@ -66,18 +65,19 @@ export default function RoleToggleButton({ userId, currentRole }: Props) {
       <Modal isOpen={confirmOpen} onClose={() => setConfirmOpen(false)}>
         <p>
           Are you sure you want to{" "}
-          {isAdmin ? "revoke admin rights from" : "make this user an admin"} this user?
+          {isAdmin ? "revoke admin rights from" : "make this user an admin"}{" "}
+          this user?
         </p>
         <div className={styles.btnContainer}>
           <FalseButton
             onClick={() => setConfirmOpen(false)}
-            btnType='outline'
+            btnType='redOutline'
             text='Cancel'
           />
           <FalseButton
             onClick={toggleRole}
             disabled={loading}
-            btnType='primary'
+            btnType='red'
             text={loading ? "…" : "Yes"}
           />
         </div>

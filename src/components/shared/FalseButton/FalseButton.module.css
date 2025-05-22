@@ -37,6 +37,17 @@
   border: 1px solid var(--red2);
 }
 
+.redOutline {
+  color: var(--red);
+  background-color: transparent;
+  border: 2px solid var(--red2);
+}
+
+.redOutline:hover {
+  color: var(--tan);
+  background-color: var(--red2);
+}
+
 .black {
   color: var(--tan);
   background-color: var(--black);
