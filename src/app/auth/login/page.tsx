@@ -15,6 +15,8 @@ import Button from "@/components/shared/Button/Button";
 import Img1 from "../../../../public/images/cadi2.jpg";
 import Nav from "@/components/shared/Nav/Nav";
 import Footer from "@/components/shared/Footer/Footer";
+import Google from "../../../../public/icons/google.svg";
+
 
 export default function LoginPage() {
   return (
@@ -174,9 +176,15 @@ function LoginInner() {
             <div className={styles.topText}>
               <h1 className={styles.heading}>Welcome Back</h1>
               <p className={styles.copy}>
-               Enter your email and password to access your account
+                Enter your email and password to access your account
               </p>
             </div>
+            <div className={styles.googleBtn}>
+              <Google className={styles.google} />{" "}
+              <span className={styles.googleBtnText}>Sign in with Google</span>
+            </div>
+            <p className={styles.or}>or</p>
+
             <form
               onSubmit={handleSubmit}
               autoComplete='off'
@@ -248,14 +256,14 @@ function LoginInner() {
                 />
               </div>
             </form>
-        <footer className={styles.cardFooter}>
-          <p className={styles.footerText}>
-            Don&apos;t have an account?{" "}
-            <Link href='/auth/register' className={styles.link}>
-              Sign up
-            </Link>
-          </p>
-        </footer>
+            <footer className={styles.cardFooter}>
+              <p className={styles.footerText}>
+                Don&apos;t have an account?{" "}
+                <Link href='/auth/register' className={styles.link}>
+                  Sign up
+                </Link>
+              </p>
+            </footer>
           </div>
 
           <div className={styles.right}>
