@@ -138,6 +138,50 @@
   color: var(--nav-item-color, var(--tan));
 }
 
+.userBtn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* simple modal content styling */
+.userModal {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 320px;
+}
+
+.welcome {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.modalLink,
+.modalBtn {
+  padding: 0.8rem 1.2rem;
+  font-size: 1.4rem;
+  text-align: center;
+  border: 1px solid var(--red);
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.modalLink {
+  color: var(--red);
+}
+
+.modalBtn {
+  color: var(--black);
+  background: var(--red);
+  border: none;
+}
+
+
 @media screen and (max-width: 1068px) {
   .navMenu {
     position: fixed;
