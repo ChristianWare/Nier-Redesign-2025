@@ -101,11 +101,20 @@ export default function RegisterPage() {
         signUpBtnType='navRedOutline'
       />
       <LayoutWrapper>
-        <h1 className={styles.heading}>
-          Create <br /> An Account
-        </h1>
         <div className={styles.content}>
           <div className={styles.left}>
+            <div className={styles.imgContainer}>
+              <Image src={Img1} alt='' fill className={styles.img} />
+            </div>
+          </div>
+          <div className={styles.right}>
+              {/* <span className={styles.logo}>Nier Transportation</span> */}
+            <div className={styles.topText}>
+              <h1 className={styles.heading}>Create An Account</h1>
+              <p className={styles.copy}>
+                Let&lsquo;s get started with your free account
+              </p>
+            </div>
             <form onSubmit={handleSubmit} className={styles.form}>
               {generalError && (
                 <div className={styles.errorAlert}>
@@ -198,21 +207,16 @@ export default function RegisterPage() {
                   btnType='black'
                 />
               </div>
+              <div className={styles.cardFooter}>
+                <p className={styles.footerText}>
+                  Already have an account?{" "}
+                  <Link href='/auth/login' className={styles.link}>
+                    Sign in
+                  </Link>
+                </p>
+              </div>
             </form>
           </div>
-          <div className={styles.right}>
-            <div className={styles.imgContainer}>
-              <Image src={Img1} alt='' fill className={styles.img} />
-            </div>
-          </div>
-        </div>
-        <div className={styles.cardFooter}>
-          <p className={styles.footerText}>
-            Already have an account?{" "}
-            <Link href='/auth/login' className={styles.link}>
-              Sign in
-            </Link>
-          </p>
         </div>
       </LayoutWrapper>
       <FinalCTA />
