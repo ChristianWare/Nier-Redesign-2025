@@ -1,5 +1,6 @@
 import { prisma } from "@/lib/prisma";
 import UsersTable from "./components/UsersTable/UsersTable";
+import styles from "./Users.module.css";
 
 export const revalidate = 60;
 
@@ -18,7 +19,7 @@ export default async function UsersPage() {
 
   return (
     <section>
-      <h1 style={{ textAlign: "center", margin: "2rem 0" }}>Users</h1>
+      <h1 className={styles.heading}>Users</h1>
       {/* Pass the Date objects straight into the client component */}
       <UsersTable users={users} />
     </section>

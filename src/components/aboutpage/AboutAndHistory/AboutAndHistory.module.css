@@ -52,10 +52,8 @@
 }
 
 .title {
-  padding-bottom: 1rem;
   margin-bottom: 2rem;
-  border-bottom: 4px solid var(--red);
-  color: var(--red);
+  /* color: var(--red); */
   width: fit-content;
 }
 
@@ -120,10 +118,11 @@
 }
 
 @media screen and (max-width: 668px) {
-  .subHeading, .heading {
+  .subHeading,
+  .heading {
     text-align: center;
   }
-  
+
   .middle {
     margin-top: 3rem;
   }

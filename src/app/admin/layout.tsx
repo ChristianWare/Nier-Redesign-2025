@@ -28,9 +28,7 @@ export default async function AdminLayout({
         signUpBtnType='navRedOutline'
       />
       <LayoutWrapper>
-        <h1 className={styles.heading}>Admin Dashboard</h1>
-        {children}
-      </LayoutWrapper>
+        {children}</LayoutWrapper>
       <Footer />
     </main>
   );

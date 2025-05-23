@@ -9,15 +9,16 @@
 }
 
 .heading {
-  font-size: 3rem;
-  letter-spacing: -1px;
+  font-family: var(--PPNeueMontrealBold);
+  font-size: 4rem;
+  text-transform: none;
 }
 
 .table {
   width: 100%;
   border-collapse: collapse;
   border-radius: 8px;
-  margin-top: 3rem;
+  margin-top: 5rem;
   overflow-x: scroll;
 }
 
