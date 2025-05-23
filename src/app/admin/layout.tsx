@@ -1,10 +1,11 @@
+import styles from "./AdminLayout.module.css";
 import { ReactNode } from "react";
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
-import styles from "./AdminLayout.module.css";
 import Footer from "@/components/shared/Footer/Footer";
 import Nav from "@/components/shared/Nav/Nav";
+import AdminSideNav from "./dashboard/components/AdminSideNav/AdminSideNav";
 
 export default async function AdminLayout({
   children,
@@ -28,7 +29,11 @@ export default async function AdminLayout({
         signUpBtnType='navRedOutline'
       />
       <LayoutWrapper>
-        {children}</LayoutWrapper>
+        <div className={styles.content}>
+          <AdminSideNav />
+          {children}
+        </div>
+      </LayoutWrapper>
       <Footer />
     </main>
   );
