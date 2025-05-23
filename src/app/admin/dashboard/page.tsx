@@ -16,12 +16,11 @@ export default async function DashboardPage() {
   }
 
   // now TS knows session is not null
-  const displayName = session.user.name ?? session.user.email;
   const kpis = await getKpis();
 
   return (
     <main className={styles.container}>
-      <h1 className={styles.heading}>Hi, {displayName}</h1>
+      <h1 className={styles.heading}>Dashboard</h1>
       <div className={styles.content}>
         {kpis.map((kpi) => (
           <KpiCard

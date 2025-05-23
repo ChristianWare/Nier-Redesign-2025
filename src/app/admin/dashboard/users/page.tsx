@@ -1,6 +1,6 @@
+import styles from "./Users.module.css";
 import { prisma } from "@/lib/prisma";
 import UsersTable from "./components/UsersTable/UsersTable";
-import styles from "./Users.module.css";
 
 export const revalidate = 60;
 

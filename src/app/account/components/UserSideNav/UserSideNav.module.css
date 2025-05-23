@@ -13,9 +13,10 @@
 .link {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   text-decoration: none;
   transition: all 0.2s ease-in;
+  white-space: nowrap;
 }
 
 .link:hover {
@@ -33,7 +34,8 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 1rem;
+  gap: 2rem;
+  white-space: nowrap;
 }
 
 .icon {
