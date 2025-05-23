@@ -1,0 +1,44 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  list-style: none;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  transition: all 0.2s ease-in;
+}
+
+.link:hover {
+  color: var(--black);
+}
+
+.link:hover .icon {
+  color: var(--black);
+}
+
+.listItem {
+  color: var(--text);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--text);
+  transition: all 0.2s ease-in;
+}
+
+/* active state */
+.listItem.active {
+  color: var(--black);
+}
+
+.listItem.active .icon {
+  color: var(--black);
+}
