@@ -9,7 +9,7 @@ export default async function DashboardPage() {
 
   return (
     <main className={styles.container}>
-      <h1 className={styles.heading}>Admin Dashboard</h1>
+      
       <div className={styles.content}>
         {kpis.map((kpi) => (
           <KpiCard

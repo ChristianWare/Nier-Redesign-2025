@@ -102,7 +102,7 @@
 .mobileIcon {
   width: 30px;
   height: 30px;
-  color: var(--red);
+  color: var(--nav-item-color, var(--red));
   margin-top: 1rem;
 }
 
@@ -145,17 +145,16 @@
   cursor: pointer;
 }
 
-/* simple modal content styling */
 .userModal {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 3rem;
   padding: 2rem;
 }
 
 .welcome {
-  font-size: 1.6rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-family: var(--PPNeueMontrealBold);
   text-align: center;
 }
 
@@ -198,7 +197,7 @@
 
   .navItem a {
     font-size: 2.5rem;
-    color: var(--black);
+    color: var(--black) !important;
     font-family: var(--sofia);
     font-size: 12vw;
   }

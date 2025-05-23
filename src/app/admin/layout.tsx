@@ -27,7 +27,10 @@ export default async function AdminLayout({
         navItemColor='var(--red)'
         signUpBtnType='navRedOutline'
       />
-      <LayoutWrapper>{children}</LayoutWrapper>
+      <LayoutWrapper>
+        <h1 className={styles.heading}>Admin Dashboard</h1>
+        {children}
+      </LayoutWrapper>
       <Footer />
     </main>
   );

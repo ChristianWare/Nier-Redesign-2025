@@ -1,9 +1,9 @@
 "use client";
+import styles from "./Nav.module.css";
 import React, { useEffect, useState, CSSProperties } from "react";
 import { usePathname } from "next/navigation";
 import { useSession, signOut } from "next-auth/react";
 import Link from "next/link";
-import styles from "./Nav.module.css";
 import Button from "../Button/Button";
 import Modal from "../Modal/Modal";
 import UserIcon from "../../../../public/icons/user.svg";
@@ -51,14 +51,11 @@ const Nav: React.FC<NavProps> = ({
   return (
     <header className={styles.header} style={customStyles}>
       <nav className={styles.navbar}>
-        {/* ---------------  Logo --------------- */}
         <div className={styles.logo}>
           <Link href='/' className={styles.logo}>
             Nier Transportation
           </Link>
         </div>
-
-        {/* -------------  Main nav list ------------- */}
         <ul
           className={
             !isOpen ? styles.navMenu : `${styles.navMenu} ${styles.active}`
