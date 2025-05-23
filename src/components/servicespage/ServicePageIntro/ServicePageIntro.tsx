@@ -3,7 +3,7 @@ import styles from "./ServicePageIntro.module.css";
 import Image from "next/image";
 import Img1 from "../../../../public/images/services.jpg";
 import Nav from "@/components/shared/Nav/Nav";
-import BookingWidget from "@/components/homepage/BookingWidget/BookingWidget";
+
 import BookingButton from "@/components/homepage/BookingButton/BookingButton";
 
 export default function ServicePageIntro() {
@@ -35,9 +35,6 @@ export default function ServicePageIntro() {
                 At Nier Transportation, we&rsquo;re more than a car service;
                 we&rsquo;re your trusted partner in high end transportation.
               </p>
-            </div>
-            <div className={styles.BookingWidgitContainer}>
-              <BookingWidget />
             </div>
           </div>
         </LayoutWrapper>

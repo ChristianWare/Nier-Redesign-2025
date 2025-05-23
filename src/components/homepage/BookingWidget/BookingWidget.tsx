@@ -32,26 +32,40 @@ const data = [
     title: "Passengers",
     icon: <Person className={styles.icon} />,
   },
+];
+
+const topData = [
   {
-    id: 6,
-    title: "Service",
-    icon: "",
+    id: 1,
+    title: "Distance",
+  },
+  {
+    id: 2,
+    title: "Flat Rate",
+  },
+  {
+    id: 3,
+    title: "Hourly",
   },
 ];
 
 export default function BookingWidget() {
   return (
-    <div className={styles.parent}>
-      <span className={styles.heading}>Get an instant quote:</span>
-      <div className={styles.container}>
-        {data.map((x) => (
-          <span className={styles.title} key={x.id}>
-           {x.icon} {x.title}
-          </span>
+    <div className={styles.container}>
+      <ul className={styles.topNav}>
+        {topData.map((x) => (
+          <li className={styles.listItem} key={x.id}>
+            {x.title}
+          </li>
         ))}
-        <div className={styles.btnContainer}>
-          <FalseButton text='Search' btnType='red' />
-        </div>
+      </ul>
+      {data.map((x) => (
+        <span className={styles.title} key={x.id}>
+          {x.icon} {x.title}
+        </span>
+      ))}
+      <div className={styles.btnContainer}>
+        <FalseButton text='Search' btnType='red' />
       </div>
     </div>
   );

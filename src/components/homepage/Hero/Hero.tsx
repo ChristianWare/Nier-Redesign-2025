@@ -26,28 +26,21 @@ export default function Hero() {
         />
         <LayoutWrapper>
           <div className={styles.content}>
-            <div className={styles.contentTop}>
-              <div className={styles.left}>
-                <h1 className={styles.heading}>
-                  Book your <br /> next ride with
-                  <br /> Nier Transportation
-                  {/* AZ&lsquo;s Premier Black Car Service */}
-                </h1>
-                <p className={styles.copy}>
-                  At Nier Transportation, we&rsquo;re more than a car service;
-                  we&rsquo;re your trusted partner in high end transportation.
-                </p>
-              </div>
-              <div className={styles.right}>
-                {/* <p className={styles.copy}>
-                  At Nier Transportation, we&rsquo;re more than a car service;
-                  we&rsquo;re your trusted partner in high end transportation.
-                </p> */}
-                <BookingButton text='Book Here • Book Here • Book Here • Book Here •' />{" "}
-              </div>
+            <div className={styles.left}>
+              <h1 className={styles.heading}>
+                Book your <br /> next ride with
+                <br /> Nier Transportation
+              </h1>
+              <p className={styles.copy}>
+                At Nier Transportation, we&rsquo;re more than a car service;
+                we&rsquo;re your trusted partner in high end transportation.
+              </p>
+              <BookingButton text='Book Here • Book Here • Book Here • Book Here •' />
             </div>
-            <div className={styles.BookingWidgitContainer}>
-              <BookingWidget />
+            <div className={styles.right}>
+              <div className={styles.BookingWidgitContainer}>
+                <BookingWidget />
+              </div>
             </div>
           </div>
         </LayoutWrapper>

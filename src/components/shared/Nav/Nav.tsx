@@ -64,9 +64,9 @@ const Nav: React.FC<NavProps> = ({
           {[
             { href: "/", label: "Home", match: (p: string) => p === "/" },
             {
-              href: "/about",
-              label: "About",
-              match: (p: string) => p.includes("/about"),
+              href: "/reservations",
+              label: "Reservations",
+              match: (p: string) => p.includes("/reservations"),
             },
             {
               href: "/services",
@@ -74,10 +74,15 @@ const Nav: React.FC<NavProps> = ({
               match: (p: string) => p.includes("/services"),
             },
             {
-              href: "/blog",
-              label: "Blog",
-              match: (p: string) => p.includes("/blog"),
+              href: "/company",
+              label: "Company",
+              match: (p: string) => p.includes("/company"),
             },
+            // {
+            //   href: "/blog",
+            //   label: "Blog",
+            //   match: (p: string) => p.includes("/blog"),
+            // },
             {
               href: "/contact",
               label: "Contact",

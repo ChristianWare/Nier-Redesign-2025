@@ -1,22 +1,38 @@
-.heading {
-  color: var(--tan);
-  font-weight: 600;
-  font-family: var(--inter);
-  text-transform: none;
-  font-size: 2rem;
-  text-align: center;
-  display: block;
-  margin-bottom: 3rem;
-}
-
 .container {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  backdrop-filter: blur(10px);
+  grid-template-columns: repeat(1, 1fr);
+  /* backdrop-filter: blur(10px); */
+  grid-gap: 2rem;
   border: 2px solid var(--lightBlue3);
+  border-radius: 15px;
+  width: 100%;
+  background-color: var(--tan);
+  padding: 2rem;
+}
+
+.topNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.listItem {
+  font-family: var(--PPNeueMontrealBold);
+  padding: 1rem 1.8rem;
   border-radius: 50px;
   width: 100%;
-  overflow: scroll;
+  text-align: center;
+  background-color: var(--lightgray);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.listItem:first-child {
+  background-color: var(--red);
+  color: var(--tan);
 }
 
 .icon {
@@ -27,17 +43,17 @@
 }
 
 .title {
-  color: var(--tan);
-  font-family: var(--PPNeueMontrealBold);
+  font-family: var(--PPNeueMontrealMedium);
+  color: var(--text);
   font-size: 1.6rem;
   text-align: center;
   white-space: nowrap;
-  display: block;
   display: flex;
   align-items: center;
-  justify-content: center;
-  border-right: 2px solid var(--lightBlue3);
-  padding: 1.8rem;
+  justify-content: flex-start;
+  border: 2px solid var(--border);
+  border-radius: 50px;
+  padding: 1.5rem;
   cursor: pointer;
   user-select: none;
   transition: all 0.3s ease-in;
@@ -52,15 +68,10 @@
   color: var(--black);
 }
 
-.title:nth-child(6) {
-  border-right: none;
-}
-
 .btnContainer {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-right: 0.7rem;
   transition: all 0.3s ease-in;
 }
 
@@ -69,7 +80,6 @@
   color: var(--black);
 }
 
-/* 2) when that same 6th title is hovered, style the very next .btnContainer */
 .title:nth-child(6):hover + .btnContainer {
   background-color: var(--tan);
   color: var(--black);
@@ -79,16 +89,6 @@
   .container {
     grid-template-columns: repeat(1, 1fr);
     border-radius: 25px;
-  }
-
-  .title {
-    border-right: none;
-    border-bottom: 1px solid var(--tan);
-  }
-
-  .btnContainer {
-    padding-right: 0rem;
-    padding: 2rem;
   }
 
   .title:nth-child(6):hover + .btnContainer {

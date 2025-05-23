@@ -1,6 +1,6 @@
 // src/app/admin/dashboard/page.tsx
 import styles from "./Dashboard.module.css";
-import { getKpis } from "@/lib/kpi";
+import { getAdminKpis } from "@/lib/kpi";
 import KpiCard from "./components/KpiCard/KpiCard";
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
@@ -16,7 +16,7 @@ export default async function DashboardPage() {
   }
 
   // now TS knows session is not null
-  const kpis = await getKpis();
+  const kpis = await getAdminKpis();
 
   return (
     <main className={styles.container}>

@@ -2,6 +2,10 @@
   background-color: var(--tan);
 }
 
+.content {
+  margin-top: -7rem;
+}
+
 .SectionHeadingContainer {
   margin-top: -5rem;
   padding-bottom: 2rem;
