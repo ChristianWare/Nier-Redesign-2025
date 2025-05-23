@@ -1,5 +1,5 @@
-import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import styles from "./ListOfServices.module.css";
+import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import Image from "next/image";
 import Airport from "../../../../public/images/airport.jpg";
 import Brewery from "../../../../public/images/brewery.jpg";

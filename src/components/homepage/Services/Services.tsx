@@ -18,9 +18,6 @@ export default function Services() {
             luxury and class. Book your next ride with us. Hare are some of the
             services we provide:
           </p>
-          <div className={styles.topBtnContainer}>
-            <Button btnType='black' href='/' text='All Services' />
-          </div>
         </div>
         <div className={styles.bottom}>
           {services.slice(0, 4).map((x) => (
@@ -48,6 +45,9 @@ export default function Services() {
               </div>
             </div>
           ))}
+        </div>
+        <div className={styles.topBtnContainer}>
+          <Button btnType='black' href='/services' text='All Services' />
         </div>
       </LayoutWrapper>
     </section>
