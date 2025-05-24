@@ -4,7 +4,7 @@
   /* backdrop-filter: blur(10px); */
   grid-gap: 2rem;
   border: 2px solid var(--lightBlue3);
-  border-radius: 15px;
+  border-radius: 25px;
   width: 100%;
   background-color: var(--tan);
   padding: 2rem;
