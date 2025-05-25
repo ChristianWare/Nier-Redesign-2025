@@ -1,156 +1,169 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
+// src/components/TripDetailsStep.tsx
 "use client";
-import { useState, startTransition } from "react";
+
+import { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import Map from "react-map-gl";
-import "mapbox-gl/dist/mapbox-gl.css";
-// import { AddressAutofill } from "@mapbox/search-js-react";
-import { getQuote } from "@/app/(actions)/quote";
-import dynamic from "next/dynamic";
+import {
+  LoadScript,
+  GoogleMap,
+  Marker,
+  Autocomplete,
+  DirectionsRenderer,
+} from "@react-google-maps/api";
 
-const AddressAutofill = dynamic(
-  () =>
-    import("@mapbox/search-js-react").then(
-      (m) => m.AddressAutofill as unknown as React.ComponentType<any>
-    ),
-  { ssr: false }
-);
-
-
-// zod schema ↓
 const FormSchema = z.object({
-  serviceId: z.coerce.number(),
+  pickupAddress: z.string(),
+  dropoffAddress: z.string(),
   date: z.string(),
   time: z.string(),
   passengers: z.coerce.number().min(1).max(8),
   luggage: z.coerce.number().min(0).max(8),
-  pickup: z.object({ lng: z.number(), lat: z.number() }),
-  dropoff: z.object({ lng: z.number(), lat: z.number() }),
 });
 
 type FormValues = z.infer<typeof FormSchema>;
 
+interface Quote {
+  distanceM: number;
+  durationS: number;
+  directions: google.maps.DirectionsResult;
+}
+
 export default function TripDetailsStep({
-  draftId,
   onComplete,
 }: {
-  draftId: string | null;
-  onComplete: (id: string) => void;
+  onComplete: (quote: Quote) => void;
 }) {
-  const {
-    register,
-    setValue,
-    handleSubmit,
-    watch,
-    formState: { errors },
-  } = useForm<FormValues>();
+  const { register, handleSubmit, setValue } = useForm<FormValues>();
 
-  const [quote, setQuote] = useState<Awaited<
-    ReturnType<typeof getQuote>
-  > | null>(null);
-  const [loading, setLoading] = useState(false);
+  const pickupRef = useRef<google.maps.places.Autocomplete | null>(null);
+  const dropoffRef = useRef<google.maps.places.Autocomplete | null>(null);
 
-  const onSubmit = (data: FormValues) => {
-    setLoading(true);
-    const payload = {
-      draftId,
-      serviceId: data.serviceId,
-      scheduledAt: new Date(`${data.date}T${data.time}`),
-      passengers: data.passengers,
-      luggage: data.luggage,
-      pickup: data.pickup,
-      dropoff: data.dropoff,
-    };
+  const [pickupLoc, setPickupLoc] = useState<google.maps.LatLngLiteral>();
+  const [dropoffLoc, setDropoffLoc] = useState<google.maps.LatLngLiteral>();
+  const [directions, setDirections] = useState<google.maps.DirectionsResult>();
+  const [distance, setDistance] = useState<string>();
+  const [duration, setDuration] = useState<string>();
 
-    startTransition(async () => {
-      const res = await getQuote(payload);
-      setQuote(res);
-      setLoading(false);
-      onComplete(res.draftId);
-    });
+  const onPickupLoad = (auto: google.maps.places.Autocomplete) => {
+    pickupRef.current = auto;
+  };
+  const onDropoffLoad = (auto: google.maps.places.Autocomplete) => {
+    dropoffRef.current = auto;
   };
 
-  const pickup = watch("pickup");
-  const dropoff = watch("dropoff");
+  const onPickupChanged = () => {
+    const place = pickupRef.current?.getPlace();
+    if (!place?.geometry?.location) return;
+    const loc = {
+      lat: place.geometry.location.lat(),
+      lng: place.geometry.location.lng(),
+    };
+    setPickupLoc(loc);
+    setValue("pickupAddress", place.formatted_address || "");
+  };
+
+  const onDropoffChanged = () => {
+    const place = dropoffRef.current?.getPlace();
+    if (!place?.geometry?.location) return;
+    const loc = {
+      lat: place.geometry.location.lat(),
+      lng: place.geometry.location.lng(),
+    };
+    setDropoffLoc(loc);
+    setValue("dropoffAddress", place.formatted_address || "");
+  };
+
+  const onSubmit = () => {
+    if (!pickupLoc || !dropoffLoc) return;
+
+    new google.maps.DirectionsService().route(
+      {
+        origin: pickupLoc,
+        destination: dropoffLoc,
+        travelMode: google.maps.TravelMode.DRIVING,
+      },
+      (result, status) => {
+        if (status === "OK" && result) {
+          const leg = result.routes[0].legs[0];
+          setDirections(result);
+          setDistance(leg.distance?.text);
+          setDuration(leg.duration?.text);
+          onComplete({
+            distanceM: leg.distance?.value ?? 0,
+            durationS: leg.duration?.value ?? 0,
+            directions: result,
+          });
+        }
+      }
+    );
+  };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className='space-y-6'>
-      {/* ── Pickup ───────────────────────────────────────────── */}
-      <AddressAutofill
-        accessToken={process.env.NEXT_PUBLIC_MAPBOX_TOKEN!}
-        onRetrieve={(e: any) => {
-          const [lng, lat] = e.features[0].geometry.coordinates;
-          setValue("pickup", { lng, lat });
-        }}
-      >
-        <input
-          placeholder='Pickup address'
-          className='input'
-          autoComplete='shipping address-line1'
-        />
-      </AddressAutofill>
+    <LoadScript
+      googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY!}
+      libraries={["places"] as any[]}
+    >
+      <div className='space-y-6'>
+        <form onSubmit={handleSubmit(onSubmit)} className='space-y-4'>
+          <Autocomplete onLoad={onPickupLoad} onPlaceChanged={onPickupChanged}>
+            <input
+              placeholder='Pickup address'
+              className='input'
+              autoComplete='off'
+              {...register("pickupAddress")}
+            />
+          </Autocomplete>
 
-      {/* ── Drop-off ─────────────────────────────────────────── */}
-      <AddressAutofill
-        accessToken={process.env.NEXT_PUBLIC_MAPBOX_TOKEN!}
-        onRetrieve={(e: any) => {
-          const [lng, lat] = e.features[0].geometry.coordinates;
-          setValue("dropoff", { lng, lat });
-        }}
-      >
-        <input
-          placeholder='Drop-off address'
-          className='input'
-          autoComplete='shipping address-line1'
-        />
-      </AddressAutofill>
+          <Autocomplete
+            onLoad={onDropoffLoad}
+            onPlaceChanged={onDropoffChanged}
+          >
+            <input
+              placeholder='Drop-off address'
+              className='input'
+              autoComplete='off'
+              {...register("dropoffAddress")}
+            />
+          </Autocomplete>
 
-      {/* ── Other fields ─────────────────────────────────────── */}
-      <input type='date' {...register("date")} className='input' />
-      <input type='time' {...register("time")} className='input' />
-      <input
-        type='number'
-        {...register("passengers", { valueAsNumber: true })}
-        placeholder='Passengers'
-        className='input'
-      />
-      <input
-        type='number'
-        {...register("luggage", { valueAsNumber: true })}
-        placeholder='Luggage'
-        className='input'
-      />
+          <input type='date' {...register("date")} className='input' />
+          <input type='time' {...register("time")} className='input' />
+          <input
+            type='number'
+            placeholder='Passengers'
+            className='input'
+            {...register("passengers", { valueAsNumber: true })}
+          />
+          <input
+            type='number'
+            placeholder='Luggage'
+            className='input'
+            {...register("luggage", { valueAsNumber: true })}
+          />
 
-      <button type='submit' className='btn' disabled={loading}>
-        {loading ? "Calculating…" : "Next"}
-      </button>
+          <button type='submit' className='btn'>
+            Calculate
+          </button>
+        </form>
 
-      {/* ── Quote summary ────────────────────────────────────── */}
-      {quote && (
-        <div className='mt-6 p-4 rounded border'>
-          <p>Distance: {(quote.distanceM / 1609.34).toFixed(1)} miles</p>
-          <p>ETA: {(quote.durationS / 60).toFixed(0)} mins</p>
-          <p className='font-bold'>
-            Fare: ${(quote.priceCents / 100).toFixed(2)}
-          </p>
-        </div>
-      )}
+        {distance && <p>Distance: {distance}</p>}
+        {duration && <p>ETA: {duration}</p>}
 
-      {/* ── Map preview ──────────────────────────────────────── */}
-      {pickup && dropoff && (
-        <Map
-          initialViewState={{
-            longitude: pickup.lng,
-            latitude: pickup.lat,
-            zoom: 11,
-          }}
-          style={{ width: "100%", height: 300 }}
-          mapStyle='mapbox://styles/mapbox/streets-v12'
-          mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_TOKEN}
-        />
-      )}
-    </form>
+        {pickupLoc && dropoffLoc && (
+          <GoogleMap
+            mapContainerStyle={{ width: "100%", height: "300px" }}
+            center={pickupLoc}
+            zoom={10}
+          >
+            <Marker position={pickupLoc} />
+            <Marker position={dropoffLoc} />
+            {directions && <DirectionsRenderer directions={directions} />}
+          </GoogleMap>
+        )}
+      </div>
+    </LoadScript>
   );
 }
