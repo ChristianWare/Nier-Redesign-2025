@@ -30,7 +30,8 @@ export default function Areas() {
           <div className={styles.content}>
             <div className={styles.contentTop}>
               <h2 className={styles.heading}>
-                At Nier we change <br /> what Transportation means to you.
+                At Nier, <br /> we change <br /> what Transportation means to
+                you.
               </h2>
             </div>
             <div className={styles.contentMiddle}></div>

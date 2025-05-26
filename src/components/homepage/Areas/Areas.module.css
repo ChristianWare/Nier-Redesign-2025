@@ -16,9 +16,8 @@
 
 .heading {
   font-size: 8vw;
-  line-height: 0.8;
+  line-height: 1;
   color: var(--tan);
-  width: 80%;
 }
 
 .contentBottom {
@@ -47,7 +46,6 @@
 .copy {
   color: var(--tan);
   font-family: var(--PPNeueMontrealMedium);
-
 }
 
 .btnContainer {
