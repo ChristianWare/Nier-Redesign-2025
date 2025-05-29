@@ -1,0 +1,9 @@
+.container {
+    background-color: var(--tan);
+  }
+  
+  .heading {
+    color: var(--red);
+    line-height: 0.9;
+    margin-bottom: 2rem;
+  }

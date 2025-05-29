@@ -39,7 +39,7 @@ export default function Home() {
     <main>
       <Hero />
       {/* step-1 wizard */}
-      <TripDetailsStep onComplete={handleTripDetailsComplete} />
+      {/* <TripDetailsStep onComplete={handleTripDetailsComplete} /> */}
       {/* you could now render step-2 if quote != null */}
       {/* e.g. quote && <VehicleStep quote={quote} onComplete={…} /> */}{" "}
       <AboutUs />

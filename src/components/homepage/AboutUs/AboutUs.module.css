@@ -60,6 +60,7 @@
   flex-wrap: nowrap;
   animation: scroll 50s linear infinite;
   padding-bottom: 5rem;
+  margin-top: 5rem;
 }
 
 .scrollTrack:hover {

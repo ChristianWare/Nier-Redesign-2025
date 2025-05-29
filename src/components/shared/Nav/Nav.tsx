@@ -74,15 +74,15 @@ const Nav: React.FC<NavProps> = ({
               match: (p: string) => p.includes("/services"),
             },
             {
-              href: "/company",
-              label: "Company",
+              href: "/about",
+              label: "about",
               match: (p: string) => p.includes("/company"),
             },
-            // {
-            //   href: "/blog",
-            //   label: "Blog",
-            //   match: (p: string) => p.includes("/blog"),
-            // },
+            {
+              href: "/blog",
+              label: "Blog",
+              match: (p: string) => p.includes("/blog"),
+            },
             {
               href: "/contact",
               label: "Contact",

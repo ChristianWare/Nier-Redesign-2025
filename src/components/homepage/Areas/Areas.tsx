@@ -28,12 +28,10 @@ export default function Areas() {
       <div className={styles.imgContainer}>
         <LayoutWrapper>
           <div className={styles.content}>
-            <div className={styles.contentTop}>
-              <h2 className={styles.heading}>
-                At Nier, <br /> we change <br /> what Transportation means to
-                you.
-              </h2>
-            </div>
+            <h2 className={styles.heading}>
+              At Nier <br /> we change <br /> what Transportation <br /> means
+              to you.
+            </h2>
             <div className={styles.contentMiddle}></div>
             <div className={styles.contentBottom}>
               <div></div>
