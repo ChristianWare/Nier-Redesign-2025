@@ -1,9 +1,11 @@
 .container {
-    background-color: var(--tan);
-  }
-  
-  .heading {
-    color: var(--red);
-    line-height: 0.9;
-    margin-bottom: 2rem;
-  }
+  background-color: var(--tan);
+  margin: 1rem;
+  border-radius: 10px;
+}
+
+.heading {
+  color: var(--red);
+  line-height: 0.9;
+  margin-bottom: 2rem;
+}
