@@ -1,14 +1,14 @@
 .header {
   position: relative;
-  padding-top: 2rem;
+  top: -10px;
   font-family: var(--roboto);
-  color: var(--cream);
   z-index: 1000;
   max-width: 1450px;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 30px;
-  padding-left: 30px;
+  padding-top: 2rem;
+  padding-right: 60px;
+  padding-left: 60px;
 }
 
 .navbar {
@@ -18,23 +18,11 @@
   justify-content: space-between;
 }
 
-.logo {
-  z-index: 998;
+.img {
+  width: 178px;
+  height: 75px;
   color: var(--tan);
-}
-
-.logo {
-  color: var(--logo-color, var(--tan));
-}
-
-.newLogo {
-  width: 107px;
-  height: 45px;
-  color: var(--tan);
-}
-
-.officialLogoMobile {
-  display: none;
+  margin-top: 1rem;
 }
 
 .menuItemsGroup,
@@ -164,7 +152,7 @@
   grid-gap: 2rem;
 }
 
-@media screen and (max-width: 1068px) {
+@media screen and (max-width: 1268px) {
   .navMenu {
     position: fixed;
     left: -120%;
@@ -249,7 +237,7 @@
 
   .hamburger.active .tanBar:nth-child(1),
   .hamburger.active .tanBar:nth-child(3) {
-    background-color: var(--nav-item-color, var(--black));
+    background-color: var(--black);
   }
 
   .rightLinks {
@@ -261,10 +249,7 @@
   .header {
     padding-right: 30px;
     padding-left: 30px;
-  }
-
-  .logo {
-    margin-left: 0.5rem;
+    top: .5rem;
   }
 
   .btnContainer {

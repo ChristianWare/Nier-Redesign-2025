@@ -8,6 +8,8 @@ import Button from "../Button/Button";
 import Modal from "../Modal/Modal";
 import UserIcon from "../../../../public/icons/user.svg";
 import FalseButton from "../FalseButton/FalseButton";
+import Image from "next/image";
+import Img1 from "../../../../public/images/logoLight.png";
 
 export interface NavProps {
   navItemColor?: string;
@@ -51,11 +53,12 @@ const Nav: React.FC<NavProps> = ({
   return (
     <header className={styles.header} style={customStyles}>
       <nav className={styles.navbar}>
-        <div className={styles.logo}>
-          <Link href='/' className={styles.logo}>
-            Nier Transportation
+        <div className={styles.logoContainer}>
+          <Link href='/'>
+            <Image src={Img1} alt='' title='' className={styles.img} />
           </Link>
         </div>
+       
         <ul
           className={
             !isOpen ? styles.navMenu : `${styles.navMenu} ${styles.active}`

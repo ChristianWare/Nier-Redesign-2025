@@ -3,7 +3,7 @@ import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import Image from "next/image";
 import Img1 from "../../../../public/images/road.jpg";
 import Nav from "@/components/shared/Nav/Nav";
-import BookingWidget from "../BookingWidget/BookingWidget";
+// import BookingWidget from "../BookingWidget/BookingWidget";
 import BookingButton from "../BookingButton/BookingButton";
 
 export default function Hero() {
@@ -35,12 +35,12 @@ export default function Hero() {
                 At Nier Transportation, we&rsquo;re more than a car service;
                 we&rsquo;re your trusted partner in high end transportation.
               </p>
-              <BookingButton text='Book Here • Book Here • Book Here • Book Here •' />
             </div>
             <div className={styles.right}>
-              <div className={styles.BookingWidgitContainer}>
+              <BookingButton text='Book Here • Book Here • Book Here • Book Here •' />
+              {/* <div className={styles.BookingWidgitContainer}>
                 <BookingWidget />
-              </div>
+              </div> */}
             </div>
           </div>
         </LayoutWrapper>

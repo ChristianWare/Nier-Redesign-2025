@@ -5,11 +5,11 @@
   border-right: 1px solid var(--lightBlack);
 }
 
-@media screen and (max-width: 870px) {
+/* @media screen and (max-width: 870px) {
   .container {
-    padding: 8rem 3rem;
+    padding: 12rem 5rem;
   }
-}
+} */
 
 @media screen and (max-width: 568px) {
   .container {
