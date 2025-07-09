@@ -3,7 +3,7 @@ import Sheryl from "../public/images/sheryl.jpg";
 import Jeff from "../public/images/jeff.jpg";
 import Airport from "../public/images/airport.jpg";
 import Events from "../public/images/events.jpg";
-import Party from "../public/images/partybus.jpg";
+import Party from "../public/images/partyBusiii.jpg";
 import Reocurring from "../public/images/reocurring.jpg";
 import Distance from "../public/images/distance.jpg";
 import Golf from "../public/images/golf.jpg";
@@ -12,6 +12,11 @@ import JimConnie from "../public/images/Jim&Connie.jpg";
 import Adam from "../public/images/Adam.jpg";
 import Lynn from "../public/images/lynn.jpg";
 import Lady from "../public/images/lady.jpg";
+import Corporate from "../public/images/corporateii.jpg";
+import Hourly from "../public/images/hourly.jpg";
+import Point from "../public/images/point.jpg";
+import Vip from "../public/images/vip.jpg";
+import Wedding from "../public/images/wedding.jpg";
 
 export const reviews = [
   {
@@ -84,42 +89,105 @@ export const services = [
   {
     id: 1,
     title: "Airport Transfers",
+    slug: "airport-transfers",
     copy: "Reliable black car service to Scottsdale, Sky Harbor, and Gateway airports. Professional chauffeurs ensure punctual, stress-free travel.",
     src: Airport,
+    description:
+      "Passion for mountain biking, outdoor adventure, and premium gear inspired the founders of Thundertrails to launch their specialized bike shop in 2019. What began as a local favorite for cycling enthusiasts has rapidly grown into one of the region's premier destinations for high-performance mountain bikes and accessories. With a loyal customer base and growing reputation, Thundertrails needed a digital presence that matched their in-store experience and could support their expansion plans.",
   },
   {
     id: 2,
-    title: "Special Events",
-    copy: "Arrive in style for any occasion. We provide luxury vehicles and shuttle buses to suit all group sizes and event types.",
-    src: Events,
+    title: "Hourly “As-Directed” Chauffeur",
+    slug: "hourly-chauffeur",
+    copy: "Keep a dedicated car and driver on standby for meetings, golf, or a night out; pay only for the hours you use.",
+    src: Hourly,
+    description:
+      "Passion for mountain biking, outdoor adventure, and premium gear inspired the founders of Thundertrails to launch their specialized bike shop in 2019. What began as a local favorite for cycling enthusiasts has rapidly grown into one of the region's premier destinations for high-performance mountain bikes and accessories. With a loyal customer base and growing reputation, Thundertrails needed a digital presence that matched their in-store experience and could support their expansion plans.",
   },
   {
     id: 3,
-    title: "Party Bus",
-    copy: "Elevate your celebration with our premium party buses. Featuring spacious interiors, entertainment systems, and professional chauffeurs.",
-    src: Party,
+    title: "Point-to-Point City Transfers",
+    slug: "point-to-point",
+    copy: "Direct, door-to-door rides across the Valley with fixed pricing and 15-minute courtesy wait time.",
+    src: Point,
+    description:
+      "Passion for mountain biking, outdoor adventure, and premium gear inspired the founders of Thundertrails to launch their specialized bike shop in 2019. What began as a local favorite for cycling enthusiasts has rapidly grown into one of the region's premier destinations for high-performance mountain bikes and accessories. With a loyal customer base and growing reputation, Thundertrails needed a digital presence that matched their in-store experience and could support their expansion plans.",
   },
   {
     id: 4,
-    title: "Reoccurring Rides",
-    copy: "Dependable transportation for regular business needs. Scheduled rides ensure timely arrivals without ride-share uncertainties.",
-    src: Reocurring,
+    title: "Corporate & Event Logistics",
+    slug: "corporate-events",
+    copy: "VIP roadshows and conferences with onsite greeters, manifest tracking, and consolidated billing.",
+    src: Corporate,
+    description:
+      "Passion for mountain biking, outdoor adventure, and premium gear inspired the founders of Thundertrails to launch their specialized bike shop in 2019. What began as a local favorite for cycling enthusiasts has rapidly grown into one of the region's premier destinations for high-performance mountain bikes and accessories. With a loyal customer base and growing reputation, Thundertrails needed a digital presence that matched their in-store experience and could support their expansion plans.",
   },
   {
     id: 5,
-    title: "Long Distance Drives",
-    copy: "Comfortable intercity travel with professional drivers. Relax in our well-maintained vehicles while we handle the journey.",
-    src: Distance,
+    title: "Special Events",
+    slug: "special-events",
+    copy: "Arrive in style for any occasion. We provide luxury vehicles and shuttle buses to suit all group sizes and event types.",
+    src: Events,
+    description:
+      "Passion for mountain biking, outdoor adventure, and premium gear inspired the founders of Thundertrails to launch their specialized bike shop in 2019. What began as a local favorite for cycling enthusiasts has rapidly grown into one of the region's premier destinations for high-performance mountain bikes and accessories. With a loyal customer base and growing reputation, Thundertrails needed a digital presence that matched their in-store experience and could support their expansion plans.",
   },
   {
     id: 6,
+    title: "Party Bus",
+    slug: "party-bus",
+    copy: "Elevate your celebration with our premium party buses. Featuring spacious interiors, entertainment systems, and professional chauffeurs.",
+    src: Party,
+    description:
+      "Passion for mountain biking, outdoor adventure, and premium gear inspired the founders of Thundertrails to launch their specialized bike shop in 2019. What began as a local favorite for cycling enthusiasts has rapidly grown into one of the region's premier destinations for high-performance mountain bikes and accessories. With a loyal customer base and growing reputation, Thundertrails needed a digital presence that matched their in-store experience and could support their expansion plans.",
+  },
+  {
+    id: 7,
+    title: "Reoccurring Rides",
+    slug: "reoccurring-rides",
+    copy: "Dependable transportation for regular business needs. Scheduled rides ensure timely arrivals without ride-share uncertainties.",
+    src: Reocurring,
+    description:
+      "Passion for mountain biking, outdoor adventure, and premium gear inspired the founders of Thundertrails to launch their specialized bike shop in 2019. What began as a local favorite for cycling enthusiasts has rapidly grown into one of the region's premier destinations for high-performance mountain bikes and accessories. With a loyal customer base and growing reputation, Thundertrails needed a digital presence that matched their in-store experience and could support their expansion plans.",
+  },
+  {
+    id: 8,
+    title: "Long Distance Drives",
+    slug: "long-distance",
+    copy: "Comfortable intercity travel with professional drivers. Relax in our well-maintained vehicles while we handle the journey.",
+    src: Distance,
+    description:
+      "Passion for mountain biking, outdoor adventure, and premium gear inspired the founders of Thundertrails to launch their specialized bike shop in 2019. What began as a local favorite for cycling enthusiasts has rapidly grown into one of the region's premier destinations for high-performance mountain bikes and accessories. With a loyal customer base and growing reputation, Thundertrails needed a digital presence that matched their in-store experience and could support their expansion plans.",
+  },
+  {
+    id: 9,
     title: "Golf Outing Tours",
+    slug: "golf-outing-tours",
     copy: "Stress-free rides to TPC, We-Ko Pa, Troon and other courses. Vehicles for any group size with knowledgeable local drivers.",
     src: Golf,
+    description:
+      "Passion for mountain biking, outdoor adventure, and premium gear inspired the founders of Thundertrails to launch their specialized bike shop in 2019. What began as a local favorite for cycling enthusiasts has rapidly grown into one of the region's premier destinations for high-performance mountain bikes and accessories. With a loyal customer base and growing reputation, Thundertrails needed a digital presence that matched their in-store experience and could support their expansion plans.",
+  },
+  {
+    id: 10,
+    title: "Weddings",
+    slug: "party-bus-weddings",
+    copy: "LED lighting, Bluetooth sound, and wrap-around seating for unforgettable celebrations and seamless shuttles.",
+    src: Wedding,
+    description:
+      "Passion for mountain biking, outdoor adventure, and premium gear inspired the founders of Thundertrails to launch their specialized bike shop in 2019. What began as a local favorite for cycling enthusiasts has rapidly grown into one of the region's premier destinations for high-performance mountain bikes and accessories. With a loyal customer base and growing reputation, Thundertrails needed a digital presence that matched their in-store experience and could support their expansion plans.",
+  },
+  {
+    id: 11,
+    title: "Secure VIP Transport",
+    slug: "secure-vip-transport",
+    copy: "Armored Suburbans, trained protection drivers, and optional armed agents for principals requiring elevated security.",
+    src: Vip,
+    description:
+      "Passion for mountain biking, outdoor adventure, and premium gear inspired the founders of Thundertrails to launch their specialized bike shop in 2019. What began as a local favorite for cycling enthusiasts has rapidly grown into one of the region's premier destinations for high-performance mountain bikes and accessories. With a loyal customer base and growing reputation, Thundertrails needed a digital presence that matched their in-store experience and could support their expansion plans.",
   },
 ] as const;
 
-export const projects = [
+export const servicesDetails = [
   {
     id: 1,
     title: "Thundertrails",
