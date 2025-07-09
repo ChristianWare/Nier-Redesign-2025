@@ -9,33 +9,33 @@ import React from "react";
 const HigherMargins = () => {
   const data = [
     {
-      title: "Unique Design",
+      title: "Proven Punctuality",
       description:
-        "Each website is uniquely designed to match your brand’s personality and vision.",
+        "We maintain a 98.7% on-time arrival rate—audited quarterly by an independent firm to ensure you’re never left waiting.",
     },
     {
       src: Img,
-      title: "User-Centered Approach",
+      title: "Flat-Rate Pricing",
       description:
-        "Our designs prioritize user experience, ensuring your visitors can easily navigate and find the information they need.",
+        "Enjoy fully transparent, all-inclusive flat-rate pricing with no surge fees, hidden charges, or surprise add-ons.",
     },
     {
-      title: "Responsive Layouts",
+      title: "Rapid Response Support",
       description:
-        "Our websites are fully responsive, looking great on all devices, from desktops to mobile phones.",
+        "Our dedicated customer-care team answers every inquiry within seven minutes, 24/7—so you always have real-time assistance.",
     },
     {
-      title: "Fast Loading Speeds",
+      title: "Certified Chauffeurs",
       description:
-        "We optimize your website to ensure fast loading times, providing a smooth user experience and reducing bounce rates.",
+        "All of our chauffeurs undergo thorough background checks and hold commercial licenses with annual defensive-driving recertifications.",
     },
     {
       src: Img2,
     },
   ];
+
   return (
     <section className={styles.container}>
-     
       <div className={styles.bottom}>
         {data.map((x, index) => (
           <React.Fragment key={index}>

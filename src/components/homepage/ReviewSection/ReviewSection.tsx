@@ -50,9 +50,8 @@ export default function ReviewSection() {
       <LayoutWrapper>
         <div className={styles.top}>
           <h2 className={styles.heading}>
-            reviews
-            <br />
-            from past clients
+            Voices of Our Riders
+          
           </h2>
           <p className={styles.headingIntro}>
             Whether it&rsquo;s an airport transfer, a night out, or corporate

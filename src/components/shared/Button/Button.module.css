@@ -89,6 +89,17 @@
   border: 1px solid var(--red);
 }
 
+.white {
+  color: var(--black);
+  background-color: var(--white);
+  border: 1px solid var(--white);
+}
+
+.white:hover {
+  background-color: transparent;
+  color: var(--white);
+}
+
 .red:hover {
   background-color: transparent;
   color: var(--red);

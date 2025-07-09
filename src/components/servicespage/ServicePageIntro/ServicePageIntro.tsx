@@ -20,7 +20,6 @@ export default function ServicePageIntro() {
           className={styles.img}
         />
         <Nav
-          logoColor='var(--tan)'
           navItemColor='var(--tan)'
           signUpBtnType='nav'
         />
@@ -32,8 +31,7 @@ export default function ServicePageIntro() {
                 Chauffeur Services <br /> Tailored to Every Journey
               </h1>
               <p className={styles.copy}>
-                At Nier Transportation, we&rsquo;re more than a car service;
-                we&rsquo;re your trusted partner in high end transportation.
+              Whether you’re catching a red-eye, hosting corporate VIPs, or whisking a bridal party between venues, Nier Transportation moves people smoothly and discretely across Arizona and the Southwest.
               </p>
             </div>
           </div>

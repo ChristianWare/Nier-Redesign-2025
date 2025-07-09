@@ -58,13 +58,13 @@ export default function Fleet() {
       <SectionHeading title='Fleet' />
       <LayoutWrapper>
         <div className={styles.top}>
-          <h2 className={styles.heading}>
-            find the Perfect <br /> Vehicle for your trip
-          </h2>
+          <h2 className={styles.heading}>Meet the Fleet</h2>
           <p className={styles.copy}>
-            Our fleet combines modern design with classic beauty. You&lsquo;ll
-            find sedans, SUVs, and limousines that stand out. The plush leather
-            seats and smooth ride make every trip unforgettable.
+            Choose from executive sedans with cold bottled water and phone
+            chargers, sleek SUVs that swallow six roller bags, or luxury
+            sprinter vans with Wi-Fi and conference seating. Each vehicle is
+            sanitized before every trip and inspected weekly by our in-house
+            mechanic.
           </p>
         </div>
         <div className={styles.content}>

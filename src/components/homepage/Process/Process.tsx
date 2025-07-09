@@ -13,30 +13,30 @@ const data = [
   {
     id: 1,
     icon: <Bell className={styles.icon} />,
-    title: "Select Service",
+    title: "Airport Transfers",
     description:
-      "Choose the ride type that fits your journey—whether it’s an airport transfer, hourly chauffeur, or special event booking.",
+      "Business travelers rely on us for seamless Sky Harbor pickups and drop-offs, complete with real-time flight monitoring and 60 minutes of complimentary wait time.",
   },
   {
     id: 2,
     icon: <Car className={styles.icon} />,
-    title: "Choose Vehicle",
+    title: "Corporate Roadshows",
     description:
-      "Pick from our premium fleet: sleek sedans, spacious SUVs, executive sprinters or party buses to match your style and group size.",
+      "Keep your executives on schedule with door-to-door service between meetings, including printed receipts and chilled bottled water onboard.",
   },
   {
     id: 3,
     icon: <Calendar className={styles.icon} />,
-    title: "Pick Date/Time",
+    title: "Special Events",
     description:
-      "Schedule your exact pickup date and time with live availability—no guesswork, no delays, just seamless planning.",
+      "From weddings to stadium games, we eliminate the parking headache—add meet-and-greet signage or champagne service for a memorable arrival.",
   },
   {
     id: 4,
     icon: <Receipt className={styles.icon} />,
-    title: "Reserve Your Ride",
+    title: "Weekend Getaways",
     description:
-      "Confirm your booking with a secure payment, and you’ll instantly receive your chauffeur’s details and live‑tracking link.",
+      "Families and groups book round-trip excursions to Sedona, Flagstaff, and beyond with flat-rate mileage pricing—no hidden fuel surcharges or surprise fees.",
   },
 ];
 
@@ -50,9 +50,15 @@ export default function Process() {
             <div className={styles.bottom}>
               <div className={styles.left}>
                 <div className={styles.leftContent}>
-                  <h2 className={styles.heading}>
-                    4 Easy steps To book your next ride
-                  </h2>
+                  <h2 className={styles.heading}>Popular Routes & Use-Cases</h2>
+                  <p className={styles.copy}>
+                    Business travelers rely on us for effortless Sky Harbor
+                    transfers. Event planners trust us to shuttle wedding
+                    parties and corporate guests across the Valley. Families
+                    book round-trips to Flagstaff, Sedona, and Tucson for the
+                    same flat mileage rate—no hidden fuel surcharges or gratuity
+                    “surprises.”
+                  </p>
                   <div className={styles.imgContanier}>
                     <Image
                       src={Img1}

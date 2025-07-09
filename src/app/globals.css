@@ -68,7 +68,7 @@ span {
 
 h1 {
   font-size: 8rem;
-  line-height: 0.9;
+  line-height: 1;
 }
 
 h2 {
@@ -183,7 +183,7 @@ textarea:focus {
   }
 
   h1 {
-    font-size: 10.5vw;
+    font-size: 9vw;
   }
 
   /* h2 {

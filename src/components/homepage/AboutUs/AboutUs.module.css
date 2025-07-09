@@ -19,7 +19,7 @@
   font-family: var(--PPNeueMontrealMedium);
   line-height: 1.2;
   font-size: 1.8rem;
-  width: 30%;
+  width: 60%;
 }
 
 .widgitContainer {
@@ -27,7 +27,7 @@
   align-items: center;
   justify-content: flex-end;
   flex-wrap: wrap;
-  gap: 3px;
+  gap: 1rem;
 }
 
 .title {
@@ -136,16 +136,12 @@
   }
 
   .copy {
-    width: 60%;
+    width: 80%;
   }
 }
 
 @media screen and (max-width: 768px) {
   .copy {
     width: 100%;
-  }
-
-  .widgitContainer {
-    gap: 1rem;
   }
 }

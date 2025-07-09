@@ -14,9 +14,9 @@ import LayoutWrapper from "@/components/shared/LayoutWrapper";
 // import Arrow from "../../../../public/icons/arrow.svg";
 
 const data = [
-  { id: 1, title: "Punctual—Guaranteed" },
-  { id: 2, title: "Professional Chauffeurs" },
-  { id: 3, title: "Luxury Fleet" },
+  { id: 1, title: "Professional Chauffeurs" },
+  { id: 2, title: "Flat-Rate Pricing" },
+  { id: 3, title: "Flight-Tracking Pickup" },
 ];
 
 // const imageData = [
@@ -43,9 +43,12 @@ export default function AboutUs() {
             </h2>
             <div className={styles.topContainer}>
               <p className={styles.copy}>
-                With a passion for providing the best car service in the Phoenix
-                Metro area, we&lsquo;ve been serving the Arizona community for
-                20 years.
+                When you ride with Nier you’re protected by a 98.7 percent
+                on-time record, flat-rate pricing with zero surge fees, and a
+                customer-care team that answers within seven minutes, day or
+                night. We hire only background-checked chauffeurs with
+                commercial licenses and defensive-driving certifications,
+                because punctuality means nothing without safety.
               </p>
               <div className={styles.widgitContainer}>
                 {data.map((x) => (
