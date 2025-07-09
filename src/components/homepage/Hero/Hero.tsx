@@ -36,6 +36,7 @@ export default function Hero() {
               </p>
               <div className={styles.btnContainer}>
                 <Button href='/' text='Reserve My Ride Now' btnType='white' />
+                <Button href='/services' text='See our Services' btnType='whiteOutline' />
               </div>
             </div>
             <div className={styles.right}>
