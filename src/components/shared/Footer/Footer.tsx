@@ -1,6 +1,9 @@
 import styles from "./Footer.module.css";
 import Arrow from "../../../../public/icons/arrow.svg";
 import LayoutWrapper from "../LayoutWrapper";
+import Image from "next/image";
+import Img1 from "../../../../public/images/logoLight.png";
+
 // import BookingButton from "@/components/homepage/BookingButton/BookingButton";
 
 const data = [
@@ -100,9 +103,19 @@ export default function Footer() {
     <>
       <footer className={styles.container}>
         <LayoutWrapper>
-          <h2 className={styles.headingOne}>
+          {/* <h2 className={styles.headingOne}>
             Nier <br /> Transportation
-          </h2>
+          </h2> */}
+          <div className={styles.imgContainer}>
+            <Image
+              src={Img1}
+              fill
+              alt=''
+              title=''
+              className={styles.img}
+              priority={true}
+            />
+          </div>
           <div className={styles.content}>
             <div className={styles.left}>
               <h3 className={styles.heading}>

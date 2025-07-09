@@ -26,6 +26,26 @@
   gap: 2rem;
 }
 
+.imgContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
+  position: relative;
+  width: 100%;
+  max-width: 499px;
+  aspect-ratio: 499 / 200;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.img {
+  max-width: 499px;
+  max-height: 200px;
+  object-fit: contain;
+}
+
 .heading {
   font-size: 4rem;
   color: var(--tan);
