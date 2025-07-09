@@ -10,17 +10,18 @@ import UserIcon from "../../../../public/icons/user.svg";
 import FalseButton from "../FalseButton/FalseButton";
 import Image from "next/image";
 import Img1 from "../../../../public/images/logoLight.png";
+import Img2 from "../../../../public/images/logoRed.png";
 
 export interface NavProps {
   navItemColor?: string;
-  logoColor?: string;
+  redLogo?: boolean;
   signUpBtnType?: string;
   rightLinksContent?: React.ReactNode;
 }
 
 const Nav: React.FC<NavProps> = ({
   navItemColor,
-  logoColor,
+  redLogo,
   signUpBtnType = "nav",
   rightLinksContent,
 }) => {
@@ -31,7 +32,7 @@ const Nav: React.FC<NavProps> = ({
 
   const customStyles = {
     ...(navItemColor && { "--nav-item-color": navItemColor }),
-    ...(logoColor && { "--logo-color": logoColor }),
+    ...(redLogo && { "--logo-color": redLogo }),
   } as CSSProperties;
 
   useEffect(() => {
@@ -55,10 +56,27 @@ const Nav: React.FC<NavProps> = ({
       <nav className={styles.navbar}>
         <div className={styles.logoContainer}>
           <Link href='/'>
-            <Image src={Img1} alt='' title='' className={styles.img} />
+            {!redLogo && (
+              <Image
+                src={Img1}
+                alt=''
+                title=''
+                className={styles.img}
+                priority={true}
+              />
+            )}
+            {redLogo && (
+              <Image
+                src={Img2}
+                alt=''
+                title=''
+                className={styles.img}
+                priority={true}
+              />
+            )}
           </Link>
         </div>
-       
+
         <ul
           className={
             !isOpen ? styles.navMenu : `${styles.navMenu} ${styles.active}`

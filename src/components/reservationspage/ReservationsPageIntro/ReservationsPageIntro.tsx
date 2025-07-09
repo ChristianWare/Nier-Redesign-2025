@@ -5,11 +5,7 @@ import Nav from "@/components/shared/Nav/Nav";
 export default function ReservationsPageIntro() {
   return (
     <section className={styles.container}>
-      <Nav
-        logoColor='var(--red)'
-        navItemColor='var(--red)'
-        signUpBtnType='navRedOutline'
-      />
+      <Nav redLogo navItemColor='var(--red)' signUpBtnType='navRedOutline' />
       <LayoutWrapper>
         <div className={styles.content}>
           <div className={styles.top}>

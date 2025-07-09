@@ -6,7 +6,7 @@ export default function ContactPageIntro() {
   return (
     <section className={styles.container}>
       <Nav
-        logoColor='var(--red)'
+        redLogo
         navItemColor='var(--red)'
         signUpBtnType='navRedOutline'
       />

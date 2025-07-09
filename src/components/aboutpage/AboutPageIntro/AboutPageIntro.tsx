@@ -11,11 +11,7 @@ import BookingButton from "@/components/homepage/BookingButton/BookingButton";
 export default function AboutPageIntro() {
   return (
     <section className={styles.container}>
-      <Nav
-        logoColor='var(--red)'
-        navItemColor='var(--red)'
-        signUpBtnType='navRedOutline'
-      />
+      <Nav redLogo navItemColor='var(--red)' signUpBtnType='navRedOutline' />
       <LayoutWrapper>
         {/* <div className={styles.SectionHeadingContainer}>
           <SectionHeading title='About Us' />
