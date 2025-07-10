@@ -1,57 +1,60 @@
 import styles from "./Footer.module.css";
-import Arrow from "../../../../public/icons/arrow.svg";
 import LayoutWrapper from "../LayoutWrapper";
 import Image from "next/image";
 import Img1 from "../../../../public/images/logoLight.png";
+import Link from "next/link";
+import LinkedIn from "@/components/icons/LinkedIn/LinkedIn";
+import Yelp from "@/components/icons/Yelp/Yelp";
+import Facebook from "@/components/icons/Facebook/Facebook";
 
 // import BookingButton from "@/components/homepage/BookingButton/BookingButton";
 
 const data = [
   {
     id: 1,
-    title: "Shop",
+    title: "Services",
     options: [
       {
         id: 1.1,
-        option: "All Honey Varieties",
+        option: "Airport Transfers",
       },
       {
         id: 1.2,
-        option: "Gift Boxes",
+        option: "Hourly Charters",
       },
       {
         id: 1.3,
-        option: "Raw & Unfiltered",
+        option: "Corporate Events",
       },
       {
         id: 1.4,
-        option: "Accessories & Tools",
+        option: "Party Bus",
       },
       {
         id: 1.5,
-        option: "Honey Recipe Booklets",
+        option: "Weddings",
       },
     ],
   },
   {
     id: 2,
-    title: "Discover",
+    title: "Quick Links",
     options: [
       {
         id: 2.1,
-        option: "FAQ",
+        option: "About",
       },
       {
         id: 2.2,
-        option: "Recipes",
+        option: "Services",
       },
       {
         id: 2.3,
-        option: "Our Story",
+        option: "Blog",
       },
       {
         id: 2.4,
-        option: "Blog",
+        option: "Contact",
       },
     ],
   },
@@ -61,19 +64,19 @@ const data = [
     options: [
       {
         id: 3.1,
-        option: "hello@goldendrips.com",
+        option: "reservations@niertransportation.com",
       },
       {
         id: 3.2,
-        option: "Wholesale Inquiries",
+        option: "480-300-6003",
       },
       {
         id: 3.3,
-        option: "My Account",
+        option: "LinkedIn",
       },
       {
         id: 3.4,
-        option: "Careers",
+        option: "Facebook",
       },
     ],
   },
@@ -98,37 +101,43 @@ const data2 = [
   },
 ];
 
+const data3 = [
+  {
+    id: 8,
+    href: "https://www.linkedin.com/company/nier-transportation/",
+    icon: <LinkedIn className={styles.socialIcon} />,
+  },
+  {
+    id: 9,
+    href: "https://www.yelp.com/biz/nier-transportation-scottsdale",
+    icon: <Yelp className={styles.socialIcon} />,
+  },
+  {
+    id: 10,
+    href: "https://www.facebook.com/profile.php?id=61576008853306",
+    icon: <Facebook className={styles.socialIcon} />,
+  },
+];
+
 export default function Footer() {
   return (
     <>
       <footer className={styles.container}>
         <LayoutWrapper>
-          {/* <h2 className={styles.headingOne}>
-            Nier <br /> Transportation
-          </h2> */}
-          <div className={styles.imgContainer}>
-            <Image
-              src={Img1}
-              fill
-              alt=''
-              title=''
-              className={styles.img}
-              priority={true}
-            />
-          </div>
+          
+
           <div className={styles.content}>
             <div className={styles.left}>
-              <h3 className={styles.heading}>
-                Reliable, On-Time Black-Car Service Across Phoenix & Beyond.
-              </h3>
-              <p className={styles.copy}>
-                A surprise for your first order by subscribing to the newsletter
-              </p>
-              <div className={styles.email}>
-                <span className={styles.span}>Email</span>
-                <Arrow className={styles.icon} />
+              <div className={styles.imgContainer}>
+                <Image
+                  src={Img1}
+                  fill
+                  alt=''
+                  title=''
+                  className={styles.img}
+                  priority={true}
+                />
               </div>
-              <p className={styles.privacy}>I accept the privacy policy</p>
             </div>
             <div className={styles.right}>
               {data.map((x) => (
@@ -146,6 +155,15 @@ export default function Footer() {
             </div>
           </div>
           <div className={styles.bottom}>
+            <div className={styles.b3}>
+              {data3.map((x) => (
+                <div key={x.id} className={styles.socialIconContainer}>
+                  <Link href={x.href} target='_blank'>
+                    {x.icon}
+                  </Link>
+                </div>
+              ))}
+            </div>
             <div className={styles.data2Container}>
               {data2.map((x) => (
                 <p key={x.id} className={styles.option}>
@@ -153,6 +171,7 @@ export default function Footer() {
                 </p>
               ))}
             </div>
+
             {/* <BookingButton text='Book Here • Book Here • Book Here • Book Here •' />{" "} */}
           </div>
         </LayoutWrapper>
