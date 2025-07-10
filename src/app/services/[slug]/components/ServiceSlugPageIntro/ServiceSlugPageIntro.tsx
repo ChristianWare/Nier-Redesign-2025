@@ -7,13 +7,12 @@ import { useParams } from "next/navigation";
 import Link from "next/link";
 import { services } from "@/data";
 import Image from "next/image";
+import Button from "@/components/shared/Button/Button";
 
 export default function ServiceSlugPageIntro() {
   const params = useParams();
   const slug = params.slug as string;
   const project = services.find((p) => p.slug === slug);
-
-  console.log(project);
 
   return (
     <section className={styles.container}>
@@ -41,21 +40,38 @@ export default function ServiceSlugPageIntro() {
               </div>
               <div className={styles.bottom}>
                 <div className={styles.b1}>
-                  <div>Description:</div>
+                  <div className={styles.description}>Details:</div>
                   <h2 className={styles.copy}>{project.copy}</h2>
                   <div className={styles.space}></div>
                   <p className={styles.desc}>{project.description}</p>
                   <div className={styles.space}></div>
                   <div className={styles.imgContainer}>
                     <Image
-                      src={project.src}
+                      src={project.src2}
                       fill
                       alt=''
                       title=''
                       className={styles.img}
                     />
                   </div>
+                  <div className={styles.space}></div>
+                  <div className={styles.featureContainer}>
+                    {project.features.map((x) => (
+                      <div className={styles.card} key={x.id}>
+                        <span className={styles.index}>{x.id}</span>
+                        <h3 className={styles.featureTitle}>{x.title}</h3>
+                        <p className={styles.featureDetails}>{x.details}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
+              </div>
+              <div className={styles.btnContainer}>
+                <Button
+                  href='/services'
+                  text='Back to all services'
+                  btnType='red'
+                />
               </div>
             </div>
           )}{" "}
