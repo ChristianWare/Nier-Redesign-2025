@@ -35,8 +35,17 @@ export default function Hero() {
                 we&rsquo;re your trusted partner in high end transportation.
               </p>
               <div className={styles.btnContainer}>
-                <Button href='/' text='Reserve My Ride Now' btnType='white' />
-                <Button href='/services' text='See our Services' btnType='whiteOutline' />
+                <Button
+                  href='https://bookridesonline.com/book/?dbaid=L4JAaOi0gExXw5xek9dmgQ%3d%3d'
+                  target="_blank"
+                  text='Reserve My Ride Now'
+                  btnType='white'
+                />
+                <Button
+                  href='/services'
+                  text='See our Services'
+                  btnType='whiteOutline'
+                />
               </div>
             </div>
             <div className={styles.right}>

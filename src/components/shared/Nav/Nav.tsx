@@ -85,7 +85,10 @@ const Nav: React.FC<NavProps> = ({
           {[
             { href: "/", label: "Home", match: (p: string) => p === "/" },
             {
-              href: "/reservations",
+              // href: "/reservations",
+              href: "https://bookridesonline.com/book/?dbaid=L4JAaOi0gExXw5xek9dmgQ%3d%3d",
+              // target="_blank",
+              target: true,
               label: "Reservations",
               match: (p: string) => p.includes("/reservations"),
             },
@@ -109,7 +112,7 @@ const Nav: React.FC<NavProps> = ({
               label: "Contact",
               match: (p: string) => p.includes("/contact"),
             },
-          ].map(({ href, label, match }) => (
+          ].map(({ href, label, match, target }) => (
             <li
               key={href}
               className={styles.navItem}
@@ -119,6 +122,7 @@ const Nav: React.FC<NavProps> = ({
               <Link
                 href={href}
                 className={match(pathname) ? styles.activeLink : ""}
+                target={target ? "_blank" : ""}
                 style={{ color: "var(--nav-item-color)" }}
               >
                 {label}

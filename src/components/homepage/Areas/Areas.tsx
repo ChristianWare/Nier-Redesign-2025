@@ -44,7 +44,7 @@ export default function Areas() {
                   a large fleet of cars, serving hundreds of satisfied clients.
                 </p>
                 <div className={styles.btnContainer}>
-                  <Button text='More About Us' btnType='nav' href='/' />
+                  <Button text='More About Us' btnType='nav' href='/about' />
                 </div>
               </div>
             </div>

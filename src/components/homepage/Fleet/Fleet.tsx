@@ -96,7 +96,12 @@ export default function Fleet() {
                   <p className={styles.detail}>{x.desc}</p>
                 </div>
                 <div className={styles.btnContainer}>
-                  <Button href='/' btnType='red' text='Book Now' />
+                  <Button
+                    href='https://bookridesonline.com/book/?dbaid=L4JAaOi0gExXw5xek9dmgQ%3d%3d'
+                    target='_blank'
+                    btnType='red'
+                    text='Book Now'
+                  />
                 </div>
               </div>
             </div>
