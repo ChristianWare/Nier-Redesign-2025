@@ -97,7 +97,7 @@
 
 .white:hover {
   background-color: transparent;
-  color: var(--white);
+  color: var(--white) !important;
 }
 
 .whiteOutline {
