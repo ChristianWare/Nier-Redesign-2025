@@ -126,7 +126,6 @@ const Nav: React.FC<NavProps> = ({
             </li>
           ))}
 
-          {/* phone link (mobile menu only) */}
           <li className={styles.navItem} onClick={toggleMenu}>
             <a
               href='tel:+14803006003'
@@ -144,12 +143,9 @@ const Nav: React.FC<NavProps> = ({
             </p>
           </div>
         </ul>
-
-        {/* -------------  Right-side actions ------------- */}
         {rightLinksContent ? (
           <div className={styles.rightLinks}>{rightLinksContent}</div>
         ) : session ? (
-          /* --------- user logged-in: show avatar / modal ---------- */
           <div className={styles.rightLinks}>
             <button
               type='button'
@@ -189,7 +185,6 @@ const Nav: React.FC<NavProps> = ({
             </Modal>
           </div>
         ) : (
-          /* --------- no session: show login / signup ---------- */
           <div className={styles.rightLinks}>
             {/* <Link
               href='/auth/login'
@@ -203,11 +198,14 @@ const Nav: React.FC<NavProps> = ({
               href='/auth/register'
               text='Sign Up'
             /> */}
-            <Button href='/' text='Reserve My Ride Now' btnType={signUpBtnType} />
+            <Button
+              href='tel:+4803006003'
+              text='(480) 300-6003'
+              btnType={signUpBtnType}
+            ></Button>
           </div>
         )}
 
-        {/* -------------  Burger ------------- */}
         <span
           className={
             !isOpen ? styles.hamburger : `${styles.hamburger} ${styles.active}`
