@@ -59,7 +59,7 @@
 } */
 
 .desc {
-  color: var(--darkGray);
+  color: var(--text);
   column-count: 2;
   column-gap: 5rem;
 }

@@ -2,7 +2,6 @@
   margin: 1rem;
 }
 
-
 .content {
   position: relative;
   z-index: 5;
@@ -15,10 +14,6 @@
   margin-top: -7rem;
 }
 
-/* .navContainer {
-    padding-top: 1rem;
-  } */
-
 .imgOverlay {
   background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
@@ -28,7 +23,6 @@
   left: 0;
   z-index: 1;
   border-radius: 10px;
-
 }
 
 .imgContainer {
