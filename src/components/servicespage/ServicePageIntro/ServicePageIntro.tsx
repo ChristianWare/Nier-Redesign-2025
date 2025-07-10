@@ -15,14 +15,13 @@ export default function ServicePageIntro() {
           src={Img1}
           alt=''
           title=''
-          priority
           fill
           className={styles.img}
+          priority
+          placeholder='blur'
+          loading='eager'
         />
-        <Nav
-          navItemColor='var(--tan)'
-          signUpBtnType='nav'
-        />
+        <Nav navItemColor='var(--tan)' signUpBtnType='nav' />
         <LayoutWrapper>
           <div className={styles.content}>
             <div className={styles.contentTop}>
@@ -31,7 +30,10 @@ export default function ServicePageIntro() {
                 Chauffeur Services <br /> Tailored to Every Journey
               </h1>
               <p className={styles.copy}>
-              Whether you’re catching a red-eye, hosting corporate VIPs, or whisking a bridal party between venues, Nier Transportation moves people smoothly and discretely across Arizona and the Southwest.
+                Whether you’re catching a red-eye, hosting corporate VIPs, or
+                whisking a bridal party between venues, Nier Transportation
+                moves people smoothly and discretely across Arizona and the
+                Southwest.
               </p>
             </div>
           </div>

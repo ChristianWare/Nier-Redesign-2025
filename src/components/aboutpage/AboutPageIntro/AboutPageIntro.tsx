@@ -36,15 +36,36 @@ export default function AboutPageIntro() {
             </div>
             <div className={styles.bottomLeft}>
               <div className={styles.ImgContainer}>
-                <Image src={Img1} fill alt='' title='' className={styles.img} />
+                <Image
+                  src={Img1}
+                  fill
+                  alt=''
+                  title=''
+                  className={styles.img}
+                  priority
+                />
               </div>
             </div>
             <div className={styles.bottomRight}>
               <div className={styles.ImgContainer2}>
-                <Image src={Img2} fill alt='' title='' className={styles.img} />
+                <Image
+                  src={Img2}
+                  fill
+                  alt=''
+                  title=''
+                  className={styles.img}
+                  placeholder='blur'
+                />
               </div>
               <div className={styles.ImgContainer3}>
-                <Image src={Img3} fill alt='' title='' className={styles.img} />
+                <Image
+                  src={Img3}
+                  fill
+                  alt=''
+                  title=''
+                  className={styles.img}
+                  loading='eager'
+                />
               </div>
             </div>
           </div>

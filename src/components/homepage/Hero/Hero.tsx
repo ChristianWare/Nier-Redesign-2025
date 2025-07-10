@@ -14,12 +14,13 @@ export default function Hero() {
         <div className={styles.imgOverlay}></div>
         <Image
           src={Img1}
-          alt=''
-          title=''
-          priority
+          alt='Nier Transportation'
+          title='Nier Transportation'
           fill
           className={styles.img}
+          priority
           placeholder='blur'
+          loading='eager'
         />
         <Nav navItemColor='var(--tan)' signUpBtnType='nav' />
         <LayoutWrapper>

@@ -4,7 +4,6 @@ import Nav from "@/components/shared/Nav/Nav";
 import Suburban from "../../../../public/images/taho.png";
 import Image from "next/image";
 
-
 export default function ContactPageIntro() {
   return (
     <section className={styles.container}>
@@ -22,7 +21,15 @@ export default function ContactPageIntro() {
               answers, honest pricing, and zero phone-tree frustration.
             </p>
             <div className={styles.imgContainer}>
-              <Image src={Suburban} fill alt='' title='' className={styles.img} />
+              <Image
+                src={Suburban}
+                fill
+                alt=''
+                title=''
+                className={styles.img}
+                priority
+                loading='eager'
+              />
             </div>
           </div>
         </div>

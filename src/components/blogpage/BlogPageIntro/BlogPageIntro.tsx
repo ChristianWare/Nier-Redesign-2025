@@ -13,7 +13,16 @@ export default function BlogPageIntro() {
         <div className={styles.content}>
           <div className={styles.top}>
             <div className={styles.imgContainer}>
-              <Image src={Blog} fill alt='' title='' className={styles.img} />
+              <Image
+                src={Blog}
+                fill
+                alt=''
+                title=''
+                className={styles.img}
+                priority
+                placeholder='blur'
+                loading='eager'
+              />
             </div>
             <h1 className={styles.heading}>
               Explore our blog for the latest updates, travel tips, and industry
