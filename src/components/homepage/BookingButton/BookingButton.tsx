@@ -1,7 +1,8 @@
 "use client";
 
 import styles from "./BookingButton.module.css";
-import Arrow from "../../../../public/icons/arrow.svg";
+// import Arrow from "../../../../public/icons/arrow.svg";
+import Logo from '../../../../public/icons/logoIcon.svg'
 
 interface RotatingTextProps {
   text: string;
@@ -31,7 +32,7 @@ export default function BookingButton({ text, color = "" }: RotatingTextProps) {
           </textPath>
         </text>
       </svg>
-      <Arrow className={styles.arrow} />
+      <Logo className={styles.arrow} />
     </div>
   );
 }

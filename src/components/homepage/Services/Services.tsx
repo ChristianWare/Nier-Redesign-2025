@@ -39,7 +39,7 @@ export default function Services() {
                 <div>
                   <p className={styles.desc}>{x.copy}</p>
                   <div className={styles.btnContainer}>
-                    <Button text='Learn More' btnType='red' href='/' />
+                    <Button text='Learn More' btnType='red' href={`/services/${x.slug}`} />
                   </div>
                 </div>
               </div>

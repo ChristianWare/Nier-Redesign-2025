@@ -6,7 +6,7 @@ import Airport2 from "../public/images/airport2.jpg";
 import Events from "../public/images/events.jpg";
 import Events2 from "../public/images/events2.jpg";
 import Party from "../public/images/partyBusiii.jpg";
-import Party2 from "../public/images/partyBusii.png";
+import Party2 from "../public/images/partybus.jpg";
 import Reocurring from "../public/images/reocurring.jpg";
 import Reocurring2 from "../public/images/reocurring2.jpg";
 import Distance from "../public/images/distance.jpg";

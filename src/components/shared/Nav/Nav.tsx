@@ -191,7 +191,7 @@ const Nav: React.FC<NavProps> = ({
         ) : (
           /* --------- no session: show login / signup ---------- */
           <div className={styles.rightLinks}>
-            <Link
+            {/* <Link
               href='/auth/login'
               className={styles.phone}
               style={{ color: "var(--nav-item-color)" }}
@@ -202,7 +202,8 @@ const Nav: React.FC<NavProps> = ({
               btnType={signUpBtnType}
               href='/auth/register'
               text='Sign Up'
-            />
+            /> */}
+            <Button href='/' text='Reserve My Ride Now' btnType={signUpBtnType} />
           </div>
         )}
 

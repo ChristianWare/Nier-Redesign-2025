@@ -53,11 +53,12 @@
 
 .arrow {
   position: absolute;
-  top: 50%;
+  top: 57%;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-  width: 8rem;
-  height: 8rem;
+  /* transform: translate(-50%, -50%) rotate(45deg); */
+  transform: translate(-50%, -50%);
+  width: 20rem;
+  height: 20rem;
   color: var(--tan);
   transition: all 0.3s ease-in;
 }

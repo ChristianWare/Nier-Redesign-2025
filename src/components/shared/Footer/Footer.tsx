@@ -119,8 +119,7 @@ export default function Footer() {
           <div className={styles.content}>
             <div className={styles.left}>
               <h3 className={styles.heading}>
-                Get ready for golden goodness—recipes, inspiration, and
-                everything honey.
+                Reliable, On-Time Black-Car Service Across Phoenix & Beyond.
               </h3>
               <p className={styles.copy}>
                 A surprise for your first order by subscribing to the newsletter
