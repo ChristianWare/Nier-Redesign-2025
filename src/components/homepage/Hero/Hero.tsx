@@ -19,6 +19,7 @@ export default function Hero() {
           priority
           fill
           className={styles.img}
+          placeholder='blur'
         />
         <Nav navItemColor='var(--tan)' signUpBtnType='nav' />
         <LayoutWrapper>
@@ -37,7 +38,7 @@ export default function Hero() {
               <div className={styles.btnContainer}>
                 <Button
                   href='https://bookridesonline.com/book/?dbaid=L4JAaOi0gExXw5xek9dmgQ%3d%3d'
-                  target="_blank"
+                  target='_blank'
                   text='Reserve My Ride Now'
                   btnType='white'
                 />
