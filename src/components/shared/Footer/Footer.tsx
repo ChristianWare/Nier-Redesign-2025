@@ -17,22 +17,27 @@ const data = [
       {
         id: 1.1,
         option: "Airport Transfers",
+        href: "/services/airport-transfers",
       },
       {
         id: 1.2,
         option: "Hourly Charters",
+        href: "/services/hourly-chauffeur",
       },
       {
         id: 1.3,
         option: "Corporate Events",
+        href: "/services/corporate-events",
       },
       {
         id: 1.4,
         option: "Party Bus",
+        href: "/services/party-bus",
       },
       {
         id: 1.5,
         option: "Weddings",
+        href: "/services/weddings",
       },
     ],
   },
@@ -43,18 +48,22 @@ const data = [
       {
         id: 2.1,
         option: "About",
+        href: "/about",
       },
       {
         id: 2.2,
         option: "Services",
+        href: "/services",
       },
       {
         id: 2.3,
         option: "Blog",
+        href: "/blog",
       },
       {
         id: 2.4,
         option: "Contact",
+        href: "/contact",
       },
     ],
   },
@@ -124,8 +133,6 @@ export default function Footer() {
     <>
       <footer className={styles.container}>
         <LayoutWrapper>
-          
-
           <div className={styles.content}>
             <div className={styles.left}>
               <div className={styles.imgContainer}>
@@ -145,9 +152,9 @@ export default function Footer() {
                   <div className={styles.title}>{x.title}</div>
                   <ul className={styles.optionList}>
                     {x.options.map((y) => (
-                      <li key={y.id} className={styles.option}>
-                        {y.option}
-                      </li>
+                      <Link href='/' key={y.id}>
+                        <li className={styles.option}>{y.option}</li>
+                      </Link>
                     ))}
                   </ul>
                 </div>

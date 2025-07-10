@@ -7,46 +7,51 @@ import Arrow from "../../../../public/icons/arrow.svg";
 import SectionHeading from "../SectionHeading/SectionHeading";
 // import Button from "../Button/Button";
 
-const data = [
+export const data = [
   {
-    id: 36,
-    question: "How long does it take to build an e-commerce website?",
+    id: 1,
+    question: "How do you handle flight delays or early arrivals?",
     answer:
-      "The timeline for building an e-commerce website depends on the complexity of your project. A basic online store can typically be launched in 4-6 weeks, while more complex sites with custom functionality may take 8-16 weeks. During our initial consultation, we'll provide a detailed timeline based on your specific requirements and business goals.",
+      "We monitor your flight in real time and automatically adjust your pickup window at no extra charge. If your flight arrives early, your chauffeur will be standing by; if it’s delayed, we’ll wait up to 60 minutes after landing before any fees apply.",
   },
   {
-    id: 36.1,
-    question: "Which e-commerce platform do you recommend?",
+    id: 1.1,
+    question: "What is your cancellation policy?",
     answer:
-      "We don't believe in one-size-fits-all solutions. The best platform depends on your specific business needs, budget, and long-term goals. We have expertise in Shopify, WooCommerce, Magento, Wix, and custom solutions. During our discovery process, we'll assess your requirements and recommend the platform that offers the best balance of features, flexibility, and scalability for your business.",
+      "You can cancel or modify your reservation free of charge up to 24 hours before your scheduled pickup. Cancellations made within 24 hours may incur a fee equal to one hour of service or 50% of the trip fare, whichever is less.",
   },
   {
-    id: 36.2,
-    question: "How much does an e-commerce website cost?",
+    id: 1.2,
+    question: "Can I bring pets or special equipment?",
     answer:
-      "E-commerce website costs vary widely based on your business requirements. Our starter stores begin at $5,900, growth-focused stores at $7,500, and enterprise solutions at $10,000. We provide transparent, detailed quotes for each project after understanding your specific needs. Factors that affect pricing include design complexity, number of products, custom functionality, and integrations with other business systems.",
+      "Yes—small pets are welcome in our vehicles at no extra cost (please use a carrier). For larger animals or special equipment (golf clubs, skis, wheelchairs), select the appropriate add-on during booking and we’ll provide secure storage and handling.",
   },
   {
-    id: 36.3,
-    question: "Do you provide ongoing support after launch?",
+    id: 1.3,
+    question: "Are gratuities included in the fare?",
     answer:
-      "Absolutely! We understand that launching your store is just the beginning of your e-commerce journey. We offer flexible maintenance and support plans starting at $495 per month, which include platform updates, security patches, content updates, and technical support. We also provide growth-focused services such as conversion optimization, A/B testing, and performance enhancements for businesses looking to continuously improve their online stores.",
+      "All of our rates are fully inclusive—there are no hidden charges or required tips. If you’d like to recognize exceptional service, you may do so directly through the app or with cash, but it’s never expected.",
   },
   {
-    id: 36.4,
-    question:
-      "What sets Fonts & Footers apart from other web development agencies?",
+    id: 1.4,
+    question: "What safety measures do you have in place?",
     answer:
-      "Unlike general web developers, we specialize exclusively in e-commerce, with deep expertise across multiple business models including B2C, B2B, marketplaces, subscription services, and more. Our approach balances beautiful design with data-driven strategy, ensuring your store not only looks great but delivers measurable business results. We take a limited number of clients to provide personalized attention, and our focus on long-term partnerships means we're invested in your success far beyond the initial launch.",
+      "Every vehicle is cleaned and sanitized before each trip, and all chauffeurs undergo annual defensive-driving recertification and background checks. We also maintain 256-bit SSL encryption on our booking and payment systems to protect your data.",
   },
   {
-    id: 36.466,
-    question:
-      "What sets Fonts & Footers apart from other web development agencies?",
+    id: 1.5,
+    question: "How can I add extra stops or change my route?",
     answer:
-      "Unlike general web developers, we specialize exclusively in e-commerce, with deep expertise across multiple business models including B2C, B2B, marketplaces, subscription services, and more. Our approach balances beautiful design with data-driven strategy, ensuring your store not only looks great but delivers measurable business results. We take a limited number of clients to provide personalized attention, and our focus on long-term partnerships means we're invested in your success far beyond the initial launch.",
+      "You can add up to three additional stops or modify your itinerary at any time via our mobile app, website, or by calling your chauffeur directly. All changes are confirmed instantly and reflected in your final fare.",
+  },
+  {
+    id: 1.6,
+    question: "Do you offer group or corporate discounts?",
+    answer:
+      "Yes—teams of five or more traveling together, or accounts with recurring ride volume, qualify for custom corporate pricing and priority booking. Contact our sales team for a tailored rate sheet and service agreement.",
   },
 ] as const;
+
 
 export default function Faq() {
   const [selected, setSelected] = useState<null | number>(null);
