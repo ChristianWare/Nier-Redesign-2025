@@ -13,9 +13,6 @@ export default function AboutPageIntro() {
     <section className={styles.container}>
       <Nav redLogo navItemColor='var(--red)' signUpBtnType='navRedOutline' />
       <LayoutWrapper>
-        {/* <div className={styles.SectionHeadingContainer}>
-          <SectionHeading title='About Us' />
-        </div> */}
         <div className={styles.content}>
           <div className={styles.top}>
             <h1 className={styles.heading}>Get to know us better</h1>

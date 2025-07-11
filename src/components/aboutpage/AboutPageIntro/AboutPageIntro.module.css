@@ -154,3 +154,9 @@
     height: 250px;
   }
 }
+
+@media screen and (max-width: 568px) {
+  .content {
+    margin-top: 1rem;
+  }
+}

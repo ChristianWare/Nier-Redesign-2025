@@ -49,6 +49,10 @@
   gap: 3rem;
 }
 
+.icon {
+  color: var(--black);
+}
+
 .card:nth-child(3) {
   background-color: var(--red);
 }
@@ -69,18 +73,6 @@
 .card:nth-child(3) .title,
 .card:nth-child(3) .desc {
   color: var(--white);
-}
-
-.imgContainer {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 1 / 1;
-}
-
-.img {
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid var(--red);
 }
 
 .card:nth-child(3) .img {
