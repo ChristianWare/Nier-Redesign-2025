@@ -1,5 +1,12 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
 generator client {
   provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
 }
 
 datasource db {
@@ -7,129 +14,23 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-enum Role {
-  CUSTOMER
-  ADMIN
-  DRIVER
-}
-
-enum BookingStatus {
-  PENDING
-  CONFIRMED
-  IN_PROGRESS
-  COMPLETED
-  CANCELED
-}
-
-enum ServiceType {
-  AIRPORT_POINT
-  HOURLY
-  POINT_TO_POINT
-}
-
 model User {
-  id             String    @id @default(uuid())
-  email          String    @unique
-  name           String?
-  role           Role      @default(CUSTOMER)
-  hashedPassword String?
-  bookings       Booking[]
-  driver         Driver?
-  createdAt      DateTime  @default(now())
-  updatedAt      DateTime  @updatedAt
+  id           String   @id @default(cuid())
+  email        String   @unique
+  firstName    String?
+  lastName     String?
+  profileImage String?
+  Posts        Post[]
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
 }
 
-model Driver {
-  id          String       @id @default(uuid())
-  licenseNo   String       @unique
-  phone       String?
-  user        User         @relation(fields: [userId], references: [id])
-  userId      String       @unique
-  vehicle     Vehicle?     @relation("DriverVehicle", fields: [vehicleId], references: [id])
-  vehicleId   Int?         @unique
-  lastSeenAt  DateTime?
-  assignments Assignment[]
-}
-
-model Service {
-  id          Int         @id @default(autoincrement())
-  name        String
-  type        ServiceType
-  description String?
-  baseFare    Int
-  perMile     Int
-  bookings    Booking[]
-}
-
-model Vehicle {
-  id         Int       @id @default(autoincrement())
-  name       String
-  capacity   Int
-  luggageCap Int
-  imageUrl   String
-  baseFare   Int
-  perMile    Int
-  active     Boolean   @default(true)
-  bookings   Booking[]
-  driver     Driver?   @relation("DriverVehicle")
-}
-
-model Location {
-  id       Int       @id @default(autoincrement())
-  label    String?
-  street   String
-  city     String
-  state    String
-  zip      String
-  lat      Float
-  lng      Float
-  pickups  Booking[] @relation("pickup")
-  dropoffs Booking[] @relation("dropoff")
-}
-
-model Booking {
-  id          String        @id @default(cuid())
-  user        User          @relation(fields: [userId], references: [id])
-  userId      String
-  service     Service       @relation(fields: [serviceId], references: [id])
-  serviceId   Int
-  // vehicle     Vehicle       @relation(fields: [vehicleId], references: [id])
-  // vehicleId   Int
-  vehicle     Vehicle?      @relation(fields: [vehicleId], references: [id])
-  vehicleId     Int?          // ← make nullable
-  pickup      Location      @relation("pickup", fields: [pickupId], references: [id])
-  dropoff     Location      @relation("dropoff", fields: [dropoffId], references: [id])
-  pickupId    Int
-  dropoffId   Int
-  scheduledAt DateTime
-  passengers  Int
-  luggage     Int
-  distanceM   Int
-  durationS   Int
-  priceCents  Int
-  status      BookingStatus @default(PENDING)
-  notes       String?
-  payment     Payment?
-  assignment  Assignment?
-  createdAt   DateTime      @default(now())
-  updatedAt   DateTime      @updatedAt
-}
-
-model Payment {
-  id          String   @id
-  booking     Booking  @relation(fields: [bookingId], references: [id])
-  bookingId   String   @unique
-  amountCents Int
-  currency    String   @default("usd")
-  status      String
-  createdAt   DateTime @default(now())
-}
-
-model Assignment {
-  id         String   @id @default(uuid())
-  booking    Booking  @relation(fields: [bookingId], references: [id])
-  bookingId  String   @unique
-  driver     Driver   @relation(fields: [driverId], references: [id])
-  driverId   String
-  assignedAt DateTime @default(now())
+model Post {
+  id         String   @id @default(cuid())
+  title      String
+  content    String
+  author     User     @relation(fields: [authorId], references: [id])
+  authorId   String
+  createdAt  DateTime @default(now())
+  updateddAt DateTime @updatedAt
 }

@@ -2,12 +2,12 @@
 import styles from "./Nav.module.css";
 import React, { useEffect, useState, CSSProperties } from "react";
 import { usePathname } from "next/navigation";
-import { useSession, signOut } from "next-auth/react";
+// import { useSession, signOut } from "next-auth/react";
 import Link from "next/link";
 import Button from "../Button/Button";
-import Modal from "../Modal/Modal";
-import UserIcon from "../../../../public/icons/user.svg";
-import FalseButton from "../FalseButton/FalseButton";
+// import Modal from "../Modal/Modal";
+// import UserIcon from "../../../../public/icons/user.svg";
+// import FalseButton from "../FalseButton/FalseButton";
 import Image from "next/image";
 import Img1 from "../../../../public/images/logoLight.png";
 import Img2 from "../../../../public/images/logoRed.png";
@@ -23,12 +23,12 @@ const Nav: React.FC<NavProps> = ({
   navItemColor,
   redLogo,
   signUpBtnType = "nav",
-  rightLinksContent,
+  // rightLinksContent,
 }) => {
-  const { data: session } = useSession();
+  // const { data: session } = useSession();
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-  const [userModalOpen, setUserModalOpen] = useState(false);
+  // const [userModalOpen, setUserModalOpen] = useState(false);
 
   const customStyles = {
     ...(navItemColor && { "--nav-item-color": navItemColor }),
@@ -49,7 +49,7 @@ const Nav: React.FC<NavProps> = ({
   }, [isOpen]);
 
   const toggleMenu = () => setIsOpen((o) => !o);
-  const toggleModal = () => setUserModalOpen((o) => !o);
+  // const toggleModal = () => setUserModalOpen((o) => !o);
 
   return (
     <header className={styles.header} style={customStyles}>
@@ -147,7 +147,7 @@ const Nav: React.FC<NavProps> = ({
             </p>
           </div>
         </ul>
-        {rightLinksContent ? (
+        {/* {rightLinksContent ? (
           <div className={styles.rightLinks}>{rightLinksContent}</div>
         ) : session ? (
           <div className={styles.rightLinks}>
@@ -190,7 +190,7 @@ const Nav: React.FC<NavProps> = ({
           </div>
         ) : (
           <div className={styles.rightLinks}>
-            {/* <Link
+            <Link
               href='/auth/login'
               className={styles.phone}
               style={{ color: "var(--nav-item-color)" }}
@@ -201,14 +201,22 @@ const Nav: React.FC<NavProps> = ({
               btnType={signUpBtnType}
               href='/auth/register'
               text='Sign Up'
-            /> */}
+            />
             <Button
               href='tel:+4803006003'
               text='(480) 300-6003'
               btnType={signUpBtnType}
             ></Button>
           </div>
-        )}
+        )} */}
+
+        <div className={styles.rightLinks}>
+          <Button
+            href='tel:+4803006003'
+            text='(480) 300-6003'
+            btnType={signUpBtnType}
+          ></Button>
+        </div>
 
         <span
           className={

@@ -3,7 +3,7 @@ import { Inter, Sofia_Sans_Extra_Condensed } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
-import AuthProvider from "@/providers/AuthProvider";
+// import AuthProvider from "@/providers/AuthProvider";
 import { ModalProvider } from "@/context/ModalContext";
 
 const inter = Inter({
@@ -63,9 +63,9 @@ export default function RootLayout({
             className: "toastFont",
           }}
         />
-        <AuthProvider>
+        {/* <AuthProvider> */}
           <ModalProvider>{children}</ModalProvider>
-        </AuthProvider>
+        {/* </AuthProvider> */}
       </body>
     </html>
   );
