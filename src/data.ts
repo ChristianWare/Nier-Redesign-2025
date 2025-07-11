@@ -205,6 +205,42 @@ export const services = [
     ],
   },
   {
+    id: 9,
+    title: "Golf Outing Transportation",
+    slug: "golf-outing-transportation",
+    copy: "Stress-free rides to TPC, We-Ko Pa, Troon and other courses. Vehicles for any group size with knowledgeable local drivers.",
+    src: Golf,
+    src2: Golf2,
+    description:
+      "Hit the links without the logistics headache: our Golf Outing Tours transport your group to top courses like TPC Scottsdale or Troon North in spacious SUVs or vans. Our drivers know each course’s layout and club rules, ensuring you arrive ready to play. Clubs and equipment can be pre-loaded to maximize your time on the green.",
+    features: [
+      {
+        id: 1,
+        title: "Comfortable Vehicles",
+        details:
+          "Use well-maintained, spacious vehicles that provide a comfortable ride for passengers, ensuring a pleasant experience before and after the game.",
+      },
+      {
+        id: 2,
+        title: "Timely Scheduling",
+        details:
+          "Establish a reliable schedule that allows for timely pickups and drop-offs, minimizing wait times and ensuring players arrive at the course without stress.",
+      },
+      {
+        id: 3,
+        title: "Knowledgeable Drivers",
+        details:
+          "Employ experienced drivers who are familiar with the area and can navigate efficiently, providing local insights and tips about the golf course and surroundings.",
+      },
+      {
+        id: 4,
+        title: "Group Coordination",
+        details:
+          "Facilitate group transportation options, such as shuttles or vans, to accommodate larger parties, fostering a social atmosphere and making it easier for players to travel together.",
+      },
+    ],
+  },
+  {
     id: 4,
     title: "Corporate & Event Logistics",
     slug: "corporate-events",
