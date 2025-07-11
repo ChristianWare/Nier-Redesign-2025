@@ -26,6 +26,8 @@
 
 .container {
   position: relative;
+  margin: 1rem;
+
 }
 
 .imgOverlay {
@@ -34,10 +36,14 @@
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+
 }
 
 .img2 {
   object-fit: cover;
+  border-radius: 10px;
+
 }
 
 .heading {
