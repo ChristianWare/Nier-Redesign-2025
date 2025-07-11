@@ -1,10 +1,15 @@
-import Img from "../../../public/images/barry.jpg";
+import Img from "../../../public/images/herovi.jpg";
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import styles from "../leagal.module.css";
 import Image from "next/image";
 import Nav from "@/components/shared/Nav/Nav";
 import Footer from "@/components/shared/Footer/Footer";
 import FinalCTA from "@/components/shared/FinalCTA/FinalCTA";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy",
+};
 
 const PrivacyPage = () => {
   return (
@@ -38,7 +43,7 @@ const PrivacyPage = () => {
       <LayoutWrapper>
         <div className={styles.content}>
           <p>
-            <strong>Effective Date: 07/01/2025</strong>
+            <strong>Effective Date: 09/14/2023</strong>
           </p>
           <br />
           <h2>1. Information Collection and Use:</h2>

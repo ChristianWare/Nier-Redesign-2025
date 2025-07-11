@@ -9,7 +9,7 @@ export default function ReservationsPageIntro() {
       <LayoutWrapper>
         <div className={styles.content}>
           <div className={styles.top}>
-            <h1 className={styles.heading}>Reservation Page here</h1>
+            <h1 className={styles.heading}>Comming Soon!</h1>
           </div>
         </div>
       </LayoutWrapper>

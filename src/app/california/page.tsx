@@ -1,10 +1,15 @@
-import Img from "../../../public/images/barry.jpg";
+import Img from "../../../public/images/herovi.jpg";
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import styles from "../leagal.module.css";
 import Image from "next/image";
 import Nav from "@/components/shared/Nav/Nav";
 import Footer from "@/components/shared/Footer/Footer";
 import FinalCTA from "@/components/shared/FinalCTA/FinalCTA";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "California",
+};
 
 const CaliforniaPage = () => {
   return (
