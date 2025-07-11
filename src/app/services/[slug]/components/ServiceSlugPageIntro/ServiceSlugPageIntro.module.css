@@ -54,10 +54,6 @@
   padding-top: 2rem;
 }
 
-/* .copy {
-  color: var(--red);
-} */
-
 .desc {
   color: var(--text);
   column-count: 2;
@@ -81,6 +77,20 @@
   justify-content: space-between;
   gap: 2rem;
   width: 100%;
+}
+
+.indexContainer {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid var(--black);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.index {
+  font-size: 2rem;
 }
 
 .btnContainer {

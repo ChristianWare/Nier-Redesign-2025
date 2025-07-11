@@ -11,7 +11,7 @@ const HigherMargins = () => {
     {
       title: "Proven Punctuality",
       description:
-        "We maintain a 98.7% on-time arrival rate—audited quarterly by an independent firm to ensure you’re never left waiting.",
+        "We maintain a 100% on-time arrival rate—audited quarterly by an independent firm to ensure you’re never left waiting.",
     },
     {
       src: Img,

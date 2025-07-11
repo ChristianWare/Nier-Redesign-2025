@@ -21,8 +21,8 @@ export default function Home() {
   return (
     <main>
       {/* <h1>{users.length}</h1> */}
-      <Announcement />
       <Hero />
+      <Announcement />
       <AboutUs />
       <Services />
       <Process />

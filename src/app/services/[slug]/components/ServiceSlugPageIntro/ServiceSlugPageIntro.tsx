@@ -58,7 +58,9 @@ export default function ServiceSlugPageIntro() {
                   <div className={styles.featureContainer}>
                     {project.features.map((x) => (
                       <div className={styles.card} key={x.id}>
-                        <span className={styles.index}>{x.id}</span>
+                        <div className={styles.indexContainer}>
+                          <span className={styles.index}>{x.id}</span>
+                        </div>
                         <h3 className={styles.featureTitle}>{x.title}</h3>
                         <p className={styles.featureDetails}>{x.details}</p>
                       </div>

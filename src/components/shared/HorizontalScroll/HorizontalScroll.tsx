@@ -1,0 +1,36 @@
+"use client";
+
+import styles from "./HorizontalScroll.module.css";
+import Image from "next/image";
+import Arrow from "../../../../public/icons/arrow.svg";
+import { useRef } from "react";
+import { services } from "@/data";
+import Link from "next/link";
+
+const loopedServices = [...services, ...services, ...services];
+
+export default function HorizontalScroll() {
+  const trackRef = useRef<HTMLDivElement>(null);
+
+  return (
+    <div className={styles.container}>
+      <div className={styles.scrollTrack} ref={trackRef}>
+        {loopedServices.map((service, idx) => (
+          <div className={styles.imgContainer} key={`${service.id}-${idx}`}>
+            <Arrow className={styles.icon} />
+            <Link href={`/services/${service.slug}`}>
+              <Image
+                src={service.src}
+                width={300}
+                height={300}
+                alt={service.title}
+                className={styles.img}
+              />
+            </Link>
+            <h3 className={styles.service}>{service.title}</h3>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}

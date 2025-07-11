@@ -2,6 +2,7 @@ import BookingButton from "@/components/homepage/BookingButton/BookingButton";
 import styles from "./FinalCTA.module.css";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import Button from "../Button/Button";
+import HorizontalScroll from "../HorizontalScroll/HorizontalScroll";
 
 export default function FinalCTA() {
   return (
@@ -25,6 +26,7 @@ export default function FinalCTA() {
           />
           <Button href='/contact' text='Contact Us' btnType='redOutline' />
         </div>
+        <HorizontalScroll />
       </div>
     </section>
   );

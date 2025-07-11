@@ -25,8 +25,9 @@ export default function BlogPageIntro() {
               />
             </div>
             <h1 className={styles.heading}>
-              Explore our blog for the latest updates, travel tips, and industry
-              insights to enhance your black car service experience.
+              {/* Explore our blog for the latest updates, travel tips, and industry
+              insights to enhance your black car service experience. */}
+              Coming Soon!
             </h1>
           </div>
           <div className={styles.bottom}>
