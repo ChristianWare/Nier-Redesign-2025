@@ -83,23 +83,23 @@ export default function AboutPageIntro() {
               <div className={styles.textContainerBottomLeft}>
                 <span className={styles.sectionHeading}>About us</span>
                 <p className={styles.text}>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Impedit quaerat quasi fuga laborum doloremque eligendi, soluta
-                  minima nam sequi perferendis cum voluptates quos officiis
-                  inventore ducimus iusto fugiat similique, ad sit, non tempore
-                  dolores laboriosam. Suscipit assumenda, unde accusantium
-                  officia soluta aut fugiat magnam architecto libero nesciunt
-                  inventore non illo.
+                  Since 2004, Nier Transportation has been the Phoenix Metro’s
+                  premier black-car service, dedicated to delivering luxury,
+                  reliability, and safety on every journey. Our fleet of
+                  late-model sedans, SUVs, and limousines is meticulously
+                  maintained, and our chauffeurs are hand-selected,
+                  background-checked professionals committed to your comfort and
+                  peace of mind.
                 </p>
               </div>
               <p className={styles.text}>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Impedit quaerat quasi fuga laborum doloremque eligendi, soluta
-                minima nam sequi perferendis cum voluptates quos officiis
-                inventore ducimus iusto fugiat similique, ad sit, non tempore
-                dolores laboriosam. Suscipit assumenda, unde accusantium officia
-                soluta aut fugiat magnam architecto libero nesciunt inventore
-                non illo.
+                Built on a foundation of personalized service and local
+                expertise, we specialize in airport transfers, corporate travel,
+                special events, and long-distance drives across Arizona and
+                beyond. With 24/7 customer support, transparent pricing, and a
+                relentless focus on exceeding expectations, Nier Transportation
+                sets the standard for high-end ground transportation in the
+                Valley.
               </p>
             </div>
           </div>
