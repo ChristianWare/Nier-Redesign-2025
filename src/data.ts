@@ -24,8 +24,8 @@ import Hourly from "../public/images/sand.jpg";
 import Hourly2 from "../public/images/hourly2.jpg";
 import Point from "../public/images/point.jpg";
 import Point2 from "../public/images/point2.jpg";
-import Vip from "../public/images/vip.jpg";
-import Vip2 from "../public/images/vip2.jpg";
+// import Vip from "../public/images/vip.jpg";
+// import Vip2 from "../public/images/vip2.jpg";
 import Wedding from "../public/images/wedding.jpg";
 import Wedding2 from "../public/images/wedding2.jpg";
 
@@ -433,38 +433,38 @@ export const services = [
       },
     ],
   },
-  {
-    id: 11,
-    title: "Secure VIP Transport",
-    slug: "secure-vip-transport",
-    copy: "Armored Suburbans, trained protection drivers, and optional armed agents for principals requiring elevated security.",
-    src: Vip,
-    src2: Vip2,
-    description:
-      "Our Secure VIP Transport offers the highest level of personal protection, featuring armored vehicles, specially trained security chauffeurs, and optional armed detail. Whether for high-net-worth individuals or diplomatic delegations, we tailor each itinerary to meet stringent safety protocols. Secure communication channels and advanced route planning ensure discretion and peace of mind.",
-    features: [
-      {
-        id: 1,
-        title: "Armored Vehicle Certification",
-        details: "All vehicles meet ballistic and blast protection standards.",
-      },
-      {
-        id: 2,
-        title: "Trained Protection Drivers",
-        details:
-          "Operators certified in evasive and defensive driving techniques.",
-      },
-      {
-        id: 3,
-        title: "Discrete Communications",
-        details:
-          "Encrypted radios and silent escort protocols for enhanced privacy.",
-      },
-      {
-        id: 4,
-        title: "Custom Security Planning",
-        details: "Risk assessments and route analysis tailored to each client.",
-      },
-    ],
-  },
+  // {
+  //   id: 11,
+  //   title: "Secure VIP Transport",
+  //   slug: "secure-vip-transport",
+  //   copy: "Armored Suburbans, trained protection drivers, and optional armed agents for principals requiring elevated security.",
+  //   src: Vip,
+  //   src2: Vip2,
+  //   description:
+  //     "Our Secure VIP Transport offers the highest level of personal protection, featuring armored vehicles, specially trained security chauffeurs, and optional armed detail. Whether for high-net-worth individuals or diplomatic delegations, we tailor each itinerary to meet stringent safety protocols. Secure communication channels and advanced route planning ensure discretion and peace of mind.",
+  //   features: [
+  //     {
+  //       id: 1,
+  //       title: "Armored Vehicle Certification",
+  //       details: "All vehicles meet ballistic and blast protection standards.",
+  //     },
+  //     {
+  //       id: 2,
+  //       title: "Trained Protection Drivers",
+  //       details:
+  //         "Operators certified in evasive and defensive driving techniques.",
+  //     },
+  //     {
+  //       id: 3,
+  //       title: "Discrete Communications",
+  //       details:
+  //         "Encrypted radios and silent escort protocols for enhanced privacy.",
+  //     },
+  //     {
+  //       id: 4,
+  //       title: "Custom Security Planning",
+  //       details: "Risk assessments and route analysis tailored to each client.",
+  //     },
+  //   ],
+  // },
 ] as const;
