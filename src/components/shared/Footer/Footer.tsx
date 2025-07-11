@@ -69,9 +69,9 @@ const data: Section[] = [
 
 const data2 = [
   { id: 4, title: "Privacy Policy", href: "/privacy" },
-  { id: 5, title: "Terms & Conditions", href: "/terms-conditions" },
-  { id: 6, title: "Cookie Preferences", href: "/cookie-preferences" },
-  { id: 7, title: "Legal Information", href: "/legal-information" },
+  { id: 5, title: "Terms & Conditions", href: "/terms" },
+  { id: 6, title: "Accessibility Policy", href: "/accessibility" },
+  { id: 7, title: "California Disclosures", href: "/california" },
 ];
 
 const data3 = [

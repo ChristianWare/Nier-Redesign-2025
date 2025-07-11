@@ -11,12 +11,12 @@ const statsData = [
   },
   {
     id: 2,
-    number: "15k",
+    number: "40k",
     detail: "Hours on the road",
   },
   {
     id: 3,
-    number: "154k",
+    number: "25k",
     detail: "Happy clients",
   },
 ];
