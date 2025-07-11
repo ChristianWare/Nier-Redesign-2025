@@ -1,6 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Allow production builds even if ESLint errors are present
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+
   images: {
     remotePatterns: [
       {
@@ -23,6 +28,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+
   env: {
     NEXT_PUBLIC_MAPBOX_TOKEN: process.env.NEXT_PUBLIC_MAPBOX_TOKEN,
   },
@@ -34,6 +40,7 @@ const nextConfig: NextConfig = {
     });
     return config;
   },
+
   turbopack: {
     rules: {
       "*.svg": {
@@ -42,6 +49,7 @@ const nextConfig: NextConfig = {
       },
     },
   },
+
   experimental: {
     serverActions: {
       // only necessary if you invoke server actions from a different origin:

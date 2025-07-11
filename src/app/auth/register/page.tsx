@@ -96,11 +96,8 @@ export default function RegisterPage() {
 
   return (
     <div className={styles.container}>
-      <Nav
-        logoColor='var(--red)'
-        navItemColor='var(--red)'
-        signUpBtnType='navRedOutline'
-      />
+      <Nav redLogo navItemColor='var(--red)' signUpBtnType='navRedOutline' />
+
       <LayoutWrapper>
         <div className={styles.content}>
           <div className={styles.left}>
