@@ -30,7 +30,7 @@ export const data = [
     id: 1.3,
     question: "Are gratuities included in the fare?",
     answer:
-      "All of our rates are fully inclusive—there are no hidden charges or required tips. If you’d like to recognize exceptional service, you may do so directly through the app or with cash, but it’s never expected.",
+      "Our fares represent the total cost of your transportation.  However, if you feel inclined, tips are always welcomed and appreciated.",
   },
   {
     id: 1.4,

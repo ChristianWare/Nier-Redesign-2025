@@ -370,8 +370,8 @@ export const services = [
   },
   {
     id: 9,
-    title: "Golf Outing Tours",
-    slug: "golf-outing-tours",
+    title: "Golf Outing Transportation",
+    slug: "golf-outing-transportation",
     copy: "Stress-free rides to TPC, We-Ko Pa, Troon and other courses. Vehicles for any group size with knowledgeable local drivers.",
     src: Golf,
     src2: Golf2,
@@ -380,24 +380,27 @@ export const services = [
     features: [
       {
         id: 1,
-        title: "Equipment Pre-Load",
+        title: "Comfortable Vehicles",
         details:
-          "Your clubs and gear are loaded before departure for quick pickup.",
+          "Use well-maintained, spacious vehicles that provide a comfortable ride for passengers, ensuring a pleasant experience before and after the game.",
       },
       {
         id: 2,
-        title: "Course Etiquette Brief",
-        details: "Drivers provide local course tips and etiquette guidelines.",
+        title: "Timely Scheduling",
+        details:
+          "Establish a reliable schedule that allows for timely pickups and drop-offs, minimizing wait times and ensuring players arrive at the course without stress.",
       },
       {
         id: 3,
-        title: "Climate-Controlled Cargo",
-        details: "Keep your clubs and bags at optimal temperature.",
+        title: "Knowledgeable Drivers",
+        details:
+          "Employ experienced drivers who are familiar with the area and can navigate efficiently, providing local insights and tips about the golf course and surroundings.",
       },
       {
         id: 4,
         title: "Group Coordination",
-        details: "We manage multiple pickups and drop-offs for large parties.",
+        details:
+          "Facilitate group transportation options, such as shuttles or vans, to accommodate larger parties, fostering a social atmosphere and making it easier for players to travel together.",
       },
     ],
   },
