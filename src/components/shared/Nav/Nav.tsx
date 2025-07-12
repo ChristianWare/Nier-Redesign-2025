@@ -142,7 +142,7 @@ const Nav: React.FC<NavProps> = ({
 
           <div className={styles.bottom}>
             <p className={styles.copy}>
-              Copyright &copy; 2024 Nier Transportation ‖ All Rights Reserved ‖
+              Copyright &copy; 2025 Nier Transportation ‖ All Rights Reserved ‖
               Designed & Developed By Fonts & Footers
             </p>
           </div>

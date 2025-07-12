@@ -50,7 +50,6 @@
   border-radius: 50%;
 }
 
-
 .icon {
   width: 4rem;
   height: 4rem;
@@ -62,7 +61,6 @@
     /* width: 100vw; */
     margin-left: 1rem;
     margin-right: 1rem;
-    /* min-height: 90vh; */
   }
 }
 
@@ -70,5 +68,9 @@
   .closeBtn {
     top: 20px;
     right: 20px;
+  }
+  .dialog {
+    min-width: 95vw;
+    /* min-height: 100vh; */
   }
 }
