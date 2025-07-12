@@ -56,10 +56,10 @@ export default function ServiceSlugPageIntro() {
                   </div>
                   <div className={styles.space}></div>
                   <div className={styles.featureContainer}>
-                    {project.features.map((x) => (
+                    {project.features.map((x, index) => (
                       <div className={styles.card} key={x.id}>
                         <div className={styles.indexContainer}>
-                          <span className={styles.index}>{x.id}</span>
+                          <span className={styles.index}>{index + 1}</span>
                         </div>
                         <h3 className={styles.featureTitle}>{x.title}</h3>
                         <p className={styles.featureDetails}>{x.details}</p>
