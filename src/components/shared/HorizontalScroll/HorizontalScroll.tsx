@@ -3,14 +3,24 @@
 import styles from "./HorizontalScroll.module.css";
 import Image from "next/image";
 import Arrow from "../../../../public/icons/arrow.svg";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { services } from "@/data";
 import Link from "next/link";
 
-const loopedServices = [...services, ...services, ...services];
+const loopedServices = [...services, ...services];
 
 export default function HorizontalScroll() {
   const trackRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    document.documentElement.style.overflowX = "hidden";
+    document.body.style.overflowX = "hidden";
+
+    return () => {
+      document.documentElement.style.overflowX = "";
+      document.body.style.overflowX = "";
+    };
+  }, []);
 
   return (
     <div className={styles.container}>
