@@ -1,29 +1,28 @@
-import { Metadata } from "next";
+// app/services/[slug]/page.tsx  (server component)
+
+import type { Metadata } from "next";
 import { services } from "@/data";
-import ServiceSlugPageIntro from "./components/ServiceSlugPageIntro/ServiceSlugPageIntro";
-import ReviewSection from "@/components/homepage/ReviewSection/ReviewSection";
-import Faq from "@/components/shared/Faq/Faq";
-import FinalCTA from "@/components/shared/FinalCTA/FinalCTA";
-import ContactSection from "@/components/shared/ContactSection/ContactSection";
-import Footer from "@/components/shared/Footer/Footer";
+import ServiceDetailsClient from "./components/ServiceDetailsClient/ServiceDetailsClient";
 
-interface PageProps {
-  params: { slug: string };
+type Params = { slug: string };
+
+/* ——— dynamic <title> ——— */
+export async function generateMetadata(
+  { params }: { params: Promise<Params> } // ← accept the promise
+): Promise<Metadata> {
+  const { slug } = await params; // ← await it
+  const svc = services.find((s) => s.slug === slug);
+  return { title: svc ? svc.title : "Service Not Found" };
 }
 
-export async function generateMetadata({
-  params,
-}: PageProps): Promise<Metadata> {
-  const project = services.find((p) => p.slug === params.slug);
-  return {
-    title: project ? project.title : "Service Not Found",
-  };
-}
+/* ——— page component ——— */
+export default async function Page(
+  { params }: { params: Promise<Params> } // ← accept the promise
+) {
+  const { slug } = await params; // ← await it
+  const svc = services.find((s) => s.slug === slug);
 
-export default function ServiceDetailsPage({ params }: PageProps) {
-  const project = services.find((p) => p.slug === params.slug);
-
-  if (!project) {
+  if (!svc) {
     return (
       <main>
         <h1>Service not found</h1>
@@ -31,14 +30,6 @@ export default function ServiceDetailsPage({ params }: PageProps) {
     );
   }
 
-  return (
-    <main>
-      <ServiceSlugPageIntro />
-      <ReviewSection />
-      <Faq />
-      <FinalCTA />
-      <ContactSection />
-      <Footer />
-    </main>
-  );
+  /* pass data to a client component if you need hooks there */
+  return <ServiceDetailsClient service={svc} />;
 }
