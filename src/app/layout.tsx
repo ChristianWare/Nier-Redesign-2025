@@ -7,8 +7,6 @@ import { ModalProvider } from "@/context/ModalContext";
 import Script from "next/script";
 import PlausibleProvider from "next-plausible";
 
-
-
 const inter = Inter({
   variable: "--inter",
   subsets: ["latin"],
@@ -54,7 +52,6 @@ export const metadata: Metadata = {
   description:
     "Experience Nier Transportation's excellence: Airport transfers, party buses, corporate transport, and more. Your premier Phoenix car service.",
 };
-
 
 export default function RootLayout({
   children,

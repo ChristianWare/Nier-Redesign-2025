@@ -219,16 +219,4 @@ textarea:focus {
 } */
 
 /* Ensure chat widget stays behind mobile menu */
-@media (max-width: 1268px) {
-  .ruby-container {
-    z-index: 100 !important;
-  }
-  
-  .navMenu {
-    z-index: 99999 !important;
-  }
-  
-  .hamburger {
-    z-index: 100000 !important;
-  }
-}
+
