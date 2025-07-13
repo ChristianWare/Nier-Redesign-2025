@@ -15,7 +15,7 @@ export default function Announcement() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsOpen(true);
-    }, 1000);
+    }, 5000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -32,7 +32,7 @@ export default function Announcement() {
         <h2 className={styles.heading}>
           Morgan Wallen concert: <br /> July 18 - 19
         </h2>
-        <p>
+        <p className={styles.copy}>
           Join us for an unforgettable experience at the Morgan Wallen Concert
           at State Farm Stadium on July 18 and 19! We're offering convenient
           group transportation to ensure you and your friends can enjoy the show
