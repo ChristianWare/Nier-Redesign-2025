@@ -5,7 +5,6 @@ import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import styles from "./ServiceAreas.module.css";
 import Image from "next/image";
 
-/* ------------- images per city ------------- */
 import ImgScottsdale from "../../../../public/images/scottsdaleii.jpg";
 import ImgPhoenix from "../../../../public/images/phoenixii.jpg";
 import ImgMesa from "../../../../public/images/mesaii.jpg";
@@ -72,7 +71,6 @@ export default function ServiceAreas() {
 
       const viewportH = window.innerHeight;
 
-      /* ---------- MOBILE ≤ 568 px ---------- */
       if (window.innerWidth <= 668) {
         const thresholdLine = viewportH * 0.7; // 70 % down
         let newIdx = active; // fallback
@@ -90,8 +88,6 @@ export default function ServiceAreas() {
         return; // done for mobile
       }
 
-      /* ---------- DESKTOP  > 568 px ---------- */
-
       const imgRect = stickyRef.current.getBoundingClientRect();
       const imgCenter = imgRect.top + imgRect.height / 2;
 
@@ -99,7 +95,6 @@ export default function ServiceAreas() {
       const containerTop = containerRect.top;
       const containerBottom = containerRect.bottom;
 
-      /* sentinel guards so first & last can activate */
       if (imgCenter <= containerTop + 200) {
         if (active !== 0) setActive(0);
         return;
@@ -110,7 +105,6 @@ export default function ServiceAreas() {
         return;
       }
 
-      /* closest‑centre logic */
       let bestIdx = active;
       let minDiff = Infinity;
 
@@ -129,7 +123,6 @@ export default function ServiceAreas() {
       if (bestIdx !== active) setActive(bestIdx);
     };
 
-    /* throttle via rAF */
     let ticking = false;
     const handleScroll = () => {
       if (!ticking) {
@@ -144,7 +137,6 @@ export default function ServiceAreas() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     window.addEventListener("resize", handleScroll, { passive: true });
 
-    /* initial run after DOM ready */
     const timer = setTimeout(() => {
       pickActiveCard();
       setIsReady(true);
@@ -196,6 +188,15 @@ export default function ServiceAreas() {
                     i === active ? styles.activeCard : ""
                   }`}
                 >
+                  <div className={styles.imgMobile}>
+                    <Image
+                      src={city.src}
+                      alt={city.city}
+                      fill
+                      priority
+                      className={styles.imgii}
+                    />
+                  </div>
                   <h3 className={styles.city}>{city.city}</h3>
                   <p className={styles.desc}>{city.desc}</p>
                 </div>

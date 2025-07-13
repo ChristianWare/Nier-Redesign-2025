@@ -14,9 +14,6 @@
   transition: all 0.3s ease-in;
 }
 
-.container:hover {
-  background-color: var(--tan);
-}
 
 .svg {
   width: 100%;
@@ -26,11 +23,6 @@
   text-transform: uppercase;
   user-select: none;
   transform-origin: 50% 50%;
-  transition: all 0.1s ease-in;
-}
-
-.container:hover .svg {
-  fill: var(--black);
   transition: all 0.1s ease-in;
 }
 
@@ -66,4 +58,21 @@
 .container:hover .arrow {
   color: var(--black);
   transition: all 0.3s ease-in;
+}
+
+/* only apply hover styles on devices that actually support hover */
+@media (hover: hover) and (pointer: fine) {
+  .container:hover {
+    background-color: var(--tan);
+  }
+
+  .container:hover .svg {
+    fill: var(--black);
+    transition: all 0.1s ease-in;
+  }
+
+  .container:hover .arrow {
+    color: var(--black);
+    transition: all 0.3s ease-in;
+  }
 }
