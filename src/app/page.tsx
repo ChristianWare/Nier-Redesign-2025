@@ -12,7 +12,7 @@ import ContactSection from "@/components/shared/ContactSection/ContactSection";
 import Faq from "@/components/shared/Faq/Faq";
 import FinalCTA from "@/components/shared/FinalCTA/FinalCTA";
 import Footer from "@/components/shared/Footer/Footer";
-// import prisma from "@/lib/db";
+// import { prisma } from "../../prisma/prisma";
 
 export default function Home() {
   // const users = await prisma.user.findMany();
