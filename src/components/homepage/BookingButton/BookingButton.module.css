@@ -42,7 +42,7 @@
   fill: var(--tan);
 }
 
-/* .arrow {
+.arrow {
   position: absolute;
   top: 57%;
   left: 50%;
@@ -52,7 +52,7 @@
   height: 20rem;
   color: var(--tan);
   transition: all 0.3s ease-in;
-} */
+}
 
 /* only apply hover styles on devices that actually support hover */
 @media (hover: hover) and (pointer: fine) {
