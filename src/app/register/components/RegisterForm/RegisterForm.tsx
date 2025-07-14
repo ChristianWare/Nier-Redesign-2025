@@ -4,7 +4,6 @@ import styles from "./RegisterForm.module.css";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { RegisterScehma } from "@/schemas";
-import Nav from "@/components/shared/Nav/Nav";
 import GoogleIcon from "../../../../../public/icons/google.svg";
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import Image from "next/image";
