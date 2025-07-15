@@ -63,7 +63,7 @@ export default function RootLayout({
       <head>
         <PlausibleProvider
           domain='niertransportation.com'
-          trackLocalhost={true}
+          trackLocalhost={false}
           enabled={true}
         />
         {/* <Script
