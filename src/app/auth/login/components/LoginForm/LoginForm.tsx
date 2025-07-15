@@ -1,21 +1,20 @@
 "use client";
 
+import styles from "./LoginForm.module.css";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { LoginSchema } from "@/schemas";
 import { login as loginAction } from "@/actions/login";
-
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import FalseButton from "@/components/shared/FalseButton/FalseButton";
 import FinalCTA from "@/components/shared/FinalCTA/FinalCTA";
 import Footer from "@/components/shared/Footer/Footer";
-import GoogleIcon from "../../../../../../public/icons/google.svg";
 import Img1 from "../../../../../../public/images/casaGrandeii.jpg";
-import styles from "./LoginForm.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import GoogleButton from "@/components/shared/GoogleButton/GoogleButton";
 
 export default function LoginForm() {
   const {
@@ -56,10 +55,7 @@ export default function LoginForm() {
               </p>
             </div>
 
-            <button type='button' className={styles.googleBtn}>
-              <GoogleIcon className={styles.google} />
-              <span className={styles.googleBtnText}>Sign in with Google</span>
-            </button>
+            <GoogleButton title='in' />
 
             <p className={styles.or}>or</p>
 
