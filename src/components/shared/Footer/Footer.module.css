@@ -1,5 +1,7 @@
 .container {
   background-color: var(--red);
+  margin: 1rem;
+  border-radius: 10px;
 }
 
 .headingOne {
@@ -168,7 +170,6 @@
 }
 
 @media screen and (max-width: 568px) {
-
   .right {
     grid-template-columns: repeat(2, 1fr);
   }
