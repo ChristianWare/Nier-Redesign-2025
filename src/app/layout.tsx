@@ -4,7 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import { ModalProvider } from "@/context/ModalContext";
-// import Script from "next/script";
+import Script from "next/script";
 import PlausibleProvider from "next-plausible";
 
 const inter = Inter({
@@ -66,7 +66,7 @@ export default function RootLayout({
           trackLocalhost={false}
           enabled={true}
         />
-        {/* <Script
+        <Script
           id='ruby-chat-script'
           // You can change this to `beforeInteractive` or `lazyOnload`
           // depending on how soon you want the script to run.
@@ -93,7 +93,7 @@ export default function RootLayout({
       })();
     `,
           }}
-        /> */}
+        />
       </head>
       <body
         className={` ${inter.variable} ${sofia.variable} ${SuisseIntlMedium.variable} ${SuisseRegular.variable} ${PPNeueMontrealBold.variable} ${PPNeueMontrealMedium.variable}`}

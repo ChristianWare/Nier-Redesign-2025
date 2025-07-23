@@ -2,6 +2,7 @@
   background-color: var(--darkGray);
   scroll-snap-type: y proximity;
   padding-top: 15rem;
+  scroll-snap-type: none;
 }
 
 .right > div {
@@ -35,6 +36,10 @@
   margin-top: 10rem;
 }
 
+.left {
+  align-self: start;
+}
+
 .right {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -57,132 +62,44 @@
   font-size: 1.8rem;
 }
 
-.left {
-  position: relative;
-}
 
 .imgContainer {
   position: sticky;
-  top: 100px;
+  top: 90px;
   height: 500px;
-  transition: opacity 0.5s ease;
-  /* clip-path: polygon(
-    5.85786px 90.1421px,
-    5.85786px 90.1421px,
-    4.78241496px 91.3063096px,
-    3.80836608px 92.5439808px,
-    2.93849472px 93.8483972px,
-    2.17558224px 95.2128424px,
-    1.52241px 96.6306px,
-    0.98175936px 98.0949536px,
-    0.55641168px 99.5991868px,
-    0.24914832px 101.1365832px,
-    0.06275064px 102.7004264px,
-    0px 104.284px,
-    0px calc(100% - 20px),
-    0px calc(100% - 20px),
-    0.2617661px calc(100% - 16.755822px),
-    1.0196128px calc(100% - 13.678336px),
-    2.2323627px calc(100% - 10.808714px),
-    3.8588384px calc(100% - 8.188128px),
-    5.8578625px calc(100% - 5.85775px),
-    8.1882576px calc(100% - 3.858752px),
-    10.8088463px calc(100% - 2.2323060000001px),
-    13.6784512px calc(100% - 1.019584px),
-    16.7558949px calc(100% - 0.26175799999999px),
-    20px calc(100% - 0px),
-    calc(100% - 132px) calc(100% - 0px),
-    calc(100% - 132px) calc(100% - 0px),
-    calc(100% - 128.755822px) calc(100% - 0.26175799999987px),
-    calc(100% - 125.678336px) calc(100% - 1.0195839999998px),
-    calc(100% - 122.808714px) calc(100% - 2.232306px),
-    calc(100% - 120.188128px) calc(100% - 3.858752px),
-    calc(100% - 117.85775px) calc(100% - 5.85775px),
-    calc(100% - 115.858752px) calc(100% - 8.188128px),
-    calc(100% - 114.232306px) calc(100% - 10.808714px),
-    calc(100% - 113.019584px) calc(100% - 13.678336px),
-    calc(100% - 112.261758px) calc(100% - 16.755822px),
-    calc(100% - 112px) calc(100% - 20px),
-    calc(100% - 112px) calc(100% - 44px),
-    calc(100% - 112px) calc(100% - 44px),
-    calc(100% - 111.738242px) calc(100% - 47.244178px),
-    calc(100% - 110.980416px) calc(100% - 50.321664px),
-    calc(100% - 109.767694px) calc(100% - 53.191286px),
-    calc(100% - 108.141248px) calc(100% - 55.811872px),
-    calc(100% - 106.14225px) calc(100% - 58.14225px),
-    calc(100% - 103.811872px) calc(100% - 60.141248px),
-    calc(100% - 101.191286px) calc(100% - 61.767694px),
-    calc(100% - 98.321664px) calc(100% - 62.980416px),
-    calc(100% - 95.244178px) calc(100% - 63.738242px),
-    calc(100% - 92px) calc(100% - 64px),
-    calc(100% - 20px) calc(100% - 64px),
-    calc(100% - 20px) calc(100% - 64px),
-    calc(100% - 16.755822px) calc(100% - 64.261758px),
-    calc(100% - 13.678336px) calc(100% - 65.019584px),
-    calc(100% - 10.808714px) calc(100% - 66.232306px),
-    calc(100% - 8.188128px) calc(100% - 67.858752px),
-    calc(100% - 5.85775px) calc(100% - 69.85775px),
-    calc(100% - 3.858752px) calc(100% - 72.188128px),
-    calc(100% - 2.232306px) calc(100% - 74.808714px),
-    calc(100% - 1.0195840000001px) calc(100% - 77.678336px),
-    calc(100% - 0.26175799999999px) calc(100% - 80.755822px),
-    calc(100% - 0px) calc(100% - 84px),
-    calc(100% - 0px) 67.999px,
-    calc(100% - 0px) 67.999px,
-    calc(100% - 0.26175799999999px) 64.7548949px,
-    calc(100% - 1.0195839999999px) 61.6774512px,
-    calc(100% - 2.232306px) 58.8078463px,
-    calc(100% - 3.858752px) 56.1872576px,
-    calc(100% - 5.85775px) 53.8568625px,
-    calc(100% - 8.188128px) 51.8578384px,
-    calc(100% - 10.808714px) 50.2313627px,
-    calc(100% - 13.678336px) 49.0186128px,
-    calc(100% - 16.755822px) 48.2607661px,
-    calc(100% - 20px) 47.999px,
-    calc(100% - 92px) 47.999px,
-    calc(100% - 92px) 47.999px,
-    calc(100% - 95.244178px) 47.7372339px,
-    calc(100% - 98.321664px) 46.9793872px,
-    calc(100% - 101.191286px) 45.7666373px,
-    calc(100% - 103.811872px) 44.1401616px,
-    calc(100% - 106.14225px) 42.1411375px,
-    calc(100% - 108.141248px) 39.8107424px,
-    calc(100% - 109.767694px) 37.1901537px,
-    calc(100% - 110.980416px) 34.3205488px,
-    calc(100% - 111.738242px) 31.2431051px,
-    calc(100% - 112px) 27.999px,
-    calc(100% - 112px) 20px,
-    calc(100% - 112px) 20px,
-    calc(100% - 112.261758px) 16.75589733px,
-    calc(100% - 113.019584px) 13.67845504px,
-    calc(100% - 114.232306px) 10.80885071px,
-    calc(100% - 115.858752px) 8.18826192px,
-    calc(100% - 117.85775px) 5.85786625px,
-    calc(100% - 120.188128px) 3.85884128px,
-    calc(100% - 122.808714px) 2.23236459px,
-    calc(100% - 125.678336px) 1.01961376px,
-    calc(100% - 128.755822px) 0.26176637px,
-    calc(100% - 132px) 0px,
-    104.284px 0px,
-    104.284px 0px,
-    102.7004021px 0.06275064px,
-    101.1365448px 0.24914832px,
-    99.5991427px 0.55641168px,
-    98.0949104px 0.98175936px,
-    96.6305625px 1.52241px,
-    95.2128136px 2.17558224px,
-    93.8483783px 2.93849472px,
-    92.5439712px 3.80836608px,
-    91.3063069px 4.78241496px,
-    90.1421px 5.85786px,
-    5.85786px 90.1421px
-  ); */
+  position: sticky;
 }
 
 .img,
 .imgii {
   object-fit: cover;
   border-radius: 25px;
+}
+
+.pin {
+  position: sticky;
+  top: var(--navH, 90px);              
+  height: calc(100vh - var(--navH, 90px)); 
+  z-index: 1;
+}
+
+.imgBox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Image styles */
+.img {
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+
+.imgBox {
+  position: relative;       
+  width: 100%;
+  height: 500px;           
 }
 
 .card {
@@ -253,7 +170,6 @@
     top: 90px;
     height: 100%;
     width: 100%;
-    /* background-color: var(--darkGray); */
     z-index: 4;
   }
 
@@ -278,9 +194,6 @@
     transform: scale(1);
   }
 
-  /* .activeCard {
-    z-index: 2;
-  } */
 
   .heading,
   .copy {
@@ -324,103 +237,3 @@
     width: 90%;
   }
 }
-
-/* @media screen and (max-width: 668px) {
-  .container {
-    padding-top: 5rem;
-    padding-bottom: 10rem;
-  }
-
-  .heading {
-    font-size: 16vw;
-  }
-
-  .copy {
-    width: 100%;
-  }
-
-  .bottom {
-    grid-template-columns: 1fr;
-    margin-top: 3rem;
-    position: relative;
-  }
-
-  .left {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    z-index: 1;
-  }
-
-  .imgContainer {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    top: 20px;
-  }
-
-  .imgContainer::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-  }
-
-  .img {
-    object-fit: cover;
-    object-position: center;
-    border-radius: 0;
-  }
-
-  .right {
-    position: relative;
-    z-index: 2;
-    margin-top: -100vh;
-    padding: 2rem;
-  }
-
-  .card {
-    min-height: 100vh;
-    padding: 2rem 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding-bottom: 20vh;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    pointer-events: none;
-  }
-
-  .activeCard {
-    opacity: 1;
-  }
-
-  .card .city,
-  .card .desc {
-    left: 2rem;
-    right: 2rem;
-    color: var(--tan);
-    z-index: 3;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-    pointer-events: auto;
-  }
-
-  .card .city {
-    top: 60vh;
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
-    font-size: 15vw;
-  }
-
-  .card .desc {
-    margin-top: 1rem;
-  }
-
-  .card:last-child {
-    padding-bottom: 50vh;
-  }
-} */

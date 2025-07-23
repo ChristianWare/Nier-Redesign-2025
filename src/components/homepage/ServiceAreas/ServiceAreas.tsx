@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import { useEffect, useRef, useState } from "react";
@@ -65,89 +66,32 @@ export default function ServiceAreas() {
   const [active, setActive] = useState(0);
   const [isReady, setIsReady] = useState(false);
 
-  useEffect(() => {
-    const pickActiveCard = () => {
-      if (!stickyRef.current || !containerRef.current) return;
-
-      const viewportH = window.innerHeight;
-
-      if (window.innerWidth <= 668) {
-        const thresholdLine = viewportH * 0.7; // 70 % down
-        let newIdx = active; // fallback
-
-        cardRefs.current.forEach((card, index) => {
-          if (!card) return;
-          const rect = card.getBoundingClientRect();
-          // card crosses the 80 % line
-          if (rect.top <= thresholdLine && rect.bottom > thresholdLine) {
-            newIdx = index;
-          }
-        });
-
-        if (newIdx !== active) setActive(newIdx);
-        return; // done for mobile
-      }
-
-      const imgRect = stickyRef.current.getBoundingClientRect();
-      const imgCenter = imgRect.top + imgRect.height / 2;
-
-      const containerRect = containerRef.current.getBoundingClientRect();
-      const containerTop = containerRect.top;
-      const containerBottom = containerRect.bottom;
-
-      if (imgCenter <= containerTop + 200) {
-        if (active !== 0) setActive(0);
-        return;
-      }
-      if (imgCenter >= containerBottom - 200) {
-        const last = data.length - 1;
-        if (active !== last) setActive(last);
-        return;
-      }
-
-      let bestIdx = active;
-      let minDiff = Infinity;
-
-      cardRefs.current.forEach((card, index) => {
-        if (!card) return;
-        const rect = card.getBoundingClientRect();
-        const cardCenter = rect.top + rect.height / 2;
-        const diff = Math.abs(cardCenter - imgCenter);
-
-        if (diff < minDiff) {
-          minDiff = diff;
-          bestIdx = index;
+useEffect(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const idx = Number((entry.target as HTMLElement).dataset.index);
+          setActive(idx);
         }
       });
+    },
+    {
+      root: null,
+      rootMargin: "-40% 0px -40% 0px",
+      threshold: 0,
+    }
+  );
 
-      if (bestIdx !== active) setActive(bestIdx);
-    };
+  cardRefs.current.forEach((el, i) => {
+    if (!el) return;
+    el.dataset.index = String(i);
+    observer.observe(el);
+  });
 
-    let ticking = false;
-    const handleScroll = () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          pickActiveCard();
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
+  return () => observer.disconnect();
+}, []);
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    window.addEventListener("resize", handleScroll, { passive: true });
-
-    const timer = setTimeout(() => {
-      pickActiveCard();
-      setIsReady(true);
-    }, 100);
-
-    return () => {
-      clearTimeout(timer);
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleScroll);
-    };
-  }, [active]);
 
   return (
     <section className={styles.container} ref={containerRef}>
@@ -165,8 +109,8 @@ export default function ServiceAreas() {
           </div>
           <div className={styles.bottom}>
             <div className={styles.left}>
-              <div className={styles.imgContainer} ref={stickyRef}>
-                {isReady && (
+              <div className={styles.pin} ref={stickyRef}>
+                <div className={styles.imgBox}>
                   <Image
                     src={data[active].src}
                     alt={data[active].city}
@@ -174,9 +118,10 @@ export default function ServiceAreas() {
                     priority
                     className={styles.img}
                   />
-                )}
+                </div>
               </div>
             </div>
+
             <div className={styles.right}>
               {data.map((city, i) => (
                 <div
