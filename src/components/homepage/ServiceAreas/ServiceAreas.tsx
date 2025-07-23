@@ -109,8 +109,8 @@ useEffect(() => {
           </div>
           <div className={styles.bottom}>
             <div className={styles.left}>
-              <div className={styles.pin} ref={stickyRef}>
-                <div className={styles.imgBox}>
+              <div className={styles.sticky}>
+                <div className={styles.imgBox} ref={stickyRef}>
                   <Image
                     src={data[active].src}
                     alt={data[active].city}

@@ -37,7 +37,7 @@
 }
 
 .left {
-  align-self: start;
+  height: 100%;
 }
 
 .right {
@@ -164,7 +164,7 @@
   }
 
   .left {
-    align-self: flex-start;
+    /* align-self: flex-start; */
     position: -webkit-sticky;
     position: sticky;
     top: 90px;
@@ -211,7 +211,7 @@
     padding-bottom: 0rem;
   }
 
-  .imgContainer {
+  .imgContainer, .imgBox {
     height: 300px;
     display: none;
   }
