@@ -1,5 +1,4 @@
 import AboutUs from "@/components/homepage/AboutUs/AboutUs";
-// import Announcement from "@/components/homepage/Announcement/Announcement";
 import Areas from "@/components/homepage/Areas/Areas";
 import Fleet from "@/components/homepage/Fleet/Fleet";
 import Hero from "@/components/homepage/Hero/Hero";
@@ -12,7 +11,6 @@ import ContactSection from "@/components/shared/ContactSection/ContactSection";
 import Faq from "@/components/shared/Faq/Faq";
 import FinalCTA from "@/components/shared/FinalCTA/FinalCTA";
 import Footer from "@/components/shared/Footer/Footer";
-// import { prisma } from "../../prisma/prisma";
 
 export default function Home() {
   // const users = await prisma.user.findMany();
@@ -20,9 +18,7 @@ export default function Home() {
 
   return (
     <main>
-      {/* <h1>{users.length}</h1> */}
       <Hero />
-      {/* <Announcement /> */}
       <AboutUs />
       <Services />
       <Process />

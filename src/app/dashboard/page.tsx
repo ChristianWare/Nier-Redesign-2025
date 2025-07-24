@@ -5,7 +5,7 @@ export default async function DashboardPage() {
   console.log(session);
   return (
     <div>
-      <h1>{session?.user.name}'s Dashboard</h1>
+      <h1>Dashboard</h1>
     </div>
   );
 }
