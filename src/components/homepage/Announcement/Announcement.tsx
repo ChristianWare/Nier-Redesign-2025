@@ -15,7 +15,7 @@ export default function Announcement() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsOpen(true);
-    }, 5000);
+    }, 3000);
     return () => clearTimeout(timer);
   }, []);
 
