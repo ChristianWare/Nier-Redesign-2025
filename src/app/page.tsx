@@ -1,4 +1,5 @@
 import AboutUs from "@/components/homepage/AboutUs/AboutUs";
+import Announcement from "@/components/homepage/Announcement/Announcement";
 import Areas from "@/components/homepage/Areas/Areas";
 import Fleet from "@/components/homepage/Fleet/Fleet";
 import Hero from "@/components/homepage/Hero/Hero";
@@ -19,6 +20,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <Announcement />
       <AboutUs />
       <Services />
       <Process />

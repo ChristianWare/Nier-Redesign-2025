@@ -6,7 +6,7 @@ import Modal from "@/components/shared/Modal/Modal";
 import Button from "@/components/shared/Button/Button";
 import styles from "./Announcement.module.css";
 import Image from "next/image";
-import Img1 from "../../../../public/images/mw.png";
+import Img1 from "../../../../public/images/football.jpeg";
 import FalseButton from "@/components/shared/FalseButton/FalseButton";
 
 export default function Announcement() {
@@ -30,17 +30,18 @@ export default function Announcement() {
           <Image src={Img1} fill alt='' title='' className={styles.img} />
         </div>
         <h2 className={styles.heading}>
-          Morgan Wallen concert: <br /> July 18 - 19
+          🏈 Thursday Night Lights – <br /> September 25, 2025!
         </h2>
         <p className={styles.copy}>
-          Join us for an unforgettable experience at the Morgan Wallen Concert
-          at State Farm Stadium on July 18 and 19! We're offering convenient
-          group transportation to ensure you and your friends can enjoy the show
-          without the hassle of parking or navigation. Our comfortable, reliable
-          service will pick you up and drop you off right at the venue, so you
-          can focus on the music and have a great time. Don’t miss out on this
-          opportunity to make the concert experience even more enjoyable—reserve
-          your rides today!
+          It’s Cardinals vs Seahawks at State Farm Stadium, and Nier
+          Transportation has your whole night covered. Grab our Game Day Package
+          for 10 people — includes Club Level seats, Club Level food, and
+          roundtrip transportation. No parking, no stress — just fun, food, and
+          football with your crew.
+        </p>
+        <p className={styles.copy}>
+          #ThursdayNightFootball #AZCardinals #GameDayVibes #GroupPackage
+          #ClubLevelExperience #NierTransportation #RideTogether #NFL2025
         </p>
 
         <div className={styles.btnContainer}>
