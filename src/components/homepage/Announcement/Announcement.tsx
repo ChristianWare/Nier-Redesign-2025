@@ -7,7 +7,6 @@ import Button from "@/components/shared/Button/Button";
 import styles from "./Announcement.module.css";
 import Image from "next/image";
 import Img1 from "../../../../public/images/football.jpeg";
-import FalseButton from "@/components/shared/FalseButton/FalseButton";
 
 export default function Announcement() {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,9 +50,10 @@ export default function Announcement() {
             text='Reserve My Ride Now'
             btnType='red'
           />{" "}
-          <FalseButton
+          <Button
+            href="tel:+14803006003"
             onClick={handleClose}
-            text='Close'
+            text='Call for special pricing'
             btnType='redOutline'
           />
         </div>
