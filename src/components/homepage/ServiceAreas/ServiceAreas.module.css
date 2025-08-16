@@ -40,6 +40,13 @@
   height: 100%;
 }
 
+.sticky {
+  align-self: flex-start;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 90px;
+}
+
 .right {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -62,7 +69,6 @@
   font-size: 1.8rem;
 }
 
-
 .imgContainer {
   position: sticky;
   top: 90px;
@@ -78,8 +84,8 @@
 
 .pin {
   position: sticky;
-  top: var(--navH, 90px);              
-  height: calc(100vh - var(--navH, 90px)); 
+  top: var(--navH, 90px);
+  height: calc(100vh - var(--navH, 90px));
   z-index: 1;
 }
 
@@ -95,11 +101,10 @@
   border-radius: 25px;
 }
 
-
 .imgBox {
-  position: relative;       
+  position: relative;
   width: 100%;
-  height: 500px;           
+  height: 500px;
 }
 
 .card {
@@ -194,7 +199,6 @@
     transform: scale(1);
   }
 
-
   .heading,
   .copy {
     text-align: center;
@@ -211,7 +215,8 @@
     padding-bottom: 0rem;
   }
 
-  .imgContainer, .imgBox {
+  .imgContainer,
+  .imgBox {
     height: 300px;
     display: none;
   }
