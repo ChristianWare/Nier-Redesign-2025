@@ -37,7 +37,7 @@
 .img {
   object-fit: contain;
   border-radius: 15px;
-  background-color: var(--white);
+  /* background-color: var(--white); */
   padding: 5rem;
 }
 
@@ -46,7 +46,8 @@
   grid-template-columns: 2fr 1fr;
   grid-gap: 5rem;
   width: 100%;
-  border: 2px solid var(--border);
+  /* border: 1px solid var(--darkerTan); */
+  background-color: var(--darkTan);
   border-radius: 15px;
   padding: 2rem;
 }

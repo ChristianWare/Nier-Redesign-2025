@@ -17,7 +17,9 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  border: 2px solid var(--border);
+  gap: 1rem;
+  border: 1px solid var(--darkerTan);
+  background-color: var(--darkTan);
 }
 
 .imgContainer {
@@ -44,6 +46,8 @@
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   padding: 1rem;
+  background-color: var(--tan);
+  border-radius: 10px;
 }
 
 .title {

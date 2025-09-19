@@ -77,9 +77,9 @@
 .copy {
   color: var(--tan);
   line-height: 1.2;
-  font-size: 1.8rem;
+  font-size: 2rem;
   width: 50%;
-  font-family: var(--PPNeueMontrealBold);
+  font-family: var(--PPNeueMontrealMedium);
 }
 
 .btnContainer {

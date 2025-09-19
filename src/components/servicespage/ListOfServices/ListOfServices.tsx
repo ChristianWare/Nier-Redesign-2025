@@ -29,7 +29,7 @@ export default function ListOfServices() {
                     <div className={styles.btnContainer}>
                       <Button
                         href={`/services/${x.slug}`}
-                        btnType='black'
+                        btnType='red'
                         text='learn more'
                       />
                     </div>

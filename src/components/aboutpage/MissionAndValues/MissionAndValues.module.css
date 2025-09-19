@@ -2,9 +2,6 @@
   background-color: var(--tan);
 }
 
-.heading {
-  color: var(--red);
-}
 
 .bottom {
   margin-top: 5rem;
@@ -14,8 +11,8 @@
 }
 
 .card {
-  border: 2px solid var(--red);
-  background-color: var(--tan);
+  border: 1px solid var(--darkerTan);
+  background-color: var(--darkTan);
   border-radius: 15px;
   padding: 2rem;
   display: flex;
@@ -27,7 +24,12 @@
 
 .title,
 .description {
-  color: var(--red);
+  color: var(--black);
+}
+
+.title  {
+  font-size: 2.5rem;
+  letter-spacing: 0.2px;
 }
 
 @media screen and (max-width: 868px) {

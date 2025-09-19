@@ -1,5 +1,5 @@
 .container {
-  background-color: var(--lightgray);
+  background-color: var(--tan);
 }
 
 .top {
@@ -42,7 +42,8 @@
   grid-template-columns: 1.5fr 2fr;
   grid-gap: 1rem;
   padding: 1rem;
-  border: 2px solid var(--red);
+  border: 1px solid var(--darkerTan);
+  background-color: var(--darkTan);
   border-radius: 15px;
   border-top-left-radius: 300px;
   border-bottom-left-radius: 300px;
