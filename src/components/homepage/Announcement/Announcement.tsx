@@ -6,7 +6,7 @@ import Modal from "@/components/shared/Modal/Modal";
 import Button from "@/components/shared/Button/Button";
 import styles from "./Announcement.module.css";
 import Image from "next/image";
-import Img1 from "../../../../public/images/football.jpeg";
+import Img1 from "../../../../public/images/footballii.png";
 
 export default function Announcement() {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,7 +29,7 @@ export default function Announcement() {
           <Image src={Img1} fill alt='' title='' className={styles.img} />
         </div>
         <h2 className={styles.heading}>
-          🏈 Thursday Night Lights – <br /> September 25, 2025!
+          🏈 Thursday Night Lights – <br /> December 21st, 2025!
         </h2>
         <p className={styles.copy}>
           It’s Cardinals vs Seahawks at State Farm Stadium, and Nier
@@ -39,7 +39,7 @@ export default function Announcement() {
           football with your crew.
         </p>
         <p className={styles.copy}>
-          #ThursdayNightFootball #AZCardinals #GameDayVibes #GroupPackage
+          #SundayNightFootball #AZCardinals #GameDayVibes #GroupPackage
           #ClubLevelExperience #NierTransportation #RideTogether #NFL2025
         </p>
 
