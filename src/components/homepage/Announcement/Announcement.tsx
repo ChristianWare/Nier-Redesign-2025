@@ -6,7 +6,7 @@ import Modal from "@/components/shared/Modal/Modal";
 import Button from "@/components/shared/Button/Button";
 import styles from "./Announcement.module.css";
 import Image from "next/image";
-import Img1 from "../../../../public/images/footballii.png";
+import Img1 from "../../../../public/images/wine.png";
 
 export default function Announcement() {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,19 +29,24 @@ export default function Announcement() {
           <Image src={Img1} fill alt='' title='' className={styles.img} />
         </div>
         <h2 className={styles.heading}>
-          🏈 Thursday Night Lights – <br /> December 21st, 2025!
+          🍷 Wine Tour – <br /> October 25th, 2025
         </h2>
         <p className={styles.copy}>
-          It’s Cardinals vs Seahawks at State Farm Stadium, and Nier
+          {/* It’s Cardinals vs Seahawks at State Farm Stadium, and Nier
           Transportation has your whole night covered. Grab our Game Day Package
           for 10 people — includes Club Level seats, Club Level food, and
           roundtrip transportation. No parking, no stress — just fun, food, and
-          football with your crew.
+          football with your crew. */}
+          You will be guided on a private tour of the Javelina Leap Estate
+          Vineyard & Winery by one of their winemakers. You will learn about the
+          unexpected history of Arizona wine and the old world style they use to
+          make wine at Javelina Leap. Finish with a tasting straight
+          from one of their premium barrels.
         </p>
-        <p className={styles.copy}>
+        {/* <p className={styles.copy}>
           #SundayNightFootball #AZCardinals #GameDayVibes #GroupPackage
           #ClubLevelExperience #NierTransportation #RideTogether #NFL2025
-        </p>
+        </p> */}
 
         <div className={styles.btnContainer}>
           <Button
@@ -51,7 +56,7 @@ export default function Announcement() {
             btnType='red'
           />{" "}
           <Button
-            href="tel:+14803006003"
+            href='tel:+14803006003'
             onClick={handleClose}
             text='Call for special pricing'
             btnType='redOutline'
