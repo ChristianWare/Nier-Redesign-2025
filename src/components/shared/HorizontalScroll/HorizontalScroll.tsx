@@ -2,7 +2,7 @@
 
 import styles from "./HorizontalScroll.module.css";
 import Image from "next/image";
-import Arrow from "../../../../public/icons/arrow.svg";
+// import Arrow from "../../../../public/icons/arrow.svg";
 import { useRef, useEffect } from "react";
 import { services } from "@/data";
 import Link from "next/link";
@@ -27,7 +27,7 @@ export default function HorizontalScroll() {
       <div className={styles.scrollTrack} ref={trackRef}>
         {loopedServices.map((service, idx) => (
           <div className={styles.imgContainer} key={`${service.id}-${idx}`}>
-            <Arrow className={styles.icon} />
+            {/* <Arrow className={styles.icon} /> */}
             <Link href={`/services/${service.slug}`}>
               <Image
                 src={service.src}

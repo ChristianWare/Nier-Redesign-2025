@@ -5,9 +5,9 @@ import styles from "./ContactSection.module.css";
 import LayoutWrapper from "../LayoutWrapper";
 import toast from "react-hot-toast";
 import { useForm, SubmitHandler } from "react-hook-form";
-import Location from "../../../../public/icons/location.svg";
-import Email from "../../../../public/icons/email.svg";
-import Phone from "../../../../public/icons/phone.svg";
+// import Location from "../../../../public/icons/location.svg";
+// import Email from "../../../../public/icons/email.svg";
+// import Phone from "../../../../public/icons/phone.svg";
 import FalseButton from "../FalseButton/FalseButton";
 import SectionHeading from "../SectionHeading/SectionHeading";
 
@@ -65,17 +65,17 @@ export default function ContactSection() {
               <div className={styles.letsTalkContainer}>
                 <h3>Let&#39;s talk</h3>
                 <div className={styles.iconInfoContainer}>
-                  <Email className={styles.icon} />
+                  {/* <Email className={styles.icon} /> */}
                   <span className={styles.info}>
                     reservations@niertransportation.com
                   </span>
                 </div>
                 <div className={styles.iconInfoContainer}>
-                  <Phone className={styles.icon} />
+                  {/* <Phone className={styles.icon} /> */}
                   <span className={styles.info}>480-300-6003</span>
                 </div>
                 <div className={styles.iconInfoContainer}>
-                  <Location className={styles.icon} />
+                  {/* <Location className={styles.icon} /> */}
                   <span className={styles.info}>Scottsdale, AZ</span>
                 </div>
               </div>

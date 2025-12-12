@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, MouseEvent } from "react";
-import Close from "../../../../public/icons/close.svg";
+// import Close from "../../../../public/icons/close.svg";
 import styles from "./Modal.module.css";
 
 interface Props {
@@ -56,7 +56,7 @@ export default function Modal({ isOpen, onClose, children }: Props) {
         aria-modal='true'
       >
         <button onClick={onClose} className={styles.closeBtn}>
-          <Close className={styles.icon} />
+          {/* <Close className={styles.icon} /> */}
         </button>
 
         <div className={styles.body}>{children}</div>

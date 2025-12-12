@@ -4,7 +4,7 @@ import styles from "./RegisterForm.module.css";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { RegisterScehma } from "@/schemas";
-import GoogleIcon from "../../../../../../public/icons/google.svg";
+// import GoogleIcon from "../../../../../../public/icons/google.svg";
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import Image from "next/image";
 import Img1 from "../../../../../../public/images/casaGrandeii.jpg";
@@ -81,7 +81,7 @@ export default function RegisterForm() {
             </div>
 
             <button type='button' className={styles.googleBtn}>
-              <GoogleIcon className={styles.google} />
+              {/* <GoogleIcon className={styles.google} /> */}
               <span className={styles.googleBtnText}>Sign up with Google</span>
             </button>
 

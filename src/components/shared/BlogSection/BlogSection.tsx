@@ -2,7 +2,7 @@ import Button from "../Button/Button";
 import LayoutWrapper from "../LayoutWrapper";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import styles from "./BlogSection.module.css";
-import Arrow from "../../../../public/icons/right.svg";
+// import Arrow from "../../../../public/icons/right.svg";
 import Image from "next/image";
 import Img1 from "../../../../public/images/heroii.jpg";
 
@@ -47,7 +47,7 @@ export default function BlogSection() {
                 <h3 className={styles.title}>{x.title}</h3>
                 <p className={styles.desc}>{x.desc}</p>
                 <div className={styles.arrowContainer}>
-                  <Arrow className={styles.arrow} />
+                  {/* <Arrow className={styles.arrow} /> */}
                 </div>
               </div>
             </div>

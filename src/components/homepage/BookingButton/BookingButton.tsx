@@ -2,7 +2,7 @@
 
 import styles from "./BookingButton.module.css";
 // import Arrow from "../../../../public/icons/arrow.svg";
-import Logo from "../../../../public/icons/logoIcon.svg";
+// import Logo from "../../../../public/icons/logoIcon.svg";
 import Link from "next/link";
 
 interface RotatingTextProps {
@@ -40,7 +40,7 @@ export default function BookingButton({ text, color = "" }: RotatingTextProps) {
             </textPath>
           </text>
         </svg>
-        <Logo className={styles.arrow} />
+        {/* <Logo className={styles.arrow} /> */}
     </div>
       </Link>
   );

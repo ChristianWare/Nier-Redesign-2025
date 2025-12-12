@@ -6,8 +6,8 @@ import { useState, useEffect, useRef } from "react";
 import { reviews } from "@/data";
 import Image from "next/image";
 // import Button from "@/components/shared/Button/Button";
-import Left from "../../../../public/icons/left.svg";
-import Right from "../../../../public/icons/right.svg";
+// import Left from "../../../../public/icons/left.svg";
+// import Right from "../../../../public/icons/right.svg";
 import SectionHeading from "@/components/shared/SectionHeading/SectionHeading";
 
 export default function ReviewSection() {
@@ -32,14 +32,14 @@ export default function ReviewSection() {
     };
   }, []);
 
-  const goPrev = () => {
-    setCurrent((i) => (i === 0 ? reviews.length - 1 : i - 1));
-    restartTimer();
-  };
-  const goNext = () => {
-    setCurrent((i) => (i + 1) % reviews.length);
-    restartTimer();
-  };
+  // const goPrev = () => {
+  //   setCurrent((i) => (i === 0 ? reviews.length - 1 : i - 1));
+  //   restartTimer();
+  // };
+  // const goNext = () => {
+  //   setCurrent((i) => (i + 1) % reviews.length);
+  //   restartTimer();
+  // };
 
   const slide = reviews[current];
 
@@ -78,12 +78,12 @@ export default function ReviewSection() {
 
             <div className={styles.navigation}>
               <div className={styles.arrowBoxParent}>
-                <div className={styles.arrowBox} onClick={goPrev}>
+                {/* <div className={styles.arrowBox} onClick={goPrev}>
                   <Left className={styles.icon} />
                 </div>
                 <div className={styles.arrowBox} onClick={goNext}>
                   <Right className={styles.icon} />
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -113,12 +113,12 @@ export default function ReviewSection() {
             </div>
             <div className={styles.navigation2}>
               <div className={styles.arrowBoxParent}>
-                <div className={styles.arrowBox} onClick={goPrev}>
+                {/* <div className={styles.arrowBox} onClick={goPrev}>
                   <Left className={styles.icon} />
                 </div>
                 <div className={styles.arrowBox} onClick={goNext}>
                   <Right className={styles.icon} />
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

@@ -5,15 +5,15 @@ import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import styles from "./Reviews.module.css";
 import { reviews } from "@/data";
 import Image from "next/image";
-import Left from "../../../../public/icons/left.svg";
-import Right from "../../../../public/icons/right.svg";
+// import Left from "../../../../public/icons/left.svg";
+// import Right from "../../../../public/icons/right.svg";
 
 export default function Reviews() {
   const slides = reviews.slice(0, 3);
   const [current, setCurrent] = useState(0);
 
-  const prev = () => setCurrent((i) => (i === 0 ? slides.length - 1 : i - 1));
-  const next = () => setCurrent((i) => (i === slides.length - 1 ? 0 : i + 1));
+  // const prev = () => setCurrent((i) => (i === 0 ? slides.length - 1 : i - 1));
+  // const next = () => setCurrent((i) => (i === slides.length - 1 ? 0 : i + 1));
 
   return (
     <section className={styles.container}>
@@ -79,12 +79,12 @@ export default function Reviews() {
         </div>
         <div className={styles.navigation}>
           <div className={styles.arrowBoxParent}>
-            <div className={styles.arrowBox} onClick={prev}>
+            {/* <div className={styles.arrowBox} onClick={prev}>
               <Left className={styles.icon} />
             </div>
             <div className={styles.arrowBox} onClick={next}>
               <Right className={styles.icon} />
-            </div>
+            </div> */}
           </div>
         </div>
       </LayoutWrapper>

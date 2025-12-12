@@ -3,7 +3,7 @@
 import styles from "./Faq.module.css";
 import LayoutWrapper from "../LayoutWrapper";
 import React, { useState } from "react";
-import Arrow from "../../../../public/icons/arrow.svg";
+// import Arrow from "../../../../public/icons/arrow.svg";
 import SectionHeading from "../SectionHeading/SectionHeading";
 // import Button from "../Button/Button";
 
@@ -96,11 +96,11 @@ export default function Faq() {
                   <div className={styles.arrowContainer}>
                     {selected === i ? (
                       <div className={styles.arrowContainer}>
-                        <Arrow className={styles.iconFlip} />
+                        {/* <Arrow className={styles.iconFlip} /> */}
                       </div>
                     ) : (
                       <div className={styles.arrowContainer}>
-                        <Arrow className={styles.icon} />
+                        {/* <Arrow className={styles.icon} /> */}
                       </div>
                     )}
                   </div>
