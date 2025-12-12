@@ -5,18 +5,18 @@ import styles from "./SafetyAndCompliance.module.css";
 // import Img2 from "../../../../public/images/distance.jpg";
 // import Img3 from "../../../../public/images/events.jpg";
 // import Img4 from "../../../../public/images/westValleyii.jpg";
-import Adot from '../../../../public/icons/adot.svg'
+// import Adot from '../../../../public/icons/adot.svg'
 import Tsa from '../../../../public/icons/tsa.svg'
 import Analytics from "../../../../public/icons/analytics.svg";
 import Safety from "../../../../public/icons/safety.svg";
 
 const data = [
-  {
-    id: 1,
-    title: "ADOT TCP Licensed",
-    src: <Adot className={styles.icon} />,
-    desc: "Arizona Department of Transportation TCP #PHX-001234",
-  },
+  // {
+  //   id: 1,
+  //   title: "ADOT TCP Licensed",
+  //   src: <Adot className={styles.icon} />,
+  //   desc: "Arizona Department of Transportation TCP #PHX-001234",
+  // },
   {
     id: 2,
     title: "TSA Security Certified",
